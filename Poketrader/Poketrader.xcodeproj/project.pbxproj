@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0AB254F163F00C81C07 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		413EC59C2550FF3200C534D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD53A0AB254F163F00C81C07 /* ViewController.swift */,
+				413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AD53A09B254F163F00C81C07 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +67,9 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
+				413EC59C2550FF3200C534D7 /* Views */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
 				AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */,
-				AD53A0AB254F163F00C81C07 /* ViewController.swift */,
 				AD53A0AD254F163F00C81C07 /* Main.storyboard */,
 				AD53A0B0254F164000C81C07 /* Assets.xcassets */,
 				AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */,
@@ -140,6 +151,7 @@
 				AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
+				413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
