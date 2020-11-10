@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0u5-4v-1Wg">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <tabBarItem systemItem="favorites" id="03Q-RM-xtj"/>
@@ -32,7 +32,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-bm-jZv">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="691"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GD-N8-psg">
                                         <rect key="frame" x="0.0" y="8" width="414" height="989"/>
@@ -331,6 +331,28 @@
                             <constraint firstItem="wwc-T2-TLM" firstAttribute="trailing" secondItem="XnU-aj-Ukr" secondAttribute="trailing" id="tv5-XB-JjA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ataqueSPValueLabel" destination="jHy-3X-4tu" id="cFf-iH-7YR"/>
+                        <outlet property="ataqueValueLabel" destination="V5K-g3-IS5" id="drj-wV-CUe"/>
+                        <outlet property="atributosLabel" destination="6E2-GO-GEW" id="A6T-UJ-aki"/>
+                        <outlet property="atributosStackView" destination="x84-5Y-WAz" id="rkF-Ok-l9V"/>
+                        <outlet property="defesaSPValueLabel" destination="8a3-GX-hje" id="UIV-XR-UVo"/>
+                        <outlet property="defesaValueLabel" destination="DQF-BH-GEi" id="ckS-le-Tvu"/>
+                        <outlet property="emailLabel" destination="hEw-F4-izm" id="RM7-s1-bH1"/>
+                        <outlet property="emailValueLabel" destination="27g-ee-Dg6" id="KQi-HG-51Y"/>
+                        <outlet property="hpValueLabel" destination="J3D-pa-u4U" id="pRZ-0b-khv"/>
+                        <outlet property="jogoLabel" destination="AiV-8M-qLf" id="qmM-dd-fuM"/>
+                        <outlet property="jogoValueLabel" destination="ti5-II-Q8k" id="gX7-wL-BVg"/>
+                        <outlet property="observacoesLabel" destination="GFs-jy-Mxl" id="N0v-Wb-Qdh"/>
+                        <outlet property="observacoesValueLabel" destination="U90-iA-Cq4" id="rgX-vR-Qg2"/>
+                        <outlet property="pokemonImage" destination="FHJ-sy-Xcn" id="gQ5-Ka-6qu"/>
+                        <outlet property="profileImage" destination="fL5-Vu-sv2" id="gUz-fN-X4N"/>
+                        <outlet property="telefoneLabel" destination="d80-zP-rfQ" id="r8b-OB-7eK"/>
+                        <outlet property="telefoneValueLabel" destination="JyR-ZN-jua" id="pqy-jK-YKn"/>
+                        <outlet property="usuarioLabel" destination="w8y-C3-3Uh" id="LPB-jc-Ncq"/>
+                        <outlet property="usuarioValueLabel" destination="nZX-Yu-d0E" id="C1B-er-kX1"/>
+                        <outlet property="velocidadeValueLabel" destination="D2E-d5-GpP" id="hbz-U4-6iv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iha-e9-i5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
