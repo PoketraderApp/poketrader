@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD23A605255AFA8400758BB8 /* Anuncio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD23A604255AFA8400758BB8 /* Anuncio.storyboard */; };
+		AD23A608255AFAA400758BB8 /* AnuncioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD23A607255AFAA400758BB8 /* AnuncioViewController.swift */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0AB254F163F00C81C07 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD23A604255AFA8400758BB8 /* Anuncio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Anuncio.storyboard; sourceTree = "<group>"; };
+		AD23A607255AFAA400758BB8 /* AnuncioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnuncioViewController.swift; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD23A602255AFA5B00758BB8 /* DetalheAnuncios */ = {
+			isa = PBXGroup;
+			children = (
+				AD23A604255AFA8400758BB8 /* Anuncio.storyboard */,
+				AD23A607255AFAA400758BB8 /* AnuncioViewController.swift */,
+			);
+			path = DetalheAnuncios;
+			sourceTree = "<group>";
+		};
 		AD53A09B254F163F00C81C07 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
+				AD23A602255AFA5B00758BB8 /* DetalheAnuncios */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
 				AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */,
 				AD53A0AB254F163F00C81C07 /* ViewController.swift */,
@@ -126,6 +140,7 @@
 			files = (
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
+				AD23A605255AFA8400758BB8 /* Anuncio.storyboard in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +154,7 @@
 			files = (
 				AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
+				AD23A608255AFAA400758BB8 /* AnuncioViewController.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
