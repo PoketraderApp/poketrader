@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0AB254F163F00C81C07 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfertasUsuario.storyboard; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				AD53A0B0254F164000C81C07 /* Assets.xcassets */,
 				AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */,
 				AD53A0B5254F164000C81C07 /* Info.plist */,
+				63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */,
 			);
 			path = Poketrader;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
+				63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
 			);
