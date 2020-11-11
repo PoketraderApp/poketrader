@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func botaoLoginScreen(_ sender: UIButton) {
+        performSegue(withIdentifier: "LoginScreen", sender: nil)
+    }
+    
 }
 

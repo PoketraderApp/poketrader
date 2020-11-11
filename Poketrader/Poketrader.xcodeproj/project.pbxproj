@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E4B1D4D255CA543005B6AD3 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B1D4C255CA543005B6AD3 /* Login.storyboard */; };
+		5E4B1D50255CA5A3005B6AD3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B1D4F255CA5A3005B6AD3 /* LoginViewController.swift */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0AB254F163F00C81C07 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E4B1D4C255CA543005B6AD3 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5E4B1D4F255CA5A3005B6AD3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				AD53A0B0254F164000C81C07 /* Assets.xcassets */,
 				AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */,
 				AD53A0B5254F164000C81C07 /* Info.plist */,
+				5E4B1D4C255CA543005B6AD3 /* Login.storyboard */,
+				5E4B1D4F255CA5A3005B6AD3 /* LoginViewController.swift */,
 			);
 			path = Poketrader;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4B1D4D255CA543005B6AD3 /* Login.storyboard in Resources */,
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
@@ -137,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4B1D50255CA5A3005B6AD3 /* LoginViewController.swift in Sources */,
 				AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
