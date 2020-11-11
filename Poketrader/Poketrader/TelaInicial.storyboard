@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wFr-Oy-L4z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CadastroViewController-->
+        <scene sceneID="h9f-AZ-Z0A">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="TelaInicialViewController" storyboardName="Cadastro" referencedIdentifier="CadastroViewController" id="f5c-kL-UnX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVl-gZ-BND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744" y="90"/>
+        </scene>
+        <!--Tela Inicial View Controller-->
+        <scene sceneID="Hbo-M6-0si">
+            <objects>
+                <viewController id="wFr-Oy-L4z" customClass="TelaInicialViewController" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ATG-Ad-9zF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poketrader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mee-2r-fPt">
+                                <rect key="frame" x="75" y="144" width="264" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PYJ-jK-EE7">
+                                <rect key="frame" x="75" y="323" width="264" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Me7-f3-036"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="isT-4F-EVY">
+                                <rect key="frame" x="75" y="639" width="264" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VsJ-cm-F8I">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <state key="normal" title="Cadastre-se">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappedCadastro:" destination="wFr-Oy-L4z" eventType="touchUpInside" id="vVI-OD-e1D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gi7-64-bDo">
+                                        <rect key="frame" x="109" y="79" width="46" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Entrar"/>
+                                        <connections>
+                                            <action selector="tappedEntrar:" destination="wFr-Oy-L4z" eventType="touchUpInside" id="iT4-1S-3aJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VsJ-cm-F8I" firstAttribute="leading" secondItem="isT-4F-EVY" secondAttribute="leading" id="2AX-Nm-fFA"/>
+                                    <constraint firstAttribute="trailing" secondItem="VsJ-cm-F8I" secondAttribute="trailing" id="wVl-GO-78l"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zpU-tu-vx9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zpU-tu-vx9" firstAttribute="trailing" secondItem="mee-2r-fPt" secondAttribute="trailing" constant="75" id="7ve-Rg-TtC"/>
+                            <constraint firstItem="zpU-tu-vx9" firstAttribute="trailing" secondItem="PYJ-jK-EE7" secondAttribute="trailing" constant="75" id="8md-PB-uRx"/>
+                            <constraint firstItem="zpU-tu-vx9" firstAttribute="trailing" secondItem="isT-4F-EVY" secondAttribute="trailing" constant="75" id="GVi-4D-qcK"/>
+                            <constraint firstItem="mee-2r-fPt" firstAttribute="leading" secondItem="zpU-tu-vx9" secondAttribute="leading" constant="75" id="RSE-qW-thw"/>
+                            <constraint firstItem="PYJ-jK-EE7" firstAttribute="leading" secondItem="zpU-tu-vx9" secondAttribute="leading" constant="75" id="d6w-qN-VhQ"/>
+                            <constraint firstItem="mee-2r-fPt" firstAttribute="top" secondItem="zpU-tu-vx9" secondAttribute="top" constant="100" id="fdi-5K-sNJ"/>
+                            <constraint firstItem="isT-4F-EVY" firstAttribute="top" secondItem="PYJ-jK-EE7" secondAttribute="bottom" constant="66" id="lIU-Mr-zii"/>
+                            <constraint firstItem="isT-4F-EVY" firstAttribute="leading" secondItem="zpU-tu-vx9" secondAttribute="leading" constant="75" id="ogd-vo-57o"/>
+                            <constraint firstItem="PYJ-jK-EE7" firstAttribute="centerY" secondItem="ATG-Ad-9zF" secondAttribute="centerY" id="okQ-01-XWf"/>
+                            <constraint firstItem="PYJ-jK-EE7" firstAttribute="centerX" secondItem="ATG-Ad-9zF" secondAttribute="centerX" id="twA-Z4-dat"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cadastroButton" destination="VsJ-cm-F8I" id="tmD-KH-Fza"/>
+                        <outlet property="imageTelaInicial" destination="PYJ-jK-EE7" id="Xe3-ah-x2H"/>
+                        <outlet property="tituloLabel" destination="mee-2r-fPt" id="Bmx-dP-Xfy"/>
+                        <segue destination="f5c-kL-UnX" kind="presentation" identifier="CadastroViewController" id="Jve-mg-vq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Cl-Q7-Azr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
