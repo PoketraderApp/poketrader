@@ -15,6 +15,8 @@
 		AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0AD254F163F00C81C07 /* Main.storyboard */; };
 		AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0B0254F164000C81C07 /* Assets.xcassets */; };
 		AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */; };
+		AD95AEBD255B52B90088F0A4 /* AnuncioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD95AEBC255B52B90088F0A4 /* AnuncioController.swift */; };
+		AD95AEC4255C9A150088F0A4 /* MeuAnuncio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD95AEC3255C9A150088F0A4 /* MeuAnuncio.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AD53A0B0254F164000C81C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD53A0B3254F164000C81C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD53A0B5254F164000C81C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD95AEBC255B52B90088F0A4 /* AnuncioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnuncioController.swift; sourceTree = "<group>"; };
+		AD95AEC3255C9A150088F0A4 /* MeuAnuncio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeuAnuncio.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 			children = (
 				AD23A604255AFA8400758BB8 /* Anuncio.storyboard */,
 				AD23A607255AFAA400758BB8 /* AnuncioViewController.swift */,
+				AD95AEBC255B52B90088F0A4 /* AnuncioController.swift */,
 			);
 			path = DetalheAnuncios;
 			sourceTree = "<group>";
@@ -69,6 +74,7 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
+				AD95AEC2255C99F10088F0A4 /* DetalheMeuAnuncio */,
 				AD23A602255AFA5B00758BB8 /* DetalheAnuncios */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
 				AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */,
@@ -79,6 +85,14 @@
 				AD53A0B5254F164000C81C07 /* Info.plist */,
 			);
 			path = Poketrader;
+			sourceTree = "<group>";
+		};
+		AD95AEC2255C99F10088F0A4 /* DetalheMeuAnuncio */ = {
+			isa = PBXGroup;
+			children = (
+				AD95AEC3255C9A150088F0A4 /* MeuAnuncio.storyboard */,
+			);
+			path = DetalheMeuAnuncio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
+				AD95AEC4255C9A150088F0A4 /* MeuAnuncio.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
 				AD23A605255AFA8400758BB8 /* Anuncio.storyboard in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
@@ -153,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */,
+				AD95AEBD255B52B90088F0A4 /* AnuncioController.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD23A608255AFAA400758BB8 /* AnuncioViewController.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,

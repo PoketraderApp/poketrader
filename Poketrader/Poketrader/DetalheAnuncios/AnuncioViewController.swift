@@ -8,6 +8,7 @@
 import UIKit
 
 class AnuncioViewController: UIViewController {
+    private var controller: AnuncioController?
     
     // Imagens
     @IBOutlet weak var pokemonImage: UIImageView!
@@ -44,10 +45,9 @@ class AnuncioViewController: UIViewController {
     @IBOutlet weak var ataqueSPValueLabel: UILabel!
     @IBOutlet weak var defesaSPValueLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
 }

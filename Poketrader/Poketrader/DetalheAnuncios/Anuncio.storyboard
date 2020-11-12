@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="691"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GD-N8-psg">
-                                        <rect key="frame" x="0.0" y="8" width="414" height="989"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="989"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnw-cy-TD7">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
@@ -310,7 +310,7 @@
                                     <constraint firstItem="1GD-N8-psg" firstAttribute="trailing" secondItem="BwW-iu-z4y" secondAttribute="trailing" constant="240" id="Kbg-H2-F5l"/>
                                     <constraint firstItem="1GD-N8-psg" firstAttribute="leading" secondItem="BwW-iu-z4y" secondAttribute="leading" id="afq-bq-Lo5"/>
                                     <constraint firstItem="1GD-N8-psg" firstAttribute="width" secondItem="j1g-Kc-8TS" secondAttribute="width" id="eVE-OI-RGI"/>
-                                    <constraint firstItem="1GD-N8-psg" firstAttribute="top" secondItem="BwW-iu-z4y" secondAttribute="top" constant="8" id="uDC-W0-Cho"/>
+                                    <constraint firstItem="1GD-N8-psg" firstAttribute="top" secondItem="BwW-iu-z4y" secondAttribute="top" id="uDC-W0-Cho"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="BwW-iu-z4y"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="j1g-Kc-8TS"/>
@@ -332,7 +332,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ataqueSPValueLabel" destination="jHy-3X-4tu" id="cFf-iH-7YR"/>
+                        <outlet property="ataqueSPLabel" destination="jHy-3X-4tu" id="cFf-iH-7YR"/>
                         <outlet property="ataqueValueLabel" destination="V5K-g3-IS5" id="drj-wV-CUe"/>
                         <outlet property="atributosLabel" destination="6E2-GO-GEW" id="A6T-UJ-aki"/>
                         <outlet property="atributosStackView" destination="x84-5Y-WAz" id="rkF-Ok-l9V"/>
