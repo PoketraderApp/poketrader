@@ -10,13 +10,13 @@ import UIKit
 class CadastroViewController: UIViewController {
     
     var controller: CadastroController = CadastroController()
+    var imagePicker: UIImagePickerController = UIImagePickerController()
 
     // MARK: TextFields e Labels
     
     @IBOutlet var viewTelaCadastro: UIView!
     
     @IBOutlet weak var imagePerfil: UIImageView!
-    
     @IBOutlet weak var inserirImagemButton: UIButton!
     
     
@@ -28,6 +28,7 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var senhaLabel: UILabel!
     @IBOutlet weak var verificaEmailLabel: UILabel!
     @IBOutlet weak var verificaSenhaLabel: UILabel!
+    @IBOutlet weak var verificaNomeLabel: UILabel!
     
     @IBOutlet weak var telefoneTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -43,11 +44,13 @@ class CadastroViewController: UIViewController {
         self.telefoneTextField.delegate = self
         self.emailTextField.delegate = self
         self.senhaTextField.delegate = self
+        self.imagePicker.delegate = self
         
         self.telefoneTextField.keyboardType = .numberPad
         
         self.verificaEmailLabel.text = ""
         self.verificaSenhaLabel.text = ""
+        self.verificaNomeLabel.text = ""
         
         self.inserirImagemButton.backgroundColor = UIColor(rgb: 0x3B4CCA)
         self.inserirImagemButton.layer.cornerRadius = 10
@@ -62,12 +65,17 @@ class CadastroViewController: UIViewController {
     
     }
     
+    // MARK: Validation
+    
     private func checkFields() -> Bool {
         
         let obrigatorio:String = "Campo obrigatório"
         var isValid:Bool = true
         
-        if  self.nomeTextField.text?.isEmpty ?? true {
+        if  self.nomeTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true {
+            
+            self.verificaNomeLabel.text = obrigatorio
+            self.verificaNomeLabel.textColor = .red
             isValid = false
             
         }
@@ -108,7 +116,18 @@ class CadastroViewController: UIViewController {
     @IBAction func tappedInserirImagem(_ sender: UIButton) {
         dismissKeyboard()
         
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            print("Button capture")
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = true
+            
+            
+            present(imagePicker, animated: true, completion: nil)
+            
+        }
+        
     }
+    
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
@@ -134,7 +153,7 @@ class CadastroViewController: UIViewController {
 
 }
 
-// MARK: delegates
+// MARK: Text Field Delegate
 
 extension CadastroViewController: UITextFieldDelegate {
     
@@ -179,8 +198,31 @@ extension CadastroViewController: UITextFieldDelegate {
             }
             
         }
+        
+        else if textField.isEqual(self.nomeTextField){
+            let nome: String = self.nomeTextField.text ?? ""
+            
+            let newNome: String = (nome as NSString).replacingCharacters(in: range, with: string)
+            
+            if (nome.isEqual("") || nome.isEmpty) && (!newNome.isEqual("") || !newNome.isEmpty){
+                
+                self.verificaNomeLabel.text = ""
+            }
+            
+        }
     
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.borderStyle = .bezel
+        textField.layer.borderColor = UIColor.black.cgColor
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.borderStyle = .roundedRect
+        textField.layer.borderColor = UIColor.gray.cgColor
     }
     
     
@@ -206,7 +248,15 @@ extension CadastroViewController: UITextFieldDelegate {
         return true
     }
     
+}
+
+extension CadastroViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        
+            self.dismiss(animated: true, completion: { () -> Void in })
+            print("Cheguei aqui - capture")
+            self.imagePerfil.image = image
+    }
 }
 
