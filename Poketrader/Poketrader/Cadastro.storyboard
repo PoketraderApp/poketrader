@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lx9-ze-M6r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,22 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lP6-oY-z5X">
-                                <rect key="frame" x="50" y="30" width="121" height="73"/>
+                                <rect key="frame" x="16" y="34" width="121" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="K99-NY-Se5"/>
+                                    <constraint firstAttribute="height" constant="73" id="PBR-DY-lhc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="ank-kT-Upm"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDW-43-WSa">
-                                <rect key="frame" x="191" y="53" width="134" height="34"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Inserir imagem">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedInserirImagem:" destination="Lx9-ze-M6r" eventType="touchUpInside" id="lWo-QS-Bbx"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="okC-kb-ymy">
                                 <rect key="frame" x="50" y="153.5" width="275" height="246"/>
                                 <subviews>
@@ -140,19 +130,30 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDW-43-WSa">
+                                <rect key="frame" x="166" y="53" width="159" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Inserir imagem">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedInserirImagem:" destination="Lx9-ze-M6r" eventType="touchUpInside" id="lWo-QS-Bbx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="stc-Tr-dNb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lP6-oY-z5X" firstAttribute="top" secondItem="stc-Tr-dNb" secondAttribute="top" constant="30" id="0Zd-Ko-eNh"/>
-                            <constraint firstItem="jDW-43-WSa" firstAttribute="leading" secondItem="lP6-oY-z5X" secondAttribute="trailing" constant="20" id="2Jx-3H-ebK"/>
+                            <constraint firstItem="lP6-oY-z5X" firstAttribute="top" secondItem="stc-Tr-dNb" secondAttribute="top" constant="34" id="0Zd-Ko-eNh"/>
+                            <constraint firstItem="jDW-43-WSa" firstAttribute="leading" secondItem="lP6-oY-z5X" secondAttribute="trailing" constant="29" id="2Jx-3H-ebK"/>
                             <constraint firstItem="okC-kb-ymy" firstAttribute="leading" secondItem="stc-Tr-dNb" secondAttribute="leading" constant="50" id="2a3-KP-Vh9"/>
                             <constraint firstItem="jDW-43-WSa" firstAttribute="top" secondItem="stc-Tr-dNb" secondAttribute="top" constant="53" id="374-gA-z9h"/>
-                            <constraint firstItem="lP6-oY-z5X" firstAttribute="leading" secondItem="okC-kb-ymy" secondAttribute="leading" id="CkV-Zo-flR"/>
+                            <constraint firstItem="lP6-oY-z5X" firstAttribute="leading" secondItem="okC-kb-ymy" secondAttribute="leading" constant="-34" id="CkV-Zo-flR"/>
                             <constraint firstItem="stc-Tr-dNb" firstAttribute="trailing" secondItem="okC-kb-ymy" secondAttribute="trailing" constant="50" id="ZKB-K5-Omg"/>
                             <constraint firstItem="5Sk-U3-zL6" firstAttribute="top" secondItem="jDW-43-WSa" secondAttribute="bottom" constant="89.5" id="dcg-BV-Gja"/>
                             <constraint firstItem="stc-Tr-dNb" firstAttribute="trailing" secondItem="jDW-43-WSa" secondAttribute="trailing" constant="50" id="iH8-ac-lb6"/>
-                            <constraint firstItem="okC-kb-ymy" firstAttribute="top" secondItem="lP6-oY-z5X" secondAttribute="bottom" constant="50.5" id="nLy-qk-4fT"/>
+                            <constraint firstItem="okC-kb-ymy" firstAttribute="top" secondItem="lP6-oY-z5X" secondAttribute="bottom" constant="46.5" id="nLy-qk-4fT"/>
                             <constraint firstItem="stc-Tr-dNb" firstAttribute="trailing" secondItem="zPe-KY-3Y0" secondAttribute="trailing" constant="75" id="qjX-kj-CiX"/>
                             <constraint firstItem="zPe-KY-3Y0" firstAttribute="leading" secondItem="stc-Tr-dNb" secondAttribute="leading" constant="75" id="tEK-4g-mGx"/>
                             <constraint firstItem="zPe-KY-3Y0" firstAttribute="top" secondItem="LZY-lZ-Mpy" secondAttribute="bottom" constant="56" id="xjP-zX-GDd"/>
@@ -173,11 +174,20 @@
                         <outlet property="verificaEmailLabel" destination="dx6-uQ-6ci" id="YBT-4D-cGk"/>
                         <outlet property="verificaSenhaLabel" destination="u60-gc-BQu" id="Heh-wv-s5g"/>
                         <outlet property="viewTelaCadastro" destination="txA-ky-F3P" id="2Qu-ws-1pS"/>
+                        <segue destination="82P-3v-Qsc" kind="presentation" identifier="TelaInicialViewController" id="vc8-7N-fFo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qU-Gs-ep6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="889.85507246376824" y="89.732142857142847"/>
+            <point key="canvasLocation" x="888.79999999999995" y="89.505247376311857"/>
+        </scene>
+        <!--TelaInicial-->
+        <scene sceneID="nok-4G-TdD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TelaInicial" id="82P-3v-Qsc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cc1-0J-EUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1530" y="32"/>
         </scene>
     </scenes>
     <resources>

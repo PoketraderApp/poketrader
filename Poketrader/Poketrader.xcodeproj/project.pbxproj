@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123AA59255D737B00F5AA2E /* CadastroController.swift */; };
 		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
 		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
 		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4123AA59255D737B00F5AA2E /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 		41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
@@ -43,13 +45,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		413EC59C2550FF3200C534D7 /* Views */ = {
+		4123AA56255D733D00F5AA2E /* TelaInicial */ = {
+			isa = PBXGroup;
+			children = (
+				41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */,
+			);
+			path = TelaInicial;
+			sourceTree = "<group>";
+		};
+		4123AA57255D734400F5AA2E /* CadastroUsuario */ = {
 			isa = PBXGroup;
 			children = (
 				413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */,
-				41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */,
+				4123AA59255D737B00F5AA2E /* CadastroController.swift */,
 			);
-			path = Views;
+			path = CadastroUsuario;
 			sourceTree = "<group>";
 		};
 		AD53A09B254F163F00C81C07 = {
@@ -71,7 +81,8 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
-				413EC59C2550FF3200C534D7 /* Views */,
+				4123AA57255D734400F5AA2E /* CadastroUsuario */,
+				4123AA56255D733D00F5AA2E /* TelaInicial */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
 				AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */,
 				AD53A0AD254F163F00C81C07 /* Main.storyboard */,
@@ -160,6 +171,7 @@
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 				41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */,
 				413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */,
+				4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +319,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83P88J475T;
 				INFOPLIST_FILE = Poketrader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,6 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83P88J475T;
 				INFOPLIST_FILE = Poketrader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

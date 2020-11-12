@@ -8,8 +8,10 @@
 import UIKit
 
 class CadastroViewController: UIViewController {
+    
+    var controller: CadastroController = CadastroController()
 
-    // MARK: TextFields e Labels da tela
+    // MARK: TextFields e Labels
     
     @IBOutlet var viewTelaCadastro: UIView!
     
@@ -24,32 +26,13 @@ class CadastroViewController: UIViewController {
     @IBOutlet weak var telefoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var senhaLabel: UILabel!
-    
     @IBOutlet weak var verificaEmailLabel: UILabel!
-    
     @IBOutlet weak var verificaSenhaLabel: UILabel!
     
-    
     @IBOutlet weak var telefoneTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var senhaTextField: UITextField!
-    
     @IBOutlet weak var cadastrarButton: UIButton!
-    
-    
-//    @IBOutlet weak var telefoneTextField: UITextField!
-//
-//    @IBOutlet weak var emailTextField: UITextField!
-//
-//    @IBOutlet weak var verificaEmailLabel: UILabel!
-//
-//    @IBOutlet weak var senhaTextField: UITextField!
-//
-//    @IBOutlet weak var verificaSenhaLabel: UILabel!
-//
-//    @IBOutlet weak var cadastrarButton: UIButton!
     
     // MARK: viewDidLoad
     
@@ -58,61 +41,94 @@ class CadastroViewController: UIViewController {
 
         self.nomeTextField.delegate = self
         self.telefoneTextField.delegate = self
-        self.telefoneTextField.keyboardType = .numberPad
         self.emailTextField.delegate = self
         self.senhaTextField.delegate = self
+        
+        self.telefoneTextField.keyboardType = .numberPad
         
         self.verificaEmailLabel.text = ""
         self.verificaSenhaLabel.text = ""
         
         self.inserirImagemButton.backgroundColor = UIColor(rgb: 0x3B4CCA)
-        
         self.inserirImagemButton.layer.cornerRadius = 10
         
+        self.imagePerfil.image = UIImage(named: "profilePic")
+        self.imagePerfil.layer.cornerRadius = 5
+        
         self.cadastrarButton.backgroundColor = UIColor(rgb: 0xB3A125)
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        self.view.addGestureRecognizer(tap)
     
     }
+    
+    private func checkFields() -> Bool {
+        
+        let obrigatorio:String = "Campo obrigatório"
+        var isValid:Bool = true
+        
+        if  self.nomeTextField.text?.isEmpty ?? true {
+            isValid = false
+            
+        }
+        
+        if self.emailTextField.text?.isEmpty ?? true {
+            
+            self.verificaEmailLabel.text = obrigatorio
+            self.verificaEmailLabel.textColor = .red
+            
+            isValid = false
+            
+        }
+        
+        if !(self.verificaEmailLabel.text?.isEqual("") ?? true) && !(self.verificaEmailLabel.text?.isEmpty ?? true) {
+            
+            isValid = false
+        }
+        
+        if self.senhaTextField.text?.isEmpty ?? true {
+            
+            self.verificaSenhaLabel.text = obrigatorio
+            self.verificaSenhaLabel.textColor = .red
+            
+            isValid = false
+        }
+        
+        if !(self.verificaSenhaLabel.text?.isEqual("") ?? true) && !(self.verificaSenhaLabel.text?.isEmpty ?? true) {
+            
+            isValid = false
+        }
+        
+        return isValid
+    }
+    
     
     // MARK: actions
     
     @IBAction func tappedInserirImagem(_ sender: UIButton) {
+        dismissKeyboard()
+        
     }
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
+        dismissKeyboard()
+        
+        let valida:Bool = checkFields()
+        
+        if valida {
+            
+            self.performSegue(withIdentifier: "TelaInicialViewController", sender: nil)
+            
+        }
+        
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {
+        dismissKeyboard()
     }
     
-    
-    //MARK: Outras Funções
-    
-    private func isValidEmail(_ email: String) -> Bool{
-        
-        let emailRegEx = "\\b([a-z 0-9]+)((\\.|_)?([a-z 0-9]+))+@([a-z]+)(\\.([a-z]{2,}))+\\b"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES[c] %@", emailRegEx)
-        
-        return emailTest.evaluate(with: email)
-    }
-    
-    private func formattedNumber(number: String) -> String {
-        
-        let cleanPhoneNumber = number.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-        let mask = "(##) ##### ####"
-        var result = ""
-        var index = cleanPhoneNumber.startIndex
-        for ch in mask where index < cleanPhoneNumber.endIndex {
-            
-            if ch == "#" {
-                result.append(cleanPhoneNumber[index])
-                index = cleanPhoneNumber.index(after: index)
-                
-            } else {
-                result.append(ch)
-            }
-        }
-        return result
+    private func dismissKeyboard(){
+        self.view.endEditing(true)
     }
     
 
@@ -128,9 +144,9 @@ extension CadastroViewController: UITextFieldDelegate {
             
             let email: String = textField.text ?? "".lowercased().trimmingCharacters(in: .whitespaces)
             
-            let newEmail: String = (email as NSString).replacingCharacters(in: range, with: string)
+            let newEmail: String = (email as NSString).replacingCharacters(in: range, with: string).lowercased().trimmingCharacters(in: .whitespaces)
             
-            if !isValidEmail(newEmail) {
+            if !self.controller.isValidEmail(newEmail) {
                 
                 self.verificaEmailLabel.text = "Email inválido"
                 
@@ -146,14 +162,26 @@ extension CadastroViewController: UITextFieldDelegate {
             guard let text = textField.text else { return false }
             
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
-            textField.text = formattedNumber(number: newString)
+            textField.text = self.controller.formattedNumber(number: newString)
+            
             return false
         }
         
+        else if textField.isEqual(self.senhaTextField){
+            
+            let senha: String = self.senhaTextField.text ?? ""
+            
+            let newSenha: String = (senha as NSString).replacingCharacters(in: range, with: string)
+            
+            if (senha.isEqual("") || senha.isEmpty) && (!newSenha.isEqual("") || !newSenha.isEmpty){
+                
+                self.verificaSenhaLabel.text = ""
+            }
+            
+        }
+    
         return true
     }
-    
-    
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -168,8 +196,11 @@ extension CadastroViewController: UITextFieldDelegate {
         case self.emailTextField:
             self.senhaTextField.becomeFirstResponder()
             
+        case self.senhaTextField:
+            self.senhaTextField.resignFirstResponder()
+            
         default:
-            textField.resignFirstResponder()
+            break
         }
         
         return true
