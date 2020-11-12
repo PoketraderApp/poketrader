@@ -73,6 +73,9 @@
                                                                 <state key="normal" title="Editar">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="pressedEditarButton:" destination="kb5-7M-dSZ" eventType="touchUpInside" id="R16-jF-lso"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jR6-od-pSD">
                                                                 <rect key="frame" x="201.5" y="0.0" width="196.5" height="36"/>
@@ -81,6 +84,9 @@
                                                                 <state key="normal" title="Excluir">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="pressedExcluirButton:" destination="kb5-7M-dSZ" eventType="touchUpInside" id="mhz-Oq-lZI"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -344,6 +350,21 @@
                             <constraint firstItem="uSK-nn-kqB" firstAttribute="bottom" secondItem="x43-aK-MtO" secondAttribute="bottom" id="s8o-Y6-wxx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ataqueSPValueLabel" destination="g5w-Oj-2Ua" id="70k-s1-NTd"/>
+                        <outlet property="ataqueValueLabel" destination="zPd-1K-6xv" id="ob5-UP-OPH"/>
+                        <outlet property="defesaSPValueLabel" destination="2QA-X3-HkR" id="xGt-nl-l3K"/>
+                        <outlet property="defesaValueLabel" destination="pHI-Tq-Xy1" id="TWX-AY-sM1"/>
+                        <outlet property="emailValueLabel" destination="PAq-vy-Qp5" id="Lgc-sJ-Cc3"/>
+                        <outlet property="hpValueLabel" destination="qqM-Jx-ger" id="jW2-AJ-qfJ"/>
+                        <outlet property="jogoValueLabel" destination="fmJ-8a-ATH" id="gPU-wa-Jvj"/>
+                        <outlet property="nomePokemonLabel" destination="4m3-3r-dUg" id="Wjh-mT-ivJ"/>
+                        <outlet property="observacoesValueLabel" destination="QiZ-vB-YIN" id="c3c-mP-H0E"/>
+                        <outlet property="pokemonImage" destination="tiu-Fp-VLf" id="dMD-qq-GbX"/>
+                        <outlet property="telefoneValueLabel" destination="V1n-JA-WdE" id="Mim-Rd-d2w"/>
+                        <outlet property="usuarioValueLabel" destination="Lx9-GC-Pdb" id="xKB-TY-zKF"/>
+                        <outlet property="velocidadeValueLabel" destination="hcc-6X-qko" id="V3l-qP-kUH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e03-Ll-iKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

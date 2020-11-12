@@ -14,6 +14,9 @@ class AnuncioViewController: UIViewController {
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    // Campo do Pokémon
+    @IBOutlet weak var nomePokemonLabel: UILabel!
+    
     // Campo do usuário
     @IBOutlet weak var usuarioLabel: UILabel!
     @IBOutlet weak var usuarioValueLabel: UILabel!
