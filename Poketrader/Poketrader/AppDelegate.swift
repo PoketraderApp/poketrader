@@ -7,7 +7,8 @@
 
 import UIKit
 
-@main
+//@main
+@UIApplicationMain // -- XCode 11.7
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

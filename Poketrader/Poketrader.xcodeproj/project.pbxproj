@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67DE2255CD6E100287636 /* OfertaCell.swift */; };
+		63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B67DE3255CD6E100287636 /* OfertaCell.xib */; };
+		63B67DE7255CD71E00287636 /* OfertasUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67DE6255CD71E00287636 /* OfertasUsuario.swift */; };
 		63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */; };
+		63EA394D255CCDBC004AB57F /* poke.json in Resources */ = {isa = PBXBuildFile; fileRef = 63EA394C255CCDBC004AB57F /* poke.json */; };
+		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
-		AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0AB254F163F00C81C07 /* ViewController.swift */; };
 		AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0AD254F163F00C81C07 /* Main.storyboard */; };
 		AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0B0254F164000C81C07 /* Assets.xcassets */; };
 		AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63B67DE2255CD6E100287636 /* OfertaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfertaCell.swift; path = Poketrader/Views/OfertaCell.swift; sourceTree = SOURCE_ROOT; };
+		63B67DE3255CD6E100287636 /* OfertaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OfertaCell.xib; path = Poketrader/Views/OfertaCell.xib; sourceTree = SOURCE_ROOT; };
+		63B67DE6255CD71E00287636 /* OfertasUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertasUsuario.swift; path = Poketrader/Views/OfertasUsuario.swift; sourceTree = SOURCE_ROOT; };
 		63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfertasUsuario.storyboard; sourceTree = "<group>"; };
+		63EA394C255CCDBC004AB57F /* poke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = poke.json; path = ../../../../../../Downloads/poke.json; sourceTree = "<group>"; };
+		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD53A0AB254F163F00C81C07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AD53A0AE254F163F00C81C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD53A0B0254F164000C81C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD53A0B3254F164000C81C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63EA394B255CCDAA004AB57F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63EA394C255CCDBC004AB57F /* poke.json */,
+				63EA394E255CCE73004AB57F /* Ofertas.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63EA3950255CCF7A004AB57F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63B67DE6255CD71E00287636 /* OfertasUsuario.swift */,
+				63B67DE2255CD6E100287636 /* OfertaCell.swift */,
+				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AD53A09B254F163F00C81C07 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +85,10 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
+				63EA394B255CCDAA004AB57F /* Model */,
+				63EA3950255CCF7A004AB57F /* Views */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
 				AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */,
-				AD53A0AB254F163F00C81C07 /* ViewController.swift */,
 				AD53A0AD254F163F00C81C07 /* Main.storyboard */,
 				AD53A0B0254F164000C81C07 /* Assets.xcassets */,
 				AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */,
@@ -127,6 +155,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */,
+				63EA394D255CCDBC004AB57F /* poke.json in Resources */,
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
 				63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
@@ -141,7 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */,
+				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
+				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
+				63B67DE7255CD71E00287636 /* OfertasUsuario.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 			);

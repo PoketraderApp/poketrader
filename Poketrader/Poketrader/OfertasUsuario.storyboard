@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="opG-hm-gRs">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,53 +7,73 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Ofertas Usuario-->
         <scene sceneID="GJv-jN-QmR">
             <objects>
-                <viewController id="opG-hm-gRs" sceneMemberID="viewController">
+                <viewController id="opG-hm-gRs" customClass="OfertasUsuario" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hnw-0s-RIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuZ-4c-eAf">
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuZ-4c-eAf">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="OwV-dW-DaN"/>
+                                    <constraint firstAttribute="height" constant="49" id="kv0-eA-vML"/>
+                                </constraints>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="xDZ-Y3-PMU"/>
-                                    <tabBarItem title="Item" id="TU3-5T-WD5"/>
-                                    <tabBarItem title="Item" id="QxP-AF-Ypl"/>
-                                    <tabBarItem systemItem="more" id="Bf6-nz-hMi"/>
+                                    <tabBarItem title="Início" id="xDZ-Y3-PMU"/>
+                                    <tabBarItem title="Cadastre" id="TU3-5T-WD5"/>
+                                    <tabBarItem title="Minhas Ofertas" id="QxP-AF-Ypl"/>
+                                    <tabBarItem title="Sua Conta" id="Bf6-nz-hMi"/>
                                 </items>
                             </tabBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W4Q-4h-WAl">
-                                <rect key="frame" x="0.0" y="106" width="414" height="707"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W4Q-4h-WAl">
+                                <rect key="frame" x="0.0" y="86.5" width="414" height="726.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEu-Ag-QDv">
-                                <rect key="frame" x="362" y="56" width="32" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokétrader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-9I-F4d">
+                                <rect key="frame" x="159" y="54" width="96" height="22.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEu-Ag-QDv">
+                                <rect key="frame" x="362" y="47" width="32" height="35"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="+"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokétrader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-9I-F4d">
-                                <rect key="frame" x="159" y="62" width="96" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QuZ-4c-eAf" firstAttribute="top" secondItem="W4Q-4h-WAl" secondAttribute="bottom" id="5Oi-r1-QMN"/>
+                            <constraint firstItem="bgk-9I-F4d" firstAttribute="leading" secondItem="FvP-vz-Zxm" secondAttribute="leading" constant="159" id="GyO-fc-eAf"/>
+                            <constraint firstItem="QuZ-4c-eAf" firstAttribute="top" secondItem="W4Q-4h-WAl" secondAttribute="bottom" id="SeO-HS-sEp"/>
+                            <constraint firstItem="W4Q-4h-WAl" firstAttribute="leading" secondItem="FvP-vz-Zxm" secondAttribute="leading" id="WSC-cT-QAT"/>
+                            <constraint firstItem="QuZ-4c-eAf" firstAttribute="bottom" secondItem="FvP-vz-Zxm" secondAttribute="bottom" id="Zlr-XF-oMM"/>
+                            <constraint firstItem="LEu-Ag-QDv" firstAttribute="top" secondItem="FvP-vz-Zxm" secondAttribute="top" constant="3" id="bvD-97-zLp"/>
+                            <constraint firstItem="LEu-Ag-QDv" firstAttribute="leading" secondItem="bgk-9I-F4d" secondAttribute="trailing" constant="107" id="e0f-2S-5fB"/>
+                            <constraint firstItem="W4Q-4h-WAl" firstAttribute="top" secondItem="LEu-Ag-QDv" secondAttribute="bottom" constant="4.5" id="inA-xA-xu1"/>
+                            <constraint firstItem="QuZ-4c-eAf" firstAttribute="leading" secondItem="FvP-vz-Zxm" secondAttribute="leading" id="lGy-83-EHu"/>
+                            <constraint firstItem="QuZ-4c-eAf" firstAttribute="trailing" secondItem="FvP-vz-Zxm" secondAttribute="trailing" id="m0s-aH-pDO"/>
+                            <constraint firstItem="bgk-9I-F4d" firstAttribute="top" secondItem="FvP-vz-Zxm" secondAttribute="top" constant="10" id="mZC-zh-eYd"/>
+                            <constraint firstItem="FvP-vz-Zxm" firstAttribute="trailing" secondItem="LEu-Ag-QDv" secondAttribute="trailing" constant="20" id="oYN-W0-mWg"/>
+                            <constraint firstItem="W4Q-4h-WAl" firstAttribute="trailing" secondItem="FvP-vz-Zxm" secondAttribute="trailing" id="r9F-Ip-QhK"/>
+                            <constraint firstItem="W4Q-4h-WAl" firstAttribute="top" secondItem="bgk-9I-F4d" secondAttribute="bottom" constant="10" id="rkF-Me-djd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FvP-vz-Zxm"/>
                     </view>
+                    <connections>
+                        <outlet property="botaoAdicionarOferta" destination="LEu-Ag-QDv" id="uFF-0g-js8"/>
+                        <outlet property="tableViewOfertas" destination="W4Q-4h-WAl" id="TEy-hI-FmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkL-zb-KL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-762.31884057971024" y="-484.15178571428567"/>
+            <point key="canvasLocation" x="-763.768115942029" y="-484.82142857142856"/>
         </scene>
     </scenes>
 </document>

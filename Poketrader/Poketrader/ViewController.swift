@@ -7,8 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OfertasUsuario: UIViewController {
 
+    @IBOutlet weak var botaoAdicionarOferta: UIButton!
+    @IBOutlet weak var tableViewOfertas: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
