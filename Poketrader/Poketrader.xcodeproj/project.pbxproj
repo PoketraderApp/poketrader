@@ -39,6 +39,8 @@
 		ADD28452255F320500F0DC1A /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD28450255F320500F0DC1A /* Perfil.storyboard */; };
 		ADD28456255F323700F0DC1A /* EdicaoPokemon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD28454255F323600F0DC1A /* EdicaoPokemon.storyboard */; };
 		ADD28457255F323700F0DC1A /* EdicaoPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD28455255F323600F0DC1A /* EdicaoPokemonVC.swift */; };
+		ADD2845B255F32D200F0DC1A /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD2845A255F32D200F0DC1A /* Feed.storyboard */; };
+		ADD2845E255F331A00F0DC1A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD2845D255F331A00F0DC1A /* FeedViewController.swift */; };
 		CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */; };
 		CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C8EA5255E1B6C005DE718 /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +59,7 @@
 		632C157F255DFEEB0068BD3E /* meus-pkmn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "meus-pkmn.json"; sourceTree = "<group>"; };
 		63B67DE2255CD6E100287636 /* OfertaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfertaCell.swift; path = Poketrader/Views/OfertaCell.swift; sourceTree = SOURCE_ROOT; };
 		63B67DE3255CD6E100287636 /* OfertaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OfertaCell.xib; path = Poketrader/Views/OfertaCell.xib; sourceTree = SOURCE_ROOT; };
-		63B67DE6255CD71E00287636 /* OfertasUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertasUsuario.swift; path = Poketrader/Views/OfertasUsuario.swift; sourceTree = SOURCE_ROOT; };
+		63B67DE6255CD71E00287636 /* OfertasUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertasUsuario.swift; path = Poketrader/Anuncios/MinhasOfertas/OfertasUsuario.swift; sourceTree = SOURCE_ROOT; };
 		63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfertasUsuario.storyboard; sourceTree = "<group>"; };
 		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,8 @@
 		ADD28450255F320500F0DC1A /* Perfil.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
 		ADD28454255F323600F0DC1A /* EdicaoPokemon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EdicaoPokemon.storyboard; sourceTree = "<group>"; };
 		ADD28455255F323600F0DC1A /* EdicaoPokemonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdicaoPokemonVC.swift; sourceTree = "<group>"; };
+		ADD2845A255F32D200F0DC1A /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		ADD2845D255F331A00F0DC1A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPokemonStoryboard.storyboard; sourceTree = "<group>"; };
 		CE2C8EA5255E1B6C005DE718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,7 +137,6 @@
 		63EA3950255CCF7A004AB57F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				63B67DE6255CD71E00287636 /* OfertasUsuario.swift */,
 				63B67DE2255CD6E100287636 /* OfertaCell.swift */,
 				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
 			);
@@ -159,29 +162,19 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
-				5E020EF7255F1140008C1705 /* LoginViewController.swift */,
+				ADD28463255F41F900F0DC1A /* Unused storyboards */,
+				ADD28464255F421F00F0DC1A /* Anuncios */,
 				ADD2844E255F320500F0DC1A /* Perfil */,
-				AD897AD5255E466100AA8C0F /* DetalheAnuncios */,
-				AD897ACC255E464300AA8C0F /* DetalheMeuAnuncio */,
 				63EA394B255CCDAA004AB57F /* Model */,
 				63EA3950255CCF7A004AB57F /* Views */,
-				4123AA57255D734400F5AA2E /* CadastroUsuario */,
-				4123AA56255D733D00F5AA2E /* TelaInicial */,
+				ADD2846A255F42DB00F0DC1A /* Parte Inicial */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
 				AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */,
-				AD53A0AB254F163F00C81C07 /* AddPokemonViewController.swift */,
-				CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */,
 				CE2C8EA5255E1B6C005DE718 /* ViewController.swift */,
 				AD53A0AD254F163F00C81C07 /* Main.storyboard */,
 				AD53A0B0254F164000C81C07 /* Assets.xcassets */,
 				AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */,
 				AD53A0B5254F164000C81C07 /* Info.plist */,
-				63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */,
-				ADD28454255F323600F0DC1A /* EdicaoPokemon.storyboard */,
-				ADD28455255F323600F0DC1A /* EdicaoPokemonVC.swift */,
-				5E020EF4255F10CD008C1705 /* Login.storyboard */,
-				41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */,
-				41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */,
 			);
 			path = Poketrader;
 			sourceTree = "<group>";
@@ -189,7 +182,6 @@
 		AD897ACC255E464300AA8C0F /* DetalheMeuAnuncio */ = {
 			isa = PBXGroup;
 			children = (
-				AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */,
 				AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */,
 				AD897ACF255E465B00AA8C0F /* MeuAnuncioViewController.swift */,
 			);
@@ -210,9 +202,87 @@
 			isa = PBXGroup;
 			children = (
 				ADD2844F255F320500F0DC1A /* PerfilNewController.swift */,
-				ADD28450255F320500F0DC1A /* Perfil.storyboard */,
 			);
 			path = Perfil;
+			sourceTree = "<group>";
+		};
+		ADD28463255F41F900F0DC1A /* Unused storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */,
+				ADD28450255F320500F0DC1A /* Perfil.storyboard */,
+				CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */,
+				63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */,
+				ADD28454255F323600F0DC1A /* EdicaoPokemon.storyboard */,
+				5E020EF4255F10CD008C1705 /* Login.storyboard */,
+				41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */,
+				41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */,
+				ADD2845A255F32D200F0DC1A /* Feed.storyboard */,
+			);
+			path = "Unused storyboards";
+			sourceTree = "<group>";
+		};
+		ADD28464255F421F00F0DC1A /* Anuncios */ = {
+			isa = PBXGroup;
+			children = (
+				ADD2846C255F431500F0DC1A /* Editar */,
+				ADD2846B255F430A00F0DC1A /* Cadastrar */,
+				ADD28469255F427700F0DC1A /* MinhasOfertas */,
+				ADD28468255F426F00F0DC1A /* Feed */,
+			);
+			path = Anuncios;
+			sourceTree = "<group>";
+		};
+		ADD28467255F424500F0DC1A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5E020EF7255F1140008C1705 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ADD28468255F426F00F0DC1A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				AD897AD5255E466100AA8C0F /* DetalheAnuncios */,
+				ADD2845D255F331A00F0DC1A /* FeedViewController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		ADD28469255F427700F0DC1A /* MinhasOfertas */ = {
+			isa = PBXGroup;
+			children = (
+				63B67DE6255CD71E00287636 /* OfertasUsuario.swift */,
+				AD897ACC255E464300AA8C0F /* DetalheMeuAnuncio */,
+			);
+			path = MinhasOfertas;
+			sourceTree = "<group>";
+		};
+		ADD2846A255F42DB00F0DC1A /* Parte Inicial */ = {
+			isa = PBXGroup;
+			children = (
+				ADD28467255F424500F0DC1A /* Login */,
+				4123AA57255D734400F5AA2E /* CadastroUsuario */,
+				4123AA56255D733D00F5AA2E /* TelaInicial */,
+			);
+			path = "Parte Inicial";
+			sourceTree = "<group>";
+		};
+		ADD2846B255F430A00F0DC1A /* Cadastrar */ = {
+			isa = PBXGroup;
+			children = (
+				AD53A0AB254F163F00C81C07 /* AddPokemonViewController.swift */,
+			);
+			path = Cadastrar;
+			sourceTree = "<group>";
+		};
+		ADD2846C255F431500F0DC1A /* Editar */ = {
+			isa = PBXGroup;
+			children = (
+				ADD28455255F323600F0DC1A /* EdicaoPokemonVC.swift */,
+			);
+			path = Editar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +344,7 @@
 			files = (
 				41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */,
 				632C157E255DFE360068BD3E /* 4.png in Resources */,
+				ADD2845B255F32D200F0DC1A /* Feed.storyboard in Resources */,
 				632C1580255DFEEB0068BD3E /* meus-pkmn.json in Resources */,
 				ADD28456255F323700F0DC1A /* EdicaoPokemon.storyboard in Resources */,
 				5E020EF5255F10CD008C1705 /* Login.storyboard in Resources */,
@@ -309,6 +380,7 @@
 				AD53A0AC254F163F00C81C07 /* AddPokemonViewController.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */,
+				ADD2845E255F331A00F0DC1A /* FeedViewController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
 				ADD28451255F320500F0DC1A /* PerfilNewController.swift in Sources */,
 				AD897AD2255E465B00AA8C0F /* MeuAnuncioViewController.swift in Sources */,
