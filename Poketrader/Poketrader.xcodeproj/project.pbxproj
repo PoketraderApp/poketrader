@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		632C157C255DFE360068BD3E /* 148.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C1579255DFE360068BD3E /* 148.png */; };
 		632C157D255DFE360068BD3E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157A255DFE360068BD3E /* 7.png */; };
 		632C157E255DFE360068BD3E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157B255DFE360068BD3E /* 4.png */; };
@@ -18,10 +17,6 @@
 		63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */; };
 		63EA394D255CCDBC004AB57F /* poke.json in Resources */ = {isa = PBXBuildFile; fileRef = 63EA394C255CCDBC004AB57F /* poke.json */; };
 		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
-=======
-		84DCAAA8255E213A007DEDBF /* PerfilNewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCAAA7255E213A007DEDBF /* PerfilNewController.swift */; };
-		84DCAAAB255E219B007DEDBF /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DCAAAA255E219B007DEDBF /* Perfil.storyboard */; };
->>>>>>> 2e5b465... tela de perfil pronta
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AC254F163F00C81C07 /* AddPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0AB254F163F00C81C07 /* AddPokemonViewController.swift */; };
@@ -33,7 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
 		632C1579255DFE360068BD3E /* 148.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 148.png; sourceTree = "<group>"; };
 		632C157A255DFE360068BD3E /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		632C157B255DFE360068BD3E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
@@ -44,10 +38,6 @@
 		63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfertasUsuario.storyboard; sourceTree = "<group>"; };
 		63EA394C255CCDBC004AB57F /* poke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = poke.json; path = ../../../../../../Downloads/poke.json; sourceTree = "<group>"; };
 		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
-=======
-		84DCAAA7255E213A007DEDBF /* PerfilNewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilNewController.swift; sourceTree = "<group>"; };
-		84DCAAAA255E219B007DEDBF /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
->>>>>>> 2e5b465... tela de perfil pronta
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +61,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-<<<<<<< HEAD
 		632C1578255DFE1E0068BD3E /* img */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,15 +90,6 @@
 				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
 			);
 			path = Views;
-=======
-		84DCAAA6255E2105007DEDBF /* Perfil */ = {
-			isa = PBXGroup;
-			children = (
-				84DCAAA7255E213A007DEDBF /* PerfilNewController.swift */,
-				84DCAAAA255E219B007DEDBF /* Perfil.storyboard */,
-			);
-			path = Perfil;
->>>>>>> 2e5b465... tela de perfil pronta
 			sourceTree = "<group>";
 		};
 		AD53A09B254F163F00C81C07 = {
@@ -131,12 +111,8 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				63EA394B255CCDAA004AB57F /* Model */,
 				63EA3950255CCF7A004AB57F /* Views */,
-=======
-				84DCAAA6255E2105007DEDBF /* Perfil */,
->>>>>>> 2e5b465... tela de perfil pronta
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
 				AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */,
 				AD53A0AB254F163F00C81C07 /* AddPokemonViewController.swift */,
@@ -217,7 +193,6 @@
 				63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */,
 				CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
-				84DCAAAB255E219B007DEDBF /* Perfil.storyboard in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
 				632C157D255DFE360068BD3E /* 7.png in Resources */,
 			);
@@ -230,15 +205,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
 				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
 				63B67DE7255CD71E00287636 /* OfertasUsuario.swift in Sources */,
 				AD53A0AC254F163F00C81C07 /* AddPokemonViewController.swift in Sources */,
-=======
-				84DCAAA8255E213A007DEDBF /* PerfilNewController.swift in Sources */,
-				AD53A0AC254F163F00C81C07 /* ViewController.swift in Sources */,
->>>>>>> 2e5b465... tela de perfil pronta
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
