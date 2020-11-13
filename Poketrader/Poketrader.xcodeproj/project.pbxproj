@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		632C157C255DFE360068BD3E /* 148.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C1579255DFE360068BD3E /* 148.png */; };
+		632C157D255DFE360068BD3E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157A255DFE360068BD3E /* 7.png */; };
+		632C157E255DFE360068BD3E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157B255DFE360068BD3E /* 4.png */; };
+		632C1580255DFEEB0068BD3E /* meus-pkmn.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C157F255DFEEB0068BD3E /* meus-pkmn.json */; };
 		63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67DE2255CD6E100287636 /* OfertaCell.swift */; };
 		63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B67DE3255CD6E100287636 /* OfertaCell.xib */; };
 		63B67DE7255CD71E00287636 /* OfertasUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67DE6255CD71E00287636 /* OfertasUsuario.swift */; };
@@ -21,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		632C1579255DFE360068BD3E /* 148.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 148.png; sourceTree = "<group>"; };
+		632C157A255DFE360068BD3E /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		632C157B255DFE360068BD3E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		632C157F255DFEEB0068BD3E /* meus-pkmn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "meus-pkmn.json"; sourceTree = "<group>"; };
 		63B67DE2255CD6E100287636 /* OfertaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfertaCell.swift; path = Poketrader/Views/OfertaCell.swift; sourceTree = SOURCE_ROOT; };
 		63B67DE3255CD6E100287636 /* OfertaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OfertaCell.xib; path = Poketrader/Views/OfertaCell.xib; sourceTree = SOURCE_ROOT; };
 		63B67DE6255CD71E00287636 /* OfertasUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertasUsuario.swift; path = Poketrader/Views/OfertasUsuario.swift; sourceTree = SOURCE_ROOT; };
@@ -47,10 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		632C1578255DFE1E0068BD3E /* img */ = {
+			isa = PBXGroup;
+			children = (
+				632C157B255DFE360068BD3E /* 4.png */,
+				632C157A255DFE360068BD3E /* 7.png */,
+				632C1579255DFE360068BD3E /* 148.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		63EA394B255CCDAA004AB57F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				632C1578255DFE1E0068BD3E /* img */,
 				63EA394C255CCDBC004AB57F /* poke.json */,
+				632C157F255DFEEB0068BD3E /* meus-pkmn.json */,
 				63EA394E255CCE73004AB57F /* Ofertas.swift */,
 			);
 			path = Model;
@@ -155,12 +175,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632C157E255DFE360068BD3E /* 4.png in Resources */,
+				632C1580255DFEEB0068BD3E /* meus-pkmn.json in Resources */,
+				632C157C255DFE360068BD3E /* 148.png in Resources */,
 				63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */,
 				63EA394D255CCDBC004AB57F /* poke.json in Resources */,
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
 				63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
+				632C157D255DFE360068BD3E /* 7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

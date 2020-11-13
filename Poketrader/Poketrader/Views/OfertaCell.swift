@@ -11,7 +11,6 @@ class OfertaCell: UITableViewCell {
 
     @IBOutlet weak var imagemPkmn: UIImageView!
     @IBOutlet weak var nomePkmn: UILabel!
-    
     @IBOutlet weak var tituloJogo: UILabel!
     @IBOutlet weak var nomeJogador: UILabel!
     
