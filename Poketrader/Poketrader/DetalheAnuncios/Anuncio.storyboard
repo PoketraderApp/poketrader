@@ -332,7 +332,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ataqueSPLabel" destination="jHy-3X-4tu" id="cFf-iH-7YR"/>
+                        <outlet property="ataqueSPValueLabel" destination="jHy-3X-4tu" id="ObU-bV-JMy"/>
                         <outlet property="ataqueValueLabel" destination="V5K-g3-IS5" id="drj-wV-CUe"/>
                         <outlet property="atributosLabel" destination="6E2-GO-GEW" id="A6T-UJ-aki"/>
                         <outlet property="atributosStackView" destination="x84-5Y-WAz" id="rkF-Ok-l9V"/>
