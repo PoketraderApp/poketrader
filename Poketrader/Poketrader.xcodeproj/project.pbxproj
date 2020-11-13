@@ -23,6 +23,12 @@
 		AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0AD254F163F00C81C07 /* Main.storyboard */; };
 		AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0B0254F164000C81C07 /* Assets.xcassets */; };
 		AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */; };
+		AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */; };
+		AD897AD2255E465B00AA8C0F /* MeuAnuncioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897ACF255E465B00AA8C0F /* MeuAnuncioViewController.swift */; };
+		AD897AD3255E465B00AA8C0F /* MeuAnuncio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */; };
+		AD897AD9255E466C00AA8C0F /* AnuncioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897AD6255E466C00AA8C0F /* AnuncioController.swift */; };
+		AD897ADA255E466C00AA8C0F /* AnuncioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897AD7255E466C00AA8C0F /* AnuncioViewController.swift */; };
+		AD897ADB255E466C00AA8C0F /* Anuncio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD897AD8255E466C00AA8C0F /* Anuncio.storyboard */; };
 		CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */; };
 		CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C8EA5255E1B6C005DE718 /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +52,12 @@
 		AD53A0B0254F164000C81C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD53A0B3254F164000C81C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD53A0B5254F164000C81C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuAnuncioController.swift; sourceTree = "<group>"; };
+		AD897ACF255E465B00AA8C0F /* MeuAnuncioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuAnuncioViewController.swift; sourceTree = "<group>"; };
+		AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeuAnuncio.storyboard; sourceTree = "<group>"; };
+		AD897AD6255E466C00AA8C0F /* AnuncioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnuncioController.swift; sourceTree = "<group>"; };
+		AD897AD7255E466C00AA8C0F /* AnuncioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnuncioViewController.swift; sourceTree = "<group>"; };
+		AD897AD8255E466C00AA8C0F /* Anuncio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Anuncio.storyboard; sourceTree = "<group>"; };
 		CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPokemonStoryboard.storyboard; sourceTree = "<group>"; };
 		CE2C8EA5255E1B6C005DE718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +123,8 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
+				AD897AD5255E466100AA8C0F /* DetalheAnuncios */,
+				AD897ACC255E464300AA8C0F /* DetalheMeuAnuncio */,
 				63EA394B255CCDAA004AB57F /* Model */,
 				63EA3950255CCF7A004AB57F /* Views */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
@@ -125,6 +139,26 @@
 				63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */,
 			);
 			path = Poketrader;
+			sourceTree = "<group>";
+		};
+		AD897ACC255E464300AA8C0F /* DetalheMeuAnuncio */ = {
+			isa = PBXGroup;
+			children = (
+				AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */,
+				AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */,
+				AD897ACF255E465B00AA8C0F /* MeuAnuncioViewController.swift */,
+			);
+			path = DetalheMeuAnuncio;
+			sourceTree = "<group>";
+		};
+		AD897AD5255E466100AA8C0F /* DetalheAnuncios */ = {
+			isa = PBXGroup;
+			children = (
+				AD897AD8255E466C00AA8C0F /* Anuncio.storyboard */,
+				AD897AD6255E466C00AA8C0F /* AnuncioController.swift */,
+				AD897AD7255E466C00AA8C0F /* AnuncioViewController.swift */,
+			);
+			path = DetalheAnuncios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,10 +222,12 @@
 				632C1580255DFEEB0068BD3E /* meus-pkmn.json in Resources */,
 				632C157C255DFE360068BD3E /* 148.png in Resources */,
 				63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */,
+				AD897AD3255E465B00AA8C0F /* MeuAnuncio.storyboard in Resources */,
 				63EA394D255CCDBC004AB57F /* poke.json in Resources */,
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
 				63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */,
 				CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */,
+				AD897ADB255E466C00AA8C0F /* Anuncio.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
 				632C157D255DFE360068BD3E /* 7.png in Resources */,
@@ -206,11 +242,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
+				AD897ADA255E466C00AA8C0F /* AnuncioViewController.swift in Sources */,
+				AD897AD9255E466C00AA8C0F /* AnuncioController.swift in Sources */,
 				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
 				63B67DE7255CD71E00287636 /* OfertasUsuario.swift in Sources */,
 				AD53A0AC254F163F00C81C07 /* AddPokemonViewController.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
+				AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
+				AD897AD2255E465B00AA8C0F /* MeuAnuncioViewController.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
