@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123AA59255D737B00F5AA2E /* CadastroController.swift */; };
+		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
+		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
+		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
+		41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */; };
 		5E020EF5255F10CD008C1705 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E020EF4255F10CD008C1705 /* Login.storyboard */; };
 		5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E020EF7255F1140008C1705 /* LoginViewController.swift */; };
 		632C157C255DFE360068BD3E /* 148.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C1579255DFE360068BD3E /* 148.png */; };
@@ -17,14 +22,7 @@
 		63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B67DE3255CD6E100287636 /* OfertaCell.xib */; };
 		63B67DE7255CD71E00287636 /* OfertasUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67DE6255CD71E00287636 /* OfertasUsuario.swift */; };
 		63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */; };
-		63EA394D255CCDBC004AB57F /* poke.json in Resources */ = {isa = PBXBuildFile; fileRef = 63EA394C255CCDBC004AB57F /* poke.json */; };
 		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
-		4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123AA59255D737B00F5AA2E /* CadastroController.swift */; };
-		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
-		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
-		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
-		41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */; };
-		41FADBB7255F085D0064B05F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FADBB6255F085D0064B05F /* ViewController.swift */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AC254F163F00C81C07 /* AddPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0AB254F163F00C81C07 /* AddPokemonViewController.swift */; };
@@ -39,6 +37,8 @@
 		AD897ADB255E466C00AA8C0F /* Anuncio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD897AD8255E466C00AA8C0F /* Anuncio.storyboard */; };
 		CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */; };
 		CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C8EA5255E1B6C005DE718 /* ViewController.swift */; };
+		FE212989255F2879007A93D8 /* EdicaoPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE212987255F2879007A93D8 /* EdicaoPokemonVC.swift */; };
+		FE21298A255F2879007A93D8 /* EdicaoPokemon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE212988255F2879007A93D8 /* EdicaoPokemon.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,6 @@
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 		41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
 		41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
-		41FADBB6255F085D0064B05F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E020EF4255F10CD008C1705 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5E020EF7255F1140008C1705 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		632C1579255DFE360068BD3E /* 148.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 148.png; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		63B67DE3255CD6E100287636 /* OfertaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OfertaCell.xib; path = Poketrader/Views/OfertaCell.xib; sourceTree = SOURCE_ROOT; };
 		63B67DE6255CD71E00287636 /* OfertasUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OfertasUsuario.swift; path = Poketrader/Views/OfertasUsuario.swift; sourceTree = SOURCE_ROOT; };
 		63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfertasUsuario.storyboard; sourceTree = "<group>"; };
-		63EA394C255CCDBC004AB57F /* poke.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = poke.json; path = ../../../../../../Downloads/poke.json; sourceTree = "<group>"; };
 		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +74,8 @@
 		AD897AD8255E466C00AA8C0F /* Anuncio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Anuncio.storyboard; sourceTree = "<group>"; };
 		CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPokemonStoryboard.storyboard; sourceTree = "<group>"; };
 		CE2C8EA5255E1B6C005DE718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE212987255F2879007A93D8 /* EdicaoPokemonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EdicaoPokemonVC.swift; path = "../../../santander/Projeto Integrador/Poke/Poke/EdicaoPokemonVC.swift"; sourceTree = "<group>"; };
+		FE212988255F2879007A93D8 /* EdicaoPokemon.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EdicaoPokemon.storyboard; path = "../../../santander/Projeto Integrador/Poke/Poke/EdicaoPokemon.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,37 +89,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		632C1578255DFE1E0068BD3E /* img */ = {
-			isa = PBXGroup;
-			children = (
-				632C157B255DFE360068BD3E /* 4.png */,
-				632C157A255DFE360068BD3E /* 7.png */,
-				632C1579255DFE360068BD3E /* 148.png */,
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
-		63EA394B255CCDAA004AB57F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				632C1578255DFE1E0068BD3E /* img */,
-				63EA394C255CCDBC004AB57F /* poke.json */,
-				632C157F255DFEEB0068BD3E /* meus-pkmn.json */,
-				63EA394E255CCE73004AB57F /* Ofertas.swift */,
-			);
-			sourceTree = "<group>";
-			path = Model;
-		};
-		63EA3950255CCF7A004AB57F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				63B67DE6255CD71E00287636 /* OfertasUsuario.swift */,
-				63B67DE2255CD6E100287636 /* OfertaCell.swift */,
-				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		4123AA56255D733D00F5AA2E /* TelaInicial */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +104,36 @@
 				4123AA59255D737B00F5AA2E /* CadastroController.swift */,
 			);
 			path = CadastroUsuario;
+			sourceTree = "<group>";
+		};
+		632C1578255DFE1E0068BD3E /* img */ = {
+			isa = PBXGroup;
+			children = (
+				632C157B255DFE360068BD3E /* 4.png */,
+				632C157A255DFE360068BD3E /* 7.png */,
+				632C1579255DFE360068BD3E /* 148.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		63EA394B255CCDAA004AB57F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				632C1578255DFE1E0068BD3E /* img */,
+				632C157F255DFEEB0068BD3E /* meus-pkmn.json */,
+				63EA394E255CCE73004AB57F /* Ofertas.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63EA3950255CCF7A004AB57F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63B67DE6255CD71E00287636 /* OfertasUsuario.swift */,
+				63B67DE2255CD6E100287636 /* OfertaCell.swift */,
+				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AD53A09B254F163F00C81C07 = {
@@ -176,6 +175,8 @@
 				5E020EF4255F10CD008C1705 /* Login.storyboard */,
 				41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */,
 				41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */,
+				FE212988255F2879007A93D8 /* EdicaoPokemon.storyboard */,
+				FE212987255F2879007A93D8 /* EdicaoPokemonVC.swift */,
 			);
 			path = Poketrader;
 			sourceTree = "<group>";
@@ -264,13 +265,13 @@
 				632C157C255DFE360068BD3E /* 148.png in Resources */,
 				63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */,
 				AD897AD3255E465B00AA8C0F /* MeuAnuncio.storyboard in Resources */,
-				63EA394D255CCDBC004AB57F /* poke.json in Resources */,
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
 				63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */,
 				CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */,
 				AD897ADB255E466C00AA8C0F /* Anuncio.storyboard in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
 				41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */,
+				FE21298A255F2879007A93D8 /* EdicaoPokemon.storyboard in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
 				632C157D255DFE360068BD3E /* 7.png in Resources */,
 			);
@@ -290,6 +291,7 @@
 				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
 				63B67DE7255CD71E00287636 /* OfertasUsuario.swift in Sources */,
 				AD53A0AC254F163F00C81C07 /* AddPokemonViewController.swift in Sources */,
+				FE212989255F2879007A93D8 /* EdicaoPokemonVC.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
@@ -447,7 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Poketrader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Poketrader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

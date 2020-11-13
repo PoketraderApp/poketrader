@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class OfertasUsuario: UIViewController {
+class ViewController: UIViewController {
 
     @IBOutlet weak var botaoAdicionarOferta: UIButton!
     @IBOutlet weak var tableViewOfertas: UITableView!
