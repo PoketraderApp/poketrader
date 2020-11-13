@@ -26,10 +26,11 @@ class TelaInicialViewController: UIViewController {
     }
     
     @IBAction func tappedCadastro(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "CadastroViewController", sender: nil)
+        self.performSegue(withIdentifier: "InicioVC.CadastroVC", sender: nil)
     }
 
     @IBAction func tappedEntrar(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "InicioVC.LoginVC", sender: nil)
     }
 
 

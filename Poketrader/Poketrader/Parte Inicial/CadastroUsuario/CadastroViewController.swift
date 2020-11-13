@@ -136,14 +136,16 @@ class CadastroViewController: UIViewController {
         
         if valida {
             
-            self.performSegue(withIdentifier: "TelaInicialViewController", sender: nil)
+            self.performSegue(withIdentifier: "CadastroVC.FeedVC", sender: nil)
+
             
         }
         
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {
-        dismissKeyboard()
+        self.dismissKeyboard()
+        self.performSegue(withIdentifier: "CadastroVC.LoginVC", sender: nil)
     }
     
     private func dismissKeyboard(){

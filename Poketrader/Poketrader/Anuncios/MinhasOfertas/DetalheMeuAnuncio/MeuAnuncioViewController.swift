@@ -44,6 +44,7 @@ class MeuAnuncioViewController: UIViewController {
     }
     
     @IBAction func pressedEditarButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "MeuAnuncioVC.EditarVC", sender: self)
     }
     
     @IBAction func pressedExcluirButton(_ sender: UIButton) {

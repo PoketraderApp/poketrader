@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ofertas Usuario-->
+        <scene sceneID="opo-OD-Wti">
+            <objects>
+                <viewController id="Jmv-64-FqS" customClass="OfertasUsuario" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfm-r1-7xy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8h7-jw-Ykn">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="V3e-oh-ElG"/>
+                                    <constraint firstAttribute="height" constant="49" id="rHG-PF-e6F"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Início" id="jJF-VJ-LKo"/>
+                                    <tabBarItem title="Cadastre" id="edk-Gv-nad"/>
+                                    <tabBarItem title="Minhas Ofertas" id="27T-7m-88y"/>
+                                    <tabBarItem title="Sua Conta" id="Bnb-3q-dPK"/>
+                                </items>
+                            </tabBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpF-Fi-Ice">
+                                <rect key="frame" x="0.0" y="87" width="414" height="726"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokétrader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeT-cE-nZT">
+                                <rect key="frame" x="123" y="54" width="168" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="V6N-7d-zZF"/>
+                                    <constraint firstAttribute="width" constant="168" id="ukg-XI-Gc3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OcF-Xg-xuE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IeT-cE-nZT" firstAttribute="leading" secondItem="OcF-Xg-xuE" secondAttribute="leading" constant="123" id="Ap8-2R-teJ"/>
+                            <constraint firstItem="wpF-Fi-Ice" firstAttribute="leading" secondItem="OcF-Xg-xuE" secondAttribute="leading" id="GEN-uT-rgr"/>
+                            <constraint firstItem="8h7-jw-Ykn" firstAttribute="bottom" secondItem="OcF-Xg-xuE" secondAttribute="bottom" id="GOw-31-ycF"/>
+                            <constraint firstItem="wpF-Fi-Ice" firstAttribute="top" secondItem="IeT-cE-nZT" secondAttribute="bottom" constant="10" id="L6z-7z-BSq"/>
+                            <constraint firstItem="8h7-jw-Ykn" firstAttribute="top" secondItem="wpF-Fi-Ice" secondAttribute="bottom" id="NCh-e5-PF5"/>
+                            <constraint firstItem="8h7-jw-Ykn" firstAttribute="trailing" secondItem="OcF-Xg-xuE" secondAttribute="trailing" id="W0l-RV-8TO"/>
+                            <constraint firstItem="8h7-jw-Ykn" firstAttribute="leading" secondItem="OcF-Xg-xuE" secondAttribute="leading" id="m8a-bx-91g"/>
+                            <constraint firstItem="wpF-Fi-Ice" firstAttribute="trailing" secondItem="OcF-Xg-xuE" secondAttribute="trailing" id="vII-Gm-CNN"/>
+                            <constraint firstItem="8h7-jw-Ykn" firstAttribute="top" secondItem="wpF-Fi-Ice" secondAttribute="bottom" id="w7Y-U3-JOx"/>
+                            <constraint firstItem="IeT-cE-nZT" firstAttribute="top" secondItem="OcF-Xg-xuE" secondAttribute="top" constant="10" id="xHC-Sy-gWt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVw-CY-O6J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-763.768115942029" y="-484.82142857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

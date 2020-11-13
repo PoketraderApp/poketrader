@@ -21,11 +21,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func cadastroButton(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "LoginVC.CadastroVC", sender: nil)
     }
     
     @IBAction func entrarButton(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
     }
     
     @IBAction func esqueceuSenhaButton(_ sender: UIButton) {

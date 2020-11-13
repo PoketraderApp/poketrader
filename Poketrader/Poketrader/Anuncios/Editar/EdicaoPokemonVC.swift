@@ -28,7 +28,7 @@ class EdicaoPokemonVC: UIViewController {
         self.descriptionTextView.delegate = self
 
         
-        self.avatarImageView.image = UIImage(named: "charmeleon")
+        // self.avatarImageView.image = UIImage(named: "charmeleon")
         self.tittleTextField.text = self.tittle
         self.descriptionTextView.text = self.describle
         

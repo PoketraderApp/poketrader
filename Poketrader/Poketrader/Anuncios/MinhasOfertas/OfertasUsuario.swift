@@ -24,12 +24,19 @@ class OfertasUsuario: UIViewController {
         self.tableViewOfertas.delegate = self
         self.tableViewOfertas.dataSource = self
     }
+    @IBAction func tappedAddButton(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "MinhasOfertasVC.CadastrarVC", sender: self)
+    }
 }
 
 //MARK: TableView delegate & data source
 extension OfertasUsuario: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.pkmn_name.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "MinhasOfertasVC.MeuAnuncioVC", sender: self)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
