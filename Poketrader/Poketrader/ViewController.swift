@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Poketrader
 //
-//  Created by Paulo Vieira on 01/11/20.
+//  Created by Augusto Rocha on 12/11/20.
 //
 
 import UIKit
@@ -14,9 +14,9 @@ class OfertasUsuario: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func tappedAddPokemon(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "segueAddPokemon", sender: nil)
+    }
 }
-
