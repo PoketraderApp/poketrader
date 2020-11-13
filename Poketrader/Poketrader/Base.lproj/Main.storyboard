@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="IgS-p2-RaX">
             <objects>
-                <viewController id="xAp-D9-bKf" sceneMemberID="viewController">
+                <viewController id="xAp-D9-bKf" customClass="ViewController" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I38-b8-cqq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
