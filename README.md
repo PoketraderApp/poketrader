@@ -3,12 +3,13 @@ Pokétrader é um app que permite aos seus usuários obterem contatos, com o obj
 # API utilizada
 Os dados dos Pokémons serão obtidos por meio da [PokéAPI](https://pokeapi.co/)
 # Desenvolvedores
-- André Lucas
-- Augusto Rocha
-- Bruno Fonseca
-- Gabriel Duarte
-- Paulo Vieira
-- Rodolpho Maia
+- André Lucas (@andrelucas22)
+- Augusto Rocha (@grgutorocha)
+- Bruno Fonseca (@btfonseca)
+- David Souza (@souzapd)
+- Gabriel Duarte (@gdrodrigues)
+- Paulo Vieira (@noirecat)
+- Rodolpho Maia (@rodolphomaia)
 # Requisitos
 - Estar rodando macOS.
 - Ter o Xcode instalado
