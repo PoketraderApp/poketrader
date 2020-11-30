@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var entrarButton: UIButton!
     
+    let controller: LoginController = LoginController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +27,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func entrarButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
+        
+        if self.controller.login(email: self.emailTextField.text, senha: self.senhaTextField.text) {
+            self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
+        }
+        
+        
     }
     
     @IBAction func esqueceuSenhaButton(_ sender: UIButton) {
