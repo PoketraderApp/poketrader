@@ -4,7 +4,6 @@
 //
 //  Created by Paulo Vieira on 01/11/20.
 //
-
 import UIKit
 
 class OfertasUsuario: UIViewController {
@@ -53,4 +52,3 @@ extension OfertasUsuario: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
 }
-
