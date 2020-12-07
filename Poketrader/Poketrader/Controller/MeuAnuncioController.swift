@@ -21,7 +21,7 @@ struct MeuAnuncioController {
     // Erro, por algum motivo solicita o mutating
     // Necessário ajustar o ID da oferta. Hoje é possível apontar para o
     //  número do Pokémon, mas e se a pessoa tiver outros? Exemplo: 3 Dragonites.
-    func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) -> Void {
+    mutating func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) -> Void {
         // Usando worker
         self.worker?.getOfertaMock(ofertaID: self.ofertaID ?? "") { (ofertaElement, error) in
             if let _ofertaElement = ofertaElement {
@@ -36,7 +36,7 @@ struct MeuAnuncioController {
     }
 }
 
-// MARK: Mover para arquivo separado
+// MARK: - Mover para arquivo separado
 class MeuAnuncioWorker {
     typealias completion<T> = (_ result: T, _ failure: String?) -> Void
     
