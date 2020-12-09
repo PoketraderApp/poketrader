@@ -14,6 +14,7 @@
 		41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */; };
 		5E020EF5255F10CD008C1705 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E020EF4255F10CD008C1705 /* Login.storyboard */; };
 		5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E020EF7255F1140008C1705 /* LoginViewController.swift */; };
+		5EFE9C0C257FB3AB002AD2ED /* EsqueciSenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFE9C0B257FB3AB002AD2ED /* EsqueciSenhaViewController.swift */; };
 		632C157C255DFE360068BD3E /* 148.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C1579255DFE360068BD3E /* 148.png */; };
 		632C157D255DFE360068BD3E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157A255DFE360068BD3E /* 7.png */; };
 		632C157E255DFE360068BD3E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157B255DFE360068BD3E /* 4.png */; };
@@ -62,6 +63,7 @@
 		41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
 		5E020EF4255F10CD008C1705 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5E020EF7255F1140008C1705 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5EFE9C0B257FB3AB002AD2ED /* EsqueciSenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsqueciSenhaViewController.swift; sourceTree = "<group>"; };
 		632C1579255DFE360068BD3E /* 148.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 148.png; sourceTree = "<group>"; };
 		632C157A255DFE360068BD3E /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		632C157B255DFE360068BD3E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				5E020EF7255F1140008C1705 /* LoginViewController.swift */,
+				5EFE9C0B257FB3AB002AD2ED /* EsqueciSenhaViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */,
 				AD7F6B33257ED00000424C38 /* PerfilNewController.swift in Sources */,
 				ADD28457255F323700F0DC1A /* EdicaoPokemonVC.swift in Sources */,
+				5EFE9C0C257FB3AB002AD2ED /* EsqueciSenhaViewController.swift in Sources */,
 				AD9A547B257C26E100BA0003 /* Pokemon.swift in Sources */,
 				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
 				AD7F6B3D257ED02900424C38 /* AnuncioController.swift in Sources */,

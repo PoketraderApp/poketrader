@@ -36,6 +36,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func esqueceuSenhaButton(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "EsqueciSenhaViewController", sender: nil)
     }
 }
