@@ -11,7 +11,7 @@ class PerfilNewController: UIViewController {
     
     // Imagens
     @IBOutlet weak var iconUser: UIImageView!
-    private var usuario: Usuario?
+    private var usuario: User?
     
     // Label
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -32,14 +32,14 @@ class PerfilNewController: UIViewController {
         super.viewDidLoad()
         self.setupView()
         
-        let service: LoginService = LoginService()
-        self.usuario = service.loadUsuario()
-        
-        if let usuario = self.usuario {
-            self.fullNameTextField.text = usuario.nome
-            self.emailTextField.text = usuario.email
-            self.telephoneTextField.text = String(usuario.telefone)
-        }
+//        let service: LoginWork = LoginWork()
+//        self.usuario = service.loadUsuario()
+//        
+//        if let usuario = self.usuario {
+//            self.fullNameTextField.text = usuario.nome
+//            self.emailTextField.text = usuario.email
+//            self.telephoneTextField.text = String(usuario.telefone)
+//        }
         
     }
     
