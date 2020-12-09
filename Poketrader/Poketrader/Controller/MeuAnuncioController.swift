@@ -12,22 +12,18 @@ struct MeuAnuncioController {
     private var ofertaID: String?
     private var worker: MeuAnuncioWorker? // Usando worker para o JSON
     
-    init(ofertaID: String?) {
-        self.ofertaID = ofertaID
-        self.ofertaElement = OfertaElement()
-        self.worker = MeuAnuncioWorker()
-    }
     
     // Erro, por algum motivo solicita o mutating
     // Necessário ajustar o ID da oferta. Hoje é possível apontar para o
     //  número do Pokémon, mas e se a pessoa tiver outros? Exemplo: 3 Dragonites.
-    mutating func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) -> Void {
+    mutating func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) {
         // Usando worker
         self.worker?.getOfertaMock(ofertaID: self.ofertaID ?? "") { (ofertaElement, error) in
-            if let _ofertaElement = ofertaElement {
+            if var _ofertaElement = ofertaElement {
+                print(_ofertaElement)
                 print("Deu bom")
                 // MARK: - erro abaixo -
-                self.ofertaElement = _ofertaElement
+                self.ofertaElement = OfertaElement()
                 completion(true, nil)
             } else {
                 completion(false, error)
@@ -42,13 +38,14 @@ class MeuAnuncioWorker {
     
     func getOfertaMock(ofertaID: String, completion: @escaping completion<OfertaElement?>) {
         
-        if let path = Bundle.main.path(forResource: "meus-pkmn", ofType: "json") {
+        if var path = Bundle.main.path(forResource: "meus-pkmn", ofType: "json") {
             do {
-                let ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)
+                var ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                var ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)
                 print(">>>> Minhas Ofertas List")
-                let lista = ofertasList.filter({?0.id == ofertaID}) // ?
-                let ofertaListaElement = lista?.first
+                print(ofertasList)
+//                let lista = ofertasList.filter({?0.id == ofertaID}) // ?
+                var ofertaListaElement = lista?.first
                 completion(ofertaListaElement, nil)
             } catch {
                 print(">>>> Your offer has failed")
