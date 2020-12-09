@@ -48,10 +48,11 @@
 		ADD2845B255F32D200F0DC1A /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD2845A255F32D200F0DC1A /* Feed.storyboard */; };
 		CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */; };
 		CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C8EA5255E1B6C005DE718 /* ViewController.swift */; };
-		FEF7BC712574FCEB0084F621 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC702574FCEB0084F621 /* Usuario.swift */; };
-		FEF7BC752574FE020084F621 /* usuario.json in Resources */ = {isa = PBXBuildFile; fileRef = FEF7BC742574FE020084F621 /* usuario.json */; };
+		FE712A872581911100F75732 /* GenericWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE712A862581911100F75732 /* GenericWork.swift */; };
+		FEF7BC712574FCEB0084F621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC702574FCEB0084F621 /* User.swift */; };
+		FEF7BC752574FE020084F621 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = FEF7BC742574FE020084F621 /* user.json */; };
 		FEF7BC772574FF040084F621 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC762574FF040084F621 /* LoginController.swift */; };
-		FEF7BC792574FFAA0084F621 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC782574FFAA0084F621 /* LoginService.swift */; };
+		FEF7BC792574FFAA0084F621 /* LoginWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC782574FFAA0084F621 /* LoginWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,10 +99,11 @@
 		ADD2845A255F32D200F0DC1A /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPokemonStoryboard.storyboard; sourceTree = "<group>"; };
 		CE2C8EA5255E1B6C005DE718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FEF7BC702574FCEB0084F621 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
-		FEF7BC742574FE020084F621 /* usuario.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = usuario.json; sourceTree = "<group>"; };
+		FE712A862581911100F75732 /* GenericWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWork.swift; sourceTree = "<group>"; };
+		FEF7BC702574FCEB0084F621 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FEF7BC742574FE020084F621 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		FEF7BC762574FF040084F621 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		FEF7BC782574FFAA0084F621 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		FEF7BC782574FFAA0084F621 /* LoginWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,22 +117,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4123AA56255D733D00F5AA2E /* TelaInicial */ = {
-			isa = PBXGroup;
-			children = (
-				41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */,
-			);
-			path = TelaInicial;
-			sourceTree = "<group>";
-		};
-		4123AA57255D734400F5AA2E /* CadastroUsuario */ = {
-			isa = PBXGroup;
-			children = (
-				413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */,
-			);
-			path = CadastroUsuario;
-			sourceTree = "<group>";
-		};
 		632C1578255DFE1E0068BD3E /* img */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,10 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				632C1578255DFE1E0068BD3E /* img */,
-				FEF7BC742574FE020084F621 /* usuario.json */,
+				FEF7BC742574FE020084F621 /* user.json */,
 				632C157F255DFEEB0068BD3E /* meus-pkmn.json */,
 				63EA394E255CCE73004AB57F /* Ofertas.swift */,
-				FEF7BC702574FCEB0084F621 /* Usuario.swift */,
+				FEF7BC702574FCEB0084F621 /* User.swift */,
 				AD9A547A257C26E100BA0003 /* Pokemon.swift */,
 				AD9A547D257C273500BA0003 /* PokeData.swift */,
 				AD9A5480257C28BA00BA0003 /* PokemonAPI.json */,
@@ -160,9 +146,15 @@
 		63EA3950255CCF7A004AB57F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4123AA56255D733D00F5AA2E /* TelaInicial */,
-				ADD28467255F424500F0DC1A /* Login */,
-				4123AA57255D734400F5AA2E /* CadastroUsuario */,
+				AD7F6B32257ED00000424C38 /* PerfilNewController.swift */,
+				AD7F6B3A257ED02900424C38 /* AnuncioViewController.swift */,
+				AD7F6B36257ED02900424C38 /* FeedViewController.swift */,
+				AD7F6B41257ED03E00424C38 /* AddPokemonViewController.swift */,
+				AD7F6B4C257ED06600424C38 /* MeuAnuncioViewController.swift */,
+				AD7F6B4D257ED06600424C38 /* OfertasUsuario.swift */,
+				41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */,
+				5E020EF7255F1140008C1705 /* LoginViewController.swift */,
+				413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */,
 				63B67DE2255CD6E100287636 /* OfertaCell.swift */,
 				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
 			);
@@ -197,11 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				842A05A02575CC0600890EFF /* Fonts */,
-				ADD28464255F421F00F0DC1A /* Anuncios */,
-				ADD2844E255F320500F0DC1A /* Perfil */,
 				63EA3950255CCF7A004AB57F /* Views */,
 				FEF7BC6C2574FBAB0084F621 /* Controller */,
-				FEF7BC6D2574FBB30084F621 /* Service */,
+				FEF7BC6D2574FBB30084F621 /* Network */,
 				63EA394B255CCDAA004AB57F /* Model */,
 				ADD28463255F41F900F0DC1A /* Unused storyboards */,
 				AD53A0A7254F163F00C81C07 /* AppDelegate.swift */,
@@ -213,64 +203,6 @@
 				AD53A0B5254F164000C81C07 /* Info.plist */,
 			);
 			path = Poketrader;
-			sourceTree = "<group>";
-		};
-		AD7F6B35257ED02900424C38 /* Feed */ = {
-			isa = PBXGroup;
-			children = (
-				AD7F6B36257ED02900424C38 /* FeedViewController.swift */,
-				AD7F6B37257ED02900424C38 /* DetalheAnuncios */,
-			);
-			path = Feed;
-			sourceTree = "<group>";
-		};
-		AD7F6B37257ED02900424C38 /* DetalheAnuncios */ = {
-			isa = PBXGroup;
-			children = (
-				AD7F6B39257ED02900424C38 /* AnuncioController.swift */,
-				AD7F6B3A257ED02900424C38 /* AnuncioViewController.swift */,
-			);
-			path = DetalheAnuncios;
-			sourceTree = "<group>";
-		};
-		AD7F6B40257ED03E00424C38 /* Cadastrar */ = {
-			isa = PBXGroup;
-			children = (
-				AD7F6B41257ED03E00424C38 /* AddPokemonViewController.swift */,
-			);
-			path = Cadastrar;
-			sourceTree = "<group>";
-		};
-		AD7F6B44257ED04A00424C38 /* Editar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Editar;
-			sourceTree = "<group>";
-		};
-		AD7F6B49257ED06600424C38 /* MinhasOfertas */ = {
-			isa = PBXGroup;
-			children = (
-				AD7F6B4A257ED06600424C38 /* DetalheMeuAnuncio */,
-				AD7F6B4D257ED06600424C38 /* OfertasUsuario.swift */,
-			);
-			path = MinhasOfertas;
-			sourceTree = "<group>";
-		};
-		AD7F6B4A257ED06600424C38 /* DetalheMeuAnuncio */ = {
-			isa = PBXGroup;
-			children = (
-				AD7F6B4C257ED06600424C38 /* MeuAnuncioViewController.swift */,
-			);
-			path = DetalheMeuAnuncio;
-			sourceTree = "<group>";
-		};
-		ADD2844E255F320500F0DC1A /* Perfil */ = {
-			isa = PBXGroup;
-			children = (
-				AD7F6B32257ED00000424C38 /* PerfilNewController.swift */,
-			);
-			path = Perfil;
 			sourceTree = "<group>";
 		};
 		ADD28463255F41F900F0DC1A /* Unused storyboards */ = {
@@ -290,28 +222,10 @@
 			path = "Unused storyboards";
 			sourceTree = "<group>";
 		};
-		ADD28464255F421F00F0DC1A /* Anuncios */ = {
-			isa = PBXGroup;
-			children = (
-				AD7F6B49257ED06600424C38 /* MinhasOfertas */,
-				AD7F6B44257ED04A00424C38 /* Editar */,
-				AD7F6B40257ED03E00424C38 /* Cadastrar */,
-				AD7F6B35257ED02900424C38 /* Feed */,
-			);
-			path = Anuncios;
-			sourceTree = "<group>";
-		};
-		ADD28467255F424500F0DC1A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				5E020EF7255F1140008C1705 /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
 		FEF7BC6C2574FBAB0084F621 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AD7F6B39257ED02900424C38 /* AnuncioController.swift */,
 				AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */,
 				4123AA59255D737B00F5AA2E /* CadastroController.swift */,
 				ADD28455255F323600F0DC1A /* EdicaoPokemonVC.swift */,
@@ -320,12 +234,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		FEF7BC6D2574FBB30084F621 /* Service */ = {
+		FEF7BC6D2574FBB30084F621 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FEF7BC782574FFAA0084F621 /* LoginService.swift */,
+				FEF7BC782574FFAA0084F621 /* LoginWork.swift */,
+				FE712A862581911100F75732 /* GenericWork.swift */,
 			);
-			path = Service;
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,7 +316,7 @@
 				AD53A0B4254F164000C81C07 /* LaunchScreen.storyboard in Resources */,
 				63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */,
 				CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */,
-				FEF7BC752574FE020084F621 /* usuario.json in Resources */,
+				FEF7BC752574FE020084F621 /* user.json in Resources */,
 				AD53A0B1254F164000C81C07 /* Assets.xcassets in Resources */,
 				41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */,
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
@@ -421,19 +336,20 @@
 				5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */,
 				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
 				AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */,
+				FE712A872581911100F75732 /* GenericWork.swift in Sources */,
 				AD7F6B33257ED00000424C38 /* PerfilNewController.swift in Sources */,
 				ADD28457255F323700F0DC1A /* EdicaoPokemonVC.swift in Sources */,
 				AD9A547B257C26E100BA0003 /* Pokemon.swift in Sources */,
 				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
 				AD7F6B3D257ED02900424C38 /* AnuncioController.swift in Sources */,
-				FEF7BC712574FCEB0084F621 /* Usuario.swift in Sources */,
+				FEF7BC712574FCEB0084F621 /* User.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD9A547E257C273500BA0003 /* PokeData.swift in Sources */,
 				AD7F6B50257ED06600424C38 /* OfertasUsuario.swift in Sources */,
 				AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */,
 				FEF7BC772574FF040084F621 /* LoginController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
-				FEF7BC792574FFAA0084F621 /* LoginService.swift in Sources */,
+				FEF7BC792574FFAA0084F621 /* LoginWork.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 				AD7F6B42257ED03E00424C38 /* AddPokemonViewController.swift in Sources */,
 				41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */,
