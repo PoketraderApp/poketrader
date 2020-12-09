@@ -24,7 +24,7 @@ struct Other: Codable {
     
     enum CodingKeys: String, CodingKey {
         case dreamWorld = "dream_world"
-        case officialArtwork = "official_artwork"
+        case officialArtwork = "official-artwork"
     }
 }
 
