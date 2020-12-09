@@ -22,7 +22,13 @@ class EsqueciSenhaViewController: UIViewController {
     }
     
     @IBAction func resetarSenhaButton(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Esqueci a senha", message: "Feito! Foi enviado a você um email com instruções para resetar sua senha!", preferredStyle: .alert)
         
+        let botao = UIAlertAction(title: "Fechar", style: .default, handler: nil)
+        
+        alert.addAction(botao)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 }
