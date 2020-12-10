@@ -12,7 +12,7 @@ class NetworkService: GenericWorker {
     let urlString: String = "https://pokeapi.co/api/v2/pokemon/"
     
     func getPokemon(nome: String, completion: @escaping completion<Pokemon?>) {
-        let url: URL? = URL(string: urlString + nomes)
+        let url: URL? = URL(string: urlString + nome)
         if let url = url {
             var request = URLRequest(url: url)
             request.httpMethod = Method.get.rawValue
