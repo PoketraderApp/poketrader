@@ -17,8 +17,8 @@ class EdicaoPokemonVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
-    var tittle: String = "Pokemon Blue"
-    var describle: String = "Tenho interesse em trocar."
+    var gameTitle: String = "Pokemon Blue"
+    var shortDescription: String = "Tenho interesse em trocar."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +29,8 @@ class EdicaoPokemonVC: UIViewController {
 
         
         // self.avatarImageView.image = UIImage(named: "charmeleon")
-        self.tittleTextField.text = self.tittle
-        self.descriptionTextView.text = self.describle
+        self.tittleTextField.text = self.gameTitle
+        self.descriptionTextView.text = self.shortDescription
         
         self.saveButton.layer.cornerRadius = 5
         self.cancelButton.layer.cornerRadius = 5
@@ -42,8 +42,8 @@ class EdicaoPokemonVC: UIViewController {
     
     @IBAction func editPokemon(_ sender: UIButton) {
         
-        self.tittle =  String(describing: self.tittleTextField.text)
-        self.describle = String(describing: self.descriptionTextView.text)
+        self.gameTitle =  String(describing: self.tittleTextField.text)
+        self.shortDescription = String(describing: self.descriptionTextView.text)
         self.dismiss(animated: true, completion: nil)
         
     }

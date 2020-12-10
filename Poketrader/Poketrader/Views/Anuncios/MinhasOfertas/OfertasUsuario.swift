@@ -7,7 +7,7 @@
 import UIKit
 
 class OfertasUsuario: UIViewController {
-
+    private var controller: MeuAnuncioController = MeuAnuncioController()
     @IBOutlet weak var botaoAdicionarOferta: UIButton!
     @IBOutlet weak var tableViewOfertas: UITableView!
     
