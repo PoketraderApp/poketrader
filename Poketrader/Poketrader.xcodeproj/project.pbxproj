@@ -19,7 +19,6 @@
 		632C157D255DFE360068BD3E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157A255DFE360068BD3E /* 7.png */; };
 		632C157E255DFE360068BD3E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157B255DFE360068BD3E /* 4.png */; };
 		632C1580255DFEEB0068BD3E /* meus-pkmn.json in Resources */ = {isa = PBXBuildFile; fileRef = 632C157F255DFEEB0068BD3E /* meus-pkmn.json */; };
-		636548062580FC3E005F8499 /* PokeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636548032580FC3E005F8499 /* PokeData.swift */; };
 		636548072580FC3E005F8499 /* Pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = 636548042580FC3E005F8499 /* Pokemon.json */; };
 		636548082580FC3E005F8499 /* PokemonAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = 636548052580FC3E005F8499 /* PokemonAPI.json */; };
 		63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B67DE2255CD6E100287636 /* OfertaCell.swift */; };
@@ -40,7 +39,6 @@
 		AD7F6B42257ED03E00424C38 /* AddPokemonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B41257ED03E00424C38 /* AddPokemonViewController.swift */; };
 		AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B4C257ED06600424C38 /* MeuAnuncioViewController.swift */; };
 		AD7F6B50257ED06600424C38 /* OfertasUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B4D257ED06600424C38 /* OfertasUsuario.swift */; };
-		AD7F6B572580484900424C38 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B562580484900424C38 /* NetworkService.swift */; };
 		AD7F6B6825829C1500424C38 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B6725829C1500424C38 /* NetworkService.swift */; };
 		AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */; };
 		AD897AD3255E465B00AA8C0F /* MeuAnuncio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */; };
@@ -75,7 +73,6 @@
 		632C157A255DFE360068BD3E /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		632C157B255DFE360068BD3E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		632C157F255DFEEB0068BD3E /* meus-pkmn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "meus-pkmn.json"; sourceTree = "<group>"; };
-		636548032580FC3E005F8499 /* PokeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeData.swift; sourceTree = "<group>"; };
 		636548042580FC3E005F8499 /* Pokemon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Pokemon.json; sourceTree = "<group>"; };
 		636548052580FC3E005F8499 /* PokemonAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PokemonAPI.json; sourceTree = "<group>"; };
 		63B67DE2255CD6E100287636 /* OfertaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfertaCell.swift; path = Poketrader/Views/OfertaCell.swift; sourceTree = SOURCE_ROOT; };
@@ -98,7 +95,6 @@
 		AD7F6B41257ED03E00424C38 /* AddPokemonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPokemonViewController.swift; sourceTree = "<group>"; };
 		AD7F6B4C257ED06600424C38 /* MeuAnuncioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuAnuncioViewController.swift; sourceTree = "<group>"; };
 		AD7F6B4D257ED06600424C38 /* OfertasUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfertasUsuario.swift; sourceTree = "<group>"; };
-		AD7F6B562580484900424C38 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AD7F6B6725829C1500424C38 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuAnuncioController.swift; sourceTree = "<group>"; };
 		AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeuAnuncio.storyboard; sourceTree = "<group>"; };
@@ -210,7 +206,6 @@
 				AD53A0A5254F163F00C81C07 /* Products */,
 				0F8411304D4FF1216C950ED3 /* Pods */,
 				11A10158B11FACE7C698B352 /* Frameworks */,
-				AD7F6B6025829BC800424C38 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,15 +235,6 @@
 				AD53A0B5254F164000C81C07 /* Info.plist */,
 			);
 			path = Poketrader;
-			sourceTree = "<group>";
-		};
-		AD7F6B6025829BC800424C38 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				636548032580FC3E005F8499 /* PokeData.swift */,
-				AD7F6B562580484900424C38 /* NetworkService.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		ADD28463255F41F900F0DC1A /* Unused storyboards */ = {
@@ -434,10 +420,8 @@
 				ADD28457255F323700F0DC1A /* EdicaoPokemonVC.swift in Sources */,
 				AD9A547B257C26E100BA0003 /* Pokemon.swift in Sources */,
 				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
-				636548062580FC3E005F8499 /* PokeData.swift in Sources */,
 				AD7F6B3D257ED02900424C38 /* AnuncioController.swift in Sources */,
 				FEF7BC712574FCEB0084F621 /* User.swift in Sources */,
-				AD7F6B572580484900424C38 /* NetworkService.swift in Sources */,
 				AD7F6B6825829C1500424C38 /* NetworkService.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD9A547E257C273500BA0003 /* PokeData.swift in Sources */,
