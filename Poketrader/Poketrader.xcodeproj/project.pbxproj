@@ -40,6 +40,7 @@
 		AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B4C257ED06600424C38 /* MeuAnuncioViewController.swift */; };
 		AD7F6B50257ED06600424C38 /* OfertasUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B4D257ED06600424C38 /* OfertasUsuario.swift */; };
 		AD7F6B6825829C1500424C38 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B6725829C1500424C38 /* NetworkService.swift */; };
+		AD7F6B6C25829F8000424C38 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F6B6B25829F8000424C38 /* ErrorHandler.swift */; };
 		AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */; };
 		AD897AD3255E465B00AA8C0F /* MeuAnuncio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */; };
 		AD9A547B257C26E100BA0003 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9A547A257C26E100BA0003 /* Pokemon.swift */; };
@@ -96,6 +97,7 @@
 		AD7F6B4C257ED06600424C38 /* MeuAnuncioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuAnuncioViewController.swift; sourceTree = "<group>"; };
 		AD7F6B4D257ED06600424C38 /* OfertasUsuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfertasUsuario.swift; sourceTree = "<group>"; };
 		AD7F6B6725829C1500424C38 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AD7F6B6B25829F8000424C38 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeuAnuncioController.swift; sourceTree = "<group>"; };
 		AD897AD0255E465B00AA8C0F /* MeuAnuncio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeuAnuncio.storyboard; sourceTree = "<group>"; };
 		AD9A547A257C26E100BA0003 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				AD7F6B6725829C1500424C38 /* NetworkService.swift */,
 				FEF7BC782574FFAA0084F621 /* LoginWork.swift */,
 				FE712A862581911100F75732 /* GenericWork.swift */,
+				AD7F6B6B25829F8000424C38 /* ErrorHandler.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
 				AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */,
 				FE712A872581911100F75732 /* GenericWork.swift in Sources */,
+				AD7F6B6C25829F8000424C38 /* ErrorHandler.swift in Sources */,
 				AD7F6B33257ED00000424C38 /* PerfilNewController.swift in Sources */,
 				ADD28457255F323700F0DC1A /* EdicaoPokemonVC.swift in Sources */,
 				AD9A547B257C26E100BA0003 /* Pokemon.swift in Sources */,
