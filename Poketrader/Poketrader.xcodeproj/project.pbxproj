@@ -15,6 +15,7 @@
 		41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */; };
 		5E020EF5255F10CD008C1705 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E020EF4255F10CD008C1705 /* Login.storyboard */; };
 		5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E020EF7255F1140008C1705 /* LoginViewController.swift */; };
+		5E8AF1EC2582747000ECC274 /* EsqueciASenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8AF1EB2582747000ECC274 /* EsqueciASenhaViewController.swift */; };
 		632C157C255DFE360068BD3E /* 148.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C1579255DFE360068BD3E /* 148.png */; };
 		632C157D255DFE360068BD3E /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157A255DFE360068BD3E /* 7.png */; };
 		632C157E255DFE360068BD3E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 632C157B255DFE360068BD3E /* 4.png */; };
@@ -70,6 +71,7 @@
 		41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
 		5E020EF4255F10CD008C1705 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5E020EF7255F1140008C1705 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5E8AF1EB2582747000ECC274 /* EsqueciASenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsqueciASenhaViewController.swift; sourceTree = "<group>"; };
 		632C1579255DFE360068BD3E /* 148.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 148.png; sourceTree = "<group>"; };
 		632C157A255DFE360068BD3E /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
 		632C157B255DFE360068BD3E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */,
 				63B67DE2255CD6E100287636 /* OfertaCell.swift */,
 				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
+				5E8AF1EB2582747000ECC274 /* EsqueciASenhaViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				AD9A547B257C26E100BA0003 /* Pokemon.swift in Sources */,
 				63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */,
 				AD7F6B3D257ED02900424C38 /* AnuncioController.swift in Sources */,
+				5E8AF1EC2582747000ECC274 /* EsqueciASenhaViewController.swift in Sources */,
 				FEF7BC712574FCEB0084F621 /* User.swift in Sources */,
 				AD7F6B6825829C1500424C38 /* NetworkService.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,

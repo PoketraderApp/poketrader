@@ -120,10 +120,7 @@ class CadastroViewController: UIViewController {
             print("Button capture")
             imagePicker.sourceType = .savedPhotosAlbum
             imagePicker.allowsEditing = true
-            
-            
             present(imagePicker, animated: true, completion: nil)
-            
         }
         
     }
@@ -131,21 +128,14 @@ class CadastroViewController: UIViewController {
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
-        
         let valida:Bool = checkFields()
-        
         if valida {
-            
-            self.performSegue(withIdentifier: "CadastroVC.FeedVC", sender: nil)
-
-            
+            self.dismiss(animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {
-        self.dismissKeyboard()
-        self.performSegue(withIdentifier: "CadastroVC.LoginVC", sender: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     private func dismissKeyboard(){
