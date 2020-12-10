@@ -52,8 +52,8 @@ class MeuAnuncioWorker {
                 // Ajustar tipo
                 // Sem o Ofertas(ofertas: lista) acaba-se criando um [OfertaElement]
                 // -> Verificar lógica
-                let ofertasLista = Ofertas(ofertas: lista)
-                completion(ofertasLista, nil)
+                let ofertas = Ofertas(ofertas: lista)
+                completion(ofertas, nil)
             } catch {
                 completion(nil, "Don't fail me again")
             }
