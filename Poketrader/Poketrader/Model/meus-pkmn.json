@@ -1,4 +1,5 @@
 {
+  "ofertaID": 1290,
   "id": 3,
   "name": "charmander",
   "sprites": {
@@ -12,7 +13,8 @@
       }
     }
   }
-
+ 
+  "ofertaID": 1563,
   "id": 7,
   "name": "squirtle",
   "sprites": {
@@ -27,6 +29,7 @@
     }
   }
     
+  "ofertaID": 3292,
   "id": 148,
   "name": "charmander",
   "sprites": {
