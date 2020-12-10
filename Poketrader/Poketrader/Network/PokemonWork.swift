@@ -1,5 +1,5 @@
 //
-//  NetworkService.swift
+//  PokemonWork.swift
 //  Poketrader
 //
 //  Created by Paulo Vieira on 08/12/20.
@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class NetworkService: GenericWorker {
+class PokemonWork: GenericWorker {
     let urlString: String = "https://pokeapi.co/api/v2/pokemon/"
     
     func getPokemon(nome: String, completion: @escaping completion<Pokemon?>) {
