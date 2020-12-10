@@ -11,7 +11,7 @@ struct PokeData: Codable {
     let id: Int?
     let name: String?
     let sprite: Sprites?
-    let stats: [Stat]?
+    let stats: [StatElement]?
 }
 
 struct Sprites: Codable {
@@ -44,7 +44,7 @@ struct OfficialArtwork: Codable {
     }
 }
 
-struct Stat: Codable {
+struct StatElement: Codable {
     let baseValue: Int?
     let statInfo: StatInfo?
     
