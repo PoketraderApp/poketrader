@@ -11,10 +11,6 @@ class MeuAnuncioController {
     private var ofertas: Ofertas?
     private var worker: MeuAnuncioWorker? // Usando worker para o JSON
     private var ofertaID: String?
-    
-    // Erro, por algum motivo solicita o mutating
-    // Necessário ajustar o ID da oferta. Hoje é possível apontar para o
-    //  número do Pokémon, mas e se a pessoa tiver outros? Exemplo: 3 Dragonites.
     func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) {
         // Usando worker
         self.worker?.getOfertaMock(ofertaID: self.ofertaID ?? "") { (ofertas, error) in
