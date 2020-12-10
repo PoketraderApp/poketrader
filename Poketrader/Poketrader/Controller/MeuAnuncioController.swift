@@ -7,28 +7,33 @@
 
 import Foundation
 
-struct MeuAnuncioController {
-    private var ofertaElement: OfertaElement?
-    private var ofertaID: String?
+class MeuAnuncioController {
+    private var ofertas: Ofertas?
     private var worker: MeuAnuncioWorker? // Usando worker para o JSON
-    
+    private var ofertaID: String?
     
     // Erro, por algum motivo solicita o mutating
     // Necessário ajustar o ID da oferta. Hoje é possível apontar para o
     //  número do Pokémon, mas e se a pessoa tiver outros? Exemplo: 3 Dragonites.
-    mutating func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) {
+    func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) {
         // Usando worker
-        self.worker?.getOfertaMock(ofertaID: self.ofertaID ?? "") { (ofertaElement, error) in
-            if var _ofertaElement = ofertaElement {
-                print(_ofertaElement)
-                print("Deu bom")
-                // MARK: - erro abaixo -
-                self.ofertaElement = OfertaElement()
+        self.worker?.getOfertaMock(ofertaID: self.ofertaID ?? "") { (ofertas, error) in
+            if let _ofertas = ofertas {
+                print(_ofertas)
+                self.ofertas = _ofertas
                 completion(true, nil)
             } else {
-                completion(false, error)
+                completion(false, "your Controller class ")
             }
         }
+    }
+    
+    var numberOfRows: Int {
+        return self.ofertas?.ofertas?.count ?? 0
+    }
+    
+    func loadCurrentOffer(indexPath: Int) -> OfertaElement? {
+        return self.ofertas?.ofertas?[indexPath]
     }
 }
 
@@ -36,21 +41,23 @@ struct MeuAnuncioController {
 class MeuAnuncioWorker {
     typealias completion<T> = (_ result: T, _ failure: String?) -> Void
     
-    func getOfertaMock(ofertaID: String, completion: @escaping completion<OfertaElement?>) {
-        
-        if var path = Bundle.main.path(forResource: "meus-pkmn", ofType: "json") {
+    func getOfertaMock(ofertaID: String, completion: @escaping completion<Ofertas?>) {
+        if let path = Bundle.main.path(forResource: "meus-pkmn", ofType: "json") {
             do {
-                var ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                var ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)
-                print(">>>> Minhas Ofertas List")
-                print(ofertasList)
-//                let lista = ofertasList.filter({?0.id == ofertaID}) // ?
-                var ofertaListaElement = lista?.first
-                completion(ofertaListaElement, nil)
+                let ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)
+                let lista = ofertasList.ofertas?.filter({$0.ofertaID == ofertaID})
+                
+                // MARK: - Avaliar
+                // Ajustar tipo
+                // Sem o Ofertas(ofertas: lista) acaba-se criando um [OfertaElement]
+                // -> Verificar lógica
+                let ofertasLista = Ofertas(ofertas: lista)
+                completion(ofertasLista, nil)
             } catch {
-                print(">>>> Your offer has failed")
                 completion(nil, "Don't fail me again")
             }
         }
     }
+    
 }

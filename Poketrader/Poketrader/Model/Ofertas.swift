@@ -6,20 +6,13 @@
 //
 
 import Foundation
-
-
 // MARK: - Lista de ofertas
 struct Ofertas: Codable {
     var ofertas: [OfertaElement]?
 }
-
-// MARK: - Oferta
+    
+// MARK: - Lista de ofertas
 struct OfertaElement: Codable {
-    var pokemon, imagem, numero, jogador: String?
-    var Stats: PokemonStats?
-}
-
-// MARK: - Struct para carregar os status do Pokémon
-struct PokemonStats: Codable {
-    var hp, attack, defence, sp_attack, sp_defence, speed: Int?
+    var ofertaID: String?
+    var pkmn: Pokemon?
 }
