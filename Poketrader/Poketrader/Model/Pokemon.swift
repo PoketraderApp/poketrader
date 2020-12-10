@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Pokemon {
+struct Pokemon: Codable {
+
     let id: Int?
     let name: String?
     let sprite: String? // URL com imagem do pokémon
