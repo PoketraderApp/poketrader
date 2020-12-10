@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0224055738C98E3AD1B26090 /* Pods_Poketrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */; };
 		4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123AA59255D737B00F5AA2E /* CadastroController.swift */; };
 		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
 		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
@@ -56,6 +57,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0167FEBDBA2477DD4C75A753 /* Pods-Poketrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.release.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.release.xcconfig"; sourceTree = "<group>"; };
+		0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poketrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4123AA59255D737B00F5AA2E /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		ADD2845A255F32D200F0DC1A /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPokemonStoryboard.storyboard; sourceTree = "<group>"; };
 		CE2C8EA5255E1B6C005DE718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D5B9724273BD59A387564D1E /* Pods-Poketrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.debug.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.debug.xcconfig"; sourceTree = "<group>"; };
 		FEF7BC702574FCEB0084F621 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		FEF7BC742574FE020084F621 /* usuario.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = usuario.json; sourceTree = "<group>"; };
 		FEF7BC762574FF040084F621 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -111,12 +115,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0224055738C98E3AD1B26090 /* Pods_Poketrader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F8411304D4FF1216C950ED3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5B9724273BD59A387564D1E /* Pods-Poketrader.debug.xcconfig */,
+				0167FEBDBA2477DD4C75A753 /* Pods-Poketrader.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		11A10158B11FACE7C698B352 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4123AA56255D733D00F5AA2E /* TelaInicial */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +207,8 @@
 			children = (
 				AD53A0A6254F163F00C81C07 /* Poketrader */,
 				AD53A0A5254F163F00C81C07 /* Products */,
+				0F8411304D4FF1216C950ED3 /* Pods */,
+				11A10158B11FACE7C698B352 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -338,9 +363,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD53A0B8254F164000C81C07 /* Build configuration list for PBXNativeTarget "Poketrader" */;
 			buildPhases = (
+				8C3042543AF7A83808AC249A /* [CP] Check Pods Manifest.lock */,
 				AD53A0A0254F163F00C81C07 /* Sources */,
 				AD53A0A1254F163F00C81C07 /* Frameworks */,
 				AD53A0A2254F163F00C81C07 /* Resources */,
+				704DB547ED9CB163B1FCB3AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -414,6 +441,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		704DB547ED9CB163B1FCB3AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poketrader/Pods-Poketrader-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Poketrader/Pods-Poketrader-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Poketrader/Pods-Poketrader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C3042543AF7A83808AC249A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Poketrader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD53A0A0254F163F00C81C07 /* Sources */ = {
@@ -587,6 +656,7 @@
 		};
 		AD53A0B9254F164000C81C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B9724273BD59A387564D1E /* Pods-Poketrader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -607,6 +677,7 @@
 		};
 		AD53A0BA254F164000C81C07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0167FEBDBA2477DD4C75A753 /* Pods-Poketrader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
