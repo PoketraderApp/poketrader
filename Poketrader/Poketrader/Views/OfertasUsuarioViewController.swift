@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OfertasUsuarioViewController.swift
 //  Poketrader
 //
 //  Created by Paulo Vieira on 01/11/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OfertasUsuario: UIViewController {
+class OfertasUsuarioViewController: UIViewController {
 
     @IBOutlet weak var botaoAdicionarOferta: UIButton!
     @IBOutlet weak var tableViewOfertas: UITableView!
@@ -30,7 +30,7 @@ class OfertasUsuario: UIViewController {
 }
 
 //MARK: TableView delegate & data source
-extension OfertasUsuario: UITableViewDelegate, UITableViewDataSource {
+extension OfertasUsuarioViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.pkmn_name.count
     }

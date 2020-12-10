@@ -1,5 +1,5 @@
 //
-//  EdicaoPokemonVC.swift
+//  EdicaoPokemonViewController.swift
 //  Poke
 //
 //  Created by Bruno da Fonseca on 13/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EdicaoPokemonVC: UIViewController {
+class EdicaoPokemonViewController: UIViewController {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var tittleTextField: UITextField!
@@ -64,7 +64,7 @@ class EdicaoPokemonVC: UIViewController {
 
 }
 
-extension EdicaoPokemonVC: UITextFieldDelegate, UITextViewDelegate {
+extension EdicaoPokemonViewController: UITextFieldDelegate, UITextViewDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         switch textField {
