@@ -1062,6 +1062,9 @@
                                         <state key="normal" title="Salvar">
                                             <color key="titleColor" systemColor="systemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="pressedSalvarButton:" destination="fuH-mp-zgc" eventType="touchUpInside" id="vTI-f7-BkB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

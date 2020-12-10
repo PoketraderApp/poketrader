@@ -7,11 +7,15 @@
 
 import Foundation
 
-struct Usuario: Codable {
+struct UserList: Codable {
+    var userList: [User]?
+}
+
+struct User: Codable {
     
-    var nome: String
-    var telefone: Int
     var email: String
+    var nome: String
     var senha: String
-    
+    var telefone: Int
+
 }
