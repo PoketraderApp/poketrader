@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Etf-EY-nVr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Etf-EY-nVr">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -366,6 +366,7 @@
                         <outlet property="senhaTextField" destination="fxB-3J-uOM" id="r5M-Xd-xbN"/>
                         <segue destination="F9I-QW-mRr" kind="presentation" identifier="LoginVC.FeedVC" id="Zaf-Ff-y0m"/>
                         <segue destination="LeO-1s-Hca" kind="presentation" identifier="LoginVC.CadastroVC" id="RpH-Kd-j4Y"/>
+                        <segue destination="nY5-Vg-BZ6" kind="presentation" identifier="EsqueciASenhaViewController" id="HQN-gQ-Y4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zje-Mk-P5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -442,7 +443,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squirtle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEF-IP-Nc1">
-                                                        <rect key="frame" x="146" y="16.5" width="83.5" height="30"/>
+                                                        <rect key="frame" x="146" y="16.5" width="83" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -1114,6 +1115,68 @@
             </objects>
             <point key="canvasLocation" x="2126.0869565217395" y="812.94642857142856"/>
         </scene>
+        <!--EsqueciA Senha View Controller-->
+        <scene sceneID="WlE-3e-YJx">
+            <objects>
+                <viewController id="nY5-Vg-BZ6" customClass="EsqueciASenhaViewController" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fHj-xy-kgR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esqueci a senha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btl-BS-HdZ">
+                                <rect key="frame" x="60" y="45" width="255" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iremos lhe enviar um email com instruções sobre como resetar sua senha." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWk-rT-Q0P">
+                                <rect key="frame" x="60" y="96" width="255" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.66274509800000003" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-5S-cct">
+                                <rect key="frame" x="60" y="168.5" width="255" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wka-Kg-ps7">
+                                <rect key="frame" x="60" y="224.5" width="255" height="30"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.63137254899999995" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Resetar a senha">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetarSenhaButton:" destination="nY5-Vg-BZ6" eventType="touchUpInside" id="6Qk-TG-M65"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Suq-Ky-wQA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="btl-BS-HdZ" firstAttribute="leading" secondItem="Suq-Ky-wQA" secondAttribute="leading" constant="60" id="4Tg-pc-E86"/>
+                            <constraint firstItem="Suq-Ky-wQA" firstAttribute="trailing" secondItem="pWk-rT-Q0P" secondAttribute="trailing" constant="60" id="4pB-MX-LaL"/>
+                            <constraint firstItem="Suq-Ky-wQA" firstAttribute="trailing" secondItem="btl-BS-HdZ" secondAttribute="trailing" constant="60" id="4up-O2-QVf"/>
+                            <constraint firstItem="btl-BS-HdZ" firstAttribute="top" secondItem="Suq-Ky-wQA" secondAttribute="top" constant="45" id="GEh-Rs-cly"/>
+                            <constraint firstItem="pWk-rT-Q0P" firstAttribute="top" secondItem="btl-BS-HdZ" secondAttribute="bottom" constant="22" id="GpL-wW-BmB"/>
+                            <constraint firstItem="PKF-5S-cct" firstAttribute="leading" secondItem="Suq-Ky-wQA" secondAttribute="leading" constant="60" id="RFE-fI-wyG"/>
+                            <constraint firstItem="PKF-5S-cct" firstAttribute="top" secondItem="pWk-rT-Q0P" secondAttribute="bottom" constant="22" id="Vsb-NL-SnI"/>
+                            <constraint firstItem="Wka-Kg-ps7" firstAttribute="top" secondItem="PKF-5S-cct" secondAttribute="bottom" constant="22" id="YTg-ey-rCV"/>
+                            <constraint firstItem="Wka-Kg-ps7" firstAttribute="leading" secondItem="Suq-Ky-wQA" secondAttribute="leading" constant="60" id="nQX-Mf-zic"/>
+                            <constraint firstItem="Suq-Ky-wQA" firstAttribute="trailing" secondItem="Wka-Kg-ps7" secondAttribute="trailing" constant="60" id="plh-cs-aEw"/>
+                            <constraint firstItem="Suq-Ky-wQA" firstAttribute="trailing" secondItem="PKF-5S-cct" secondAttribute="trailing" constant="60" id="vT0-ez-Ipo"/>
+                            <constraint firstItem="pWk-rT-Q0P" firstAttribute="leading" secondItem="Suq-Ky-wQA" secondAttribute="leading" constant="60" id="wpq-XG-mkX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="PKF-5S-cct" id="gky-4B-L74"/>
+                        <outlet property="resetarSenhaButton" destination="Wka-Kg-ps7" id="IwY-SH-XM5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5td-DC-ptZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208.80000000000001" y="1191.4542728635683"/>
+        </scene>
         <!--Meu perfil-->
         <scene sceneID="LWZ-hG-qma">
             <objects>
@@ -1151,7 +1214,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squirtle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAt-G7-ST1">
-                                                        <rect key="frame" x="146" y="16.5" width="83.5" height="30"/>
+                                                        <rect key="frame" x="146" y="16.5" width="83" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
