@@ -9,8 +9,11 @@ import UIKit
 
 class FeedViewController: UIViewController {
 
+ 
+    @IBOutlet weak var navigation: UINavigationItem!
     @IBOutlet weak var feedTableView: UITableView!
     
+    @IBOutlet weak var logoff: UIBarButtonItem!
     let pkmn_name = ["Charmander Nº004", "Squirtle Nº007"]
     let pkmn_game = ["Pokemon Blue", "Pokemon Blue"]
     let pkmn_img  = ["4", "7"]
@@ -25,8 +28,6 @@ class FeedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
 }
 
 extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
