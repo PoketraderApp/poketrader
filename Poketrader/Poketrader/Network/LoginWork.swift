@@ -18,8 +18,8 @@ class LoginWork: GenericWorker {
                 do {
                     let userList = try JSONDecoder().decode(UserList.self, from: data ?? Data())
                     if let _userList = userList.userList {
-                        
-                        let user = _userList.first
+                        let _user = _userList.filter({$0.email == email})
+                        let user: User? = _user.first
                         completion(user, nil)
                     } else {
                         completion(nil, "Não fez o parse")
