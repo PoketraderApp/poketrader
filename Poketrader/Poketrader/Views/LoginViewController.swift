@@ -51,17 +51,16 @@ class LoginViewController: BaseViewController {
     
     @IBAction func entrarButton(_ sender: UIButton) {
         
+        dismissKeyboard()
         self.showLoading()
         
-       if self.checkFields() {
+        if self.checkFields() {
             LoginController(email: self.emailTextField.text, senha: self.senhaTextField.text).login { (result, error ) in
                 
                 if result {
                     DispatchQueue.main.async {
-                        
                         self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
                         self.hiddenLoading()
-                        
                     }
                 }else{
                     DispatchQueue.main.async {
@@ -85,6 +84,10 @@ class LoginViewController: BaseViewController {
     
     @IBAction func esqueceuSenhaButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "EsqueciASenhaViewController", sender: nil)
+    }
+    
+    private func dismissKeyboard(){
+        self.view.endEditing(true)
     }
 }
 
