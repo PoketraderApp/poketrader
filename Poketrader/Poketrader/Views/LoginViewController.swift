@@ -22,6 +22,10 @@ class LoginViewController: UIViewController {
         backgroudImageLogin.image = UIImage(named: "imagemLogin")
         emailTextField.delegate = self
         senhaTextField.delegate = self
+        entrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
+
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+                self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
