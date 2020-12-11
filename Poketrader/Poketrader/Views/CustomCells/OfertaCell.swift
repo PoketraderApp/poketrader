@@ -18,6 +18,15 @@ class OfertaCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func setup(oferta: OfertaElement?) {
+        if let oferta = oferta {
+            self.nomePkmn.text = oferta.pokemon?.name
+            self.tituloJogo.text = "JOGO XPTO"
+            self.nomeJogador.text = oferta.nome
+            self.imagemPkmn.image = UIImage(named: String(oferta.pokemon?.id ?? 3))
+        }
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

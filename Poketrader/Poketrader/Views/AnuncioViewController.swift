@@ -8,8 +8,8 @@
 import UIKit
 
 class AnuncioViewController: UIViewController {
-    private var controller: AnuncioController?
-    
+    var controller: AnuncioController? = AnuncioController()
+        
     // Imagens
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
@@ -50,6 +50,28 @@ class AnuncioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        controller?.loadAnuncio(completion: { (carregou, erro) in
+            if carregou {
+                DispatchQueue.main.async {
+                    self.profileImage.isHidden = true
+                    
+                    self.usuarioValueLabel.text = self.controller?.nomeUsuario
+                    self.emailValueLabel.text = self.controller?.emailUsuario
+                    self.telefoneValueLabel.text = self.controller?.telefoneUsuario
+                    self.observacoesValueLabel.text = self.controller?.observacoes
+                    
+                    self.nomePokemonLabel.text = self.controller?.pokemonName
+                    
+                    // se nÃo achar imagem, bota a imagem 3 como default
+                    self.pokemonImage.image = UIImage(named: self.controller?.imageID ?? "3")
+                    
+                    
+                }
+            }
+        })
+        
+        
         
     }
     
