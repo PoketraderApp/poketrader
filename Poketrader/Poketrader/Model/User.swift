@@ -13,9 +13,19 @@ struct UserList: Codable {
 
 struct User: Codable {
     
-    var email: String
-    var nome: String
-    var senha: String
-    var telefone: Int
-
+    var nome: String?
+    var telefone: Int?
+    var email: String?
+    var senha: String?
+    var dictionary: [String: Any] {
+            return ["nome": nome,
+                    "telefone": telefone,
+                    "email": email,
+                    "senha": senha
+                    ]
+        }
+        var nsDictionary: NSDictionary {
+            return dictionary as NSDictionary
+        }
+    
 }

@@ -26,7 +26,9 @@
 		63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B67DE3255CD6E100287636 /* OfertaCell.xib */; };
 		63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */; };
 		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
+		669F2B1BDB6F792C90310581 /* Pods_Poketrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE800170E2B4547EE5C63BE3 /* Pods_Poketrader.framework */; };
 		842A05A22575CC1A00890EFF /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842A05A12575CC1A00890EFF /* PokemonSolid.ttf */; };
+		84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0AD254F163F00C81C07 /* Main.storyboard */; };
@@ -62,8 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		0167FEBDBA2477DD4C75A753 /* Pods-Poketrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.release.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.release.xcconfig"; sourceTree = "<group>"; };
 		0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poketrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23A99CFFD5E18EC559A343C5 /* Pods-Poketrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.release.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.release.xcconfig"; sourceTree = "<group>"; };
 		4123AA59255D737B00F5AA2E /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OfertasUsuario.storyboard; sourceTree = "<group>"; };
 		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
 		842A05A12575CC1A00890EFF /* PokemonSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonSolid.ttf; sourceTree = "<group>"; };
+		84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioWork.swift; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +118,8 @@
 		CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPokemonStoryboard.storyboard; sourceTree = "<group>"; };
 		CE2C8EA5255E1B6C005DE718 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5B9724273BD59A387564D1E /* Pods-Poketrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.debug.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.debug.xcconfig"; sourceTree = "<group>"; };
+		DE800170E2B4547EE5C63BE3 /* Pods_Poketrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poketrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70E6AC735EF89F6370E94EE /* Pods-Poketrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.debug.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.debug.xcconfig"; sourceTree = "<group>"; };
 		FE712A862581911100F75732 /* GenericWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWork.swift; sourceTree = "<group>"; };
 		FEF7BC702574FCEB0084F621 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FEF7BC742574FE020084F621 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
@@ -147,6 +154,16 @@
 				0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2FB744844A44721C845A781E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F70E6AC735EF89F6370E94EE /* Pods-Poketrader.debug.xcconfig */,
+				23A99CFFD5E18EC559A343C5 /* Pods-Poketrader.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		632C1578255DFE1E0068BD3E /* img */ = {
@@ -196,6 +213,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		78E3B80BF822DD2C89F45990 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE800170E2B4547EE5C63BE3 /* Pods_Poketrader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		842A05A02575CC0600890EFF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +236,8 @@
 				AD53A0A5254F163F00C81C07 /* Products */,
 				0F8411304D4FF1216C950ED3 /* Pods */,
 				11A10158B11FACE7C698B352 /* Frameworks */,
+				2FB744844A44721C845A781E /* Pods */,
+				78E3B80BF822DD2C89F45990 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +305,7 @@
 				FEF7BC782574FFAA0084F621 /* LoginWork.swift */,
 				FE712A862581911100F75732 /* GenericWork.swift */,
 				AD7F6B6B25829F8000424C38 /* ErrorHandler.swift */,
+				84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -431,6 +459,7 @@
 				5E8AF1EC2582747000ECC274 /* EsqueciASenhaViewController.swift in Sources */,
 				FEF7BC712574FCEB0084F621 /* User.swift in Sources */,
 				AD7F6B6825829C1500424C38 /* PokemonWork.swift in Sources */,
+				84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
 				AD9A547E257C273500BA0003 /* PokeData.swift in Sources */,
 				AD7F6B50257ED06600424C38 /* OfertasUsuario.swift in Sources */,

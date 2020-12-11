@@ -7,7 +7,20 @@
 
 import UIKit
 
-class CadastroViewController: UIViewController {
+protocol cadastroViewControllerDelegate: class {
+    func usuarioCriado(result: Bool)
+}
+
+class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
+    
+    func usuarioCriado(result: Bool) {
+        if result {
+            self.performSegue(withIdentifier: "CadastroVC.FeedVC", sender: nil)
+        } else {
+            
+        }
+    }
+    
     
     var controller: CadastroController = CadastroController()
     var imagePicker: UIImagePickerController = UIImagePickerController()
@@ -62,6 +75,7 @@ class CadastroViewController: UIViewController {
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
+        self.controller.delegate = self
     
     }
     
@@ -130,7 +144,12 @@ class CadastroViewController: UIViewController {
         dismissKeyboard()
         let valida:Bool = checkFields()
         if valida {
-            self.dismiss(animated: true, completion: nil)
+            let nome = self.nomeTextField.text ?? ""
+            let telefone = Int(self.telefoneTextField.text ?? "") ?? 0
+            let senha = self.senhaTextField.text ?? ""
+            let email = self.emailTextField.text ?? ""
+            self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
+            
         }
     }
     
@@ -142,7 +161,6 @@ class CadastroViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-
 }
 
 // MARK: Text Field Delegate
@@ -173,7 +191,8 @@ extension CadastroViewController: UITextFieldDelegate {
             guard let text = textField.text else { return false }
             
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
-            textField.text = self.controller.formattedNumber(number: newString)
+//            textField.text = self.controller.formattedNumber(number: newString)
+            textField.text = newString
             
             return false
         }

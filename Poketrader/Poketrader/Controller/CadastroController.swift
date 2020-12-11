@@ -9,6 +9,14 @@ import Foundation
 
 class CadastroController {
     
+    private var worker: CriarUsuarioWork? = CriarUsuarioWork()
+    weak var delegate: cadastroViewControllerDelegate?
+    
+//    init() {
+//
+////        worker = CriarUsuarioWork()
+//    }
+    
     func isValidEmail(_ email: String) -> Bool{
         
         let emailRegEx = "\\b([a-z 0-9]+)((\\.|_)?([a-z 0-9]+))+@([a-z]+)(\\.([a-z]{2,}))+\\b"
@@ -35,6 +43,17 @@ class CadastroController {
             }
         }
         return result
+    }
+    
+    func cadastrarUsuario(nome: String, telefone: Int, email: String, senha: String) {
+        var usuario : User = User()
+        usuario.nome = nome
+        usuario.telefone = telefone
+        usuario.senha = senha
+        usuario.email = email
+        worker?.criarUsuario(usuario: usuario, completion: { (resposta) in
+            self.delegate?.usuarioCriado(result: resposta)
+        })
     }
     
     
