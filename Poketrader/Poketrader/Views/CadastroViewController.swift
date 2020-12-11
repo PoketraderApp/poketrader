@@ -128,7 +128,8 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     @IBAction func tappedInserirImagem(_ sender: UIButton) {
         dismissKeyboard()
-        
+        EscolherImagem().selecionadorImagem(self){ imagem in
+                self.imagePerfil.image = imagem
         
     }
     
@@ -254,4 +255,3 @@ extension CadastroViewController: UITextFieldDelegate {
     }
     
 }
-
