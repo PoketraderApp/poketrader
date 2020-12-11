@@ -12,11 +12,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var entrarButton: UIButton!
     
+    @IBOutlet weak var backgroudImageLogin: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
+        backgroudImageLogin.image = UIImage(named: "imagemLogin")
         // Do any additional setup after loading the view.
     }
     
