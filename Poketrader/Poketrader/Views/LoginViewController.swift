@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
         backgroudImageLogin.image = UIImage(named: "imagemLogin")
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -66,4 +68,23 @@ class LoginViewController: UIViewController {
     @IBAction func esqueceuSenhaButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "EsqueciASenhaViewController", sender: nil)
     }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.emailTextField:
+            self.senhaTextField.becomeFirstResponder()
+            
+        case self.senhaTextField:
+            self.senhaTextField.resignFirstResponder()
+            
+        default:
+            
+            break
+        }
+        return true
+    }
+    
 }
