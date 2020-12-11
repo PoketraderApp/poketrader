@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1UG-Od-pfe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="CxM-mZ-4fd">
+            <objects>
+                <viewController id="1UG-Od-pfe" customClass="LoginViewController" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h16-IV-C1b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8i-Da-wn3">
+                                <rect key="frame" x="60" y="89" width="294" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ou" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud6-QJ-xEG">
+                                <rect key="frame" x="60" y="140" width="16.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.61568627450980395" green="0.66274509803921566" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-Ps-Fn5">
+                                <rect key="frame" x="88" y="133" width="196" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Cadastre-se no Pokétrader">
+                                    <color key="titleColor" red="0.23137254901960785" green="0.30196078431372547" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cadastroButton:" destination="1UG-Od-pfe" eventType="touchUpInside" id="8GA-5F-psQ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="GIg-9D-N7h">
+                                <rect key="frame" x="60" y="215" width="294" height="200"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xfo-C7-CKD">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7JJ-Yb-TdE">
+                                        <rect key="frame" x="0.0" y="59" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3et-Na-OAN">
+                                        <rect key="frame" x="0.0" y="118" width="294" height="30"/>
+                                        <color key="backgroundColor" red="0.70196078431372544" green="0.63137254901960782" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Entrar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="entrarButton:" destination="1UG-Od-pfe" eventType="touchUpInside" id="14E-2S-RSz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miT-2b-tNU">
+                                        <rect key="frame" x="92.5" y="173" width="109" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Esqueceu a senha?">
+                                            <color key="titleColor" red="0.61568627450980395" green="0.66274509803921566" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="esqueceuSenhaButton:" destination="1UG-Od-pfe" eventType="touchUpInside" id="pWV-H2-tT6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7JJ-Yb-TdE" firstAttribute="leading" secondItem="GIg-9D-N7h" secondAttribute="leading" id="Qsk-Ym-Ak3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xfo-C7-CKD" secondAttribute="trailing" id="ZFJ-mY-uUh"/>
+                                    <constraint firstAttribute="trailing" secondItem="7JJ-Yb-TdE" secondAttribute="trailing" id="gsS-LH-7gI"/>
+                                    <constraint firstItem="3et-Na-OAN" firstAttribute="leading" secondItem="GIg-9D-N7h" secondAttribute="leading" id="q4v-bY-cLE"/>
+                                    <constraint firstAttribute="trailing" secondItem="3et-Na-OAN" secondAttribute="trailing" id="xng-ti-qqW"/>
+                                    <constraint firstItem="Xfo-C7-CKD" firstAttribute="leading" secondItem="GIg-9D-N7h" secondAttribute="leading" id="zWC-z0-bjN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wDH-re-LqA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ud6-QJ-xEG" firstAttribute="top" secondItem="O8i-Da-wn3" secondAttribute="bottom" constant="22" id="3PW-R0-ihe"/>
+                            <constraint firstItem="GIg-9D-N7h" firstAttribute="leading" secondItem="wDH-re-LqA" secondAttribute="leading" constant="60" id="KLF-rT-XF6"/>
+                            <constraint firstItem="wDH-re-LqA" firstAttribute="trailing" secondItem="GIg-9D-N7h" secondAttribute="trailing" constant="60" id="RqN-cd-bxZ"/>
+                            <constraint firstItem="WSn-Ps-Fn5" firstAttribute="top" secondItem="O8i-Da-wn3" secondAttribute="bottom" constant="15" id="Wzj-Ea-KKV"/>
+                            <constraint firstItem="WSn-Ps-Fn5" firstAttribute="leading" secondItem="ud6-QJ-xEG" secondAttribute="trailing" constant="11.5" id="dJ1-g9-NYR"/>
+                            <constraint firstItem="ud6-QJ-xEG" firstAttribute="leading" secondItem="wDH-re-LqA" secondAttribute="leading" constant="60" id="gOw-Rk-3ys"/>
+                            <constraint firstItem="GIg-9D-N7h" firstAttribute="top" secondItem="WSn-Ps-Fn5" secondAttribute="bottom" constant="50" id="pN7-HH-ihM"/>
+                            <constraint firstItem="O8i-Da-wn3" firstAttribute="top" secondItem="wDH-re-LqA" secondAttribute="top" constant="45" id="qUq-Oq-3Ga"/>
+                            <constraint firstItem="O8i-Da-wn3" firstAttribute="leading" secondItem="wDH-re-LqA" secondAttribute="leading" constant="60" id="tej-hb-vbY"/>
+                            <constraint firstItem="wDH-re-LqA" firstAttribute="trailing" secondItem="O8i-Da-wn3" secondAttribute="trailing" constant="60" id="w94-RB-6ng"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Xfo-C7-CKD" id="dgA-mG-QbG"/>
+                        <outlet property="entrarButton" destination="3et-Na-OAN" id="JKz-C3-KJ3"/>
+                        <outlet property="senhaTextField" destination="7JJ-Yb-TdE" id="5T2-Es-JgR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ntW-J1-FMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.44927536231887" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

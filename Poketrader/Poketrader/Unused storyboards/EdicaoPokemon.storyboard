@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BWY-g3-5In">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edicao PokemonVC-->
+        <scene sceneID="Qbv-7P-63J">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="BWY-g3-5In" customClass="EdicaoPokemonVC" customModule="Poke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PND-N2-igm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokétrader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gC-nC-qvl">
+                                <rect key="frame" x="20" y="44" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lek-GT-VPF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENN-qY-02G">
+                                <rect key="frame" x="0.0" y="84" width="414" height="2"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="crb-lK-XnE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XK0-uC-wlP">
+                                <rect key="frame" x="0.0" y="122.5" width="414" height="2"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="QkR-OB-Drg"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmeleon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSS-84-ZMO">
+                                <rect key="frame" x="8" y="94" width="398" height="20.5"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ISb-2a-yvw">
+                                <rect key="frame" x="40" y="132.5" width="334" height="404"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Fb-yp-PGe">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="186"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="186" id="ceO-eK-Y8s"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Jogo Dois" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cif-iX-Ile">
+                                        <rect key="frame" x="0.0" y="194" width="334" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLC-K2-ncO">
+                                        <rect key="frame" x="0.0" y="236" width="334" height="168"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="168" id="rns-RH-iiG"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <string key="content">Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.Tenho interesse em trocar por um pokemon mais evoluído.</string>
+                                                <attributes>
+                                                    <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <font key="NSFont" metaFont="menu" size="14"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpC-Qd-Fwj">
+                                <rect key="frame" x="40" y="566.5" width="130" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.74058496010480335" blue="0.033527291585761287" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Zmk-D7-ZQ9"/>
+                                    <constraint firstAttribute="height" constant="40" id="n7Z-U4-F4v"/>
+                                </constraints>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editPokemon:" destination="BWY-g3-5In" eventType="touchUpInside" id="4xR-QT-R27"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fac-jn-LUw">
+                                <rect key="frame" x="244" y="566.5" width="130" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.27936888189999998" blue="0.12906092029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="QWt-rJ-xMt"/>
+                                    <constraint firstAttribute="height" constant="40" id="Uby-ld-QvN"/>
+                                </constraints>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelEditPokemon:" destination="BWY-g3-5In" eventType="touchUpInside" id="glp-0U-EE6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mX4-FU-a4n" firstAttribute="trailing" secondItem="mSS-84-ZMO" secondAttribute="trailing" constant="8" id="2CQ-Cb-AdS"/>
+                            <constraint firstItem="mX4-FU-a4n" firstAttribute="trailing" secondItem="fac-jn-LUw" secondAttribute="trailing" constant="40" id="30H-L0-l4i"/>
+                            <constraint firstItem="ENN-qY-02G" firstAttribute="top" secondItem="3gC-nC-qvl" secondAttribute="bottom" id="568-eo-TQR"/>
+                            <constraint firstItem="ISb-2a-yvw" firstAttribute="top" secondItem="XK0-uC-wlP" secondAttribute="bottom" constant="8" id="7D9-fO-HUF"/>
+                            <constraint firstItem="XK0-uC-wlP" firstAttribute="top" secondItem="mSS-84-ZMO" secondAttribute="bottom" constant="8" id="Hpn-TS-m6W"/>
+                            <constraint firstItem="mX4-FU-a4n" firstAttribute="trailing" secondItem="ENN-qY-02G" secondAttribute="trailing" id="I1B-Ne-vYp"/>
+                            <constraint firstItem="mSS-84-ZMO" firstAttribute="top" secondItem="ENN-qY-02G" secondAttribute="bottom" constant="8" id="IZX-oB-O3b"/>
+                            <constraint firstItem="mX4-FU-a4n" firstAttribute="trailing" secondItem="3gC-nC-qvl" secondAttribute="trailing" constant="20" id="Jhl-fO-A2W"/>
+                            <constraint firstItem="ENN-qY-02G" firstAttribute="leading" secondItem="mX4-FU-a4n" secondAttribute="leading" id="Ov9-eL-Umn"/>
+                            <constraint firstItem="jpC-Qd-Fwj" firstAttribute="leading" secondItem="mX4-FU-a4n" secondAttribute="leading" constant="40" id="XT2-F1-Izi"/>
+                            <constraint firstItem="ISb-2a-yvw" firstAttribute="leading" secondItem="mX4-FU-a4n" secondAttribute="leading" constant="40" id="blS-tQ-ZEH"/>
+                            <constraint firstItem="XK0-uC-wlP" firstAttribute="leading" secondItem="PND-N2-igm" secondAttribute="leading" id="ez3-Bo-8V8"/>
+                            <constraint firstItem="fac-jn-LUw" firstAttribute="centerY" secondItem="jpC-Qd-Fwj" secondAttribute="centerY" id="kMv-MI-1PZ"/>
+                            <constraint firstItem="jpC-Qd-Fwj" firstAttribute="top" secondItem="ISb-2a-yvw" secondAttribute="bottom" constant="30" id="kaU-Yt-OAR"/>
+                            <constraint firstItem="3gC-nC-qvl" firstAttribute="top" secondItem="mX4-FU-a4n" secondAttribute="top" id="nbG-9B-wE4"/>
+                            <constraint firstAttribute="trailing" secondItem="XK0-uC-wlP" secondAttribute="trailing" id="p7O-cQ-8tQ"/>
+                            <constraint firstItem="mX4-FU-a4n" firstAttribute="trailing" secondItem="ISb-2a-yvw" secondAttribute="trailing" constant="40" id="uwd-DL-yFk"/>
+                            <constraint firstItem="mSS-84-ZMO" firstAttribute="leading" secondItem="mX4-FU-a4n" secondAttribute="leading" constant="8" id="wXr-uM-IzX"/>
+                            <constraint firstItem="3gC-nC-qvl" firstAttribute="leading" secondItem="mX4-FU-a4n" secondAttribute="leading" constant="20" id="zm0-MD-PfS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mX4-FU-a4n"/>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="6Fb-yp-PGe" id="yap-ei-Lzv"/>
+                        <outlet property="cancelButton" destination="fac-jn-LUw" id="JKz-Aw-m2D"/>
+                        <outlet property="descriptionTextView" destination="mLC-K2-ncO" id="iJH-aW-D1x"/>
+                        <outlet property="saveButton" destination="jpC-Qd-Fwj" id="VCX-4T-b9A"/>
+                        <outlet property="tittleTextField" destination="Cif-iX-Ile" id="jaw-GW-eWU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0b7-Oo-R82" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173.91304347826087" y="-5.3571428571428568"/>
+        </scene>
+    </scenes>
+</document>
