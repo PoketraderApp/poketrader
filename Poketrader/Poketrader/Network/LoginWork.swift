@@ -9,25 +9,32 @@ import Foundation
 
 class LoginWork: GenericWorker {
     
-    func loadUsuario(email: String, completion: @escaping completion<User?>) {
+    private var logou: Bool = false
+    
+    func loadUsuario(email: String?, completion: @escaping completion<User?>) {
         let session: URLSession = URLSession.shared
-        let url: URL? = URL(string: "https://poketrader-c8754-default-rtdb.firebaseio.com/.json")
+        let url: URL? = URL(string: "https://poketrader-c8754-default-rtdb.firebaseio.com/userList.json")
         
         if let _url = url {
             let task: URLSessionTask = session.dataTask(with: _url) { (data, response, error) in
                 do {
-                    let userList = try JSONDecoder().decode(UserList.self, from: data ?? Data())
-                    if let _userList = userList.userList {
-                        let _user = _userList.filter({$0.email == email})
-                        let user: User? = _user.first
-                        completion(user, nil)
-                    } else {
-                        completion(nil, "Não fez o parse")
-                        print("nao fez parse")
+                    let userList: Dictionary<String, User> = try JSONDecoder().decode(Dictionary<String, User>.self, from: data ?? Data())
+
+                    for (name, value) in userList {
+                        if (value.email == email) {
+                            self.logou = true
+                            let user: User? = value
+                            completion(user, nil)
+                        }
                     }
+                    
                 } catch {
                     completion(nil, "Entrou no catch")
                     print(error)
+                }
+                
+                if self.logou == false{
+                    completion(nil, "Entrou no catch")
                 }
             }
             task.resume()

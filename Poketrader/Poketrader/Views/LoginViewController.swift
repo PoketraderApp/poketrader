@@ -17,6 +17,10 @@ class LoginViewController: UIViewController {
 
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
+        
+        
+        self.emailTextField.text = "teste@gmail.com"
+        self.senhaTextField.text = "12345678"
         // Do any additional setup after loading the view.
     }
     

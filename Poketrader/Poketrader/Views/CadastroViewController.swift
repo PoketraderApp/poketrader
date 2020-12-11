@@ -15,7 +15,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     func usuarioCriado(result: Bool) {
         if result {
-            self.performSegue(withIdentifier: "CadastroVC.FeedVC", sender: nil)
+            self.dismiss(animated: true, completion: nil)
         } else {
             
         }
