@@ -13,6 +13,7 @@
 		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
 		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
 		41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */; };
+		41D0C0692583CB3C005B3A7B /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */; };
 		5E020EF5255F10CD008C1705 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E020EF4255F10CD008C1705 /* Login.storyboard */; };
 		5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E020EF7255F1140008C1705 /* LoginViewController.swift */; };
 		5E8AF1EC2582747000ECC274 /* EsqueciASenhaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8AF1EB2582747000ECC274 /* EsqueciASenhaViewController.swift */; };
@@ -26,7 +27,6 @@
 		63B67DE5255CD6E100287636 /* OfertaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63B67DE3255CD6E100287636 /* OfertaCell.xib */; };
 		63C9D610255BFEFF0003C35C /* OfertasUsuario.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9D60F255BFEFF0003C35C /* OfertasUsuario.storyboard */; };
 		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
-		669F2B1BDB6F792C90310581 /* Pods_Poketrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE800170E2B4547EE5C63BE3 /* Pods_Poketrader.framework */; };
 		842A05A22575CC1A00890EFF /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842A05A12575CC1A00890EFF /* PokemonSolid.ttf */; };
 		84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
@@ -62,7 +62,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
 		0167FEBDBA2477DD4C75A753 /* Pods-Poketrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.release.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.release.xcconfig"; sourceTree = "<group>"; };
 		0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poketrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A99CFFD5E18EC559A343C5 /* Pods-Poketrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.release.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 		41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
 		41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
+		41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
 		5E020EF4255F10CD008C1705 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5E020EF7255F1140008C1705 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5E8AF1EB2582747000ECC274 /* EsqueciASenhaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsqueciASenhaViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +158,6 @@
 				F70E6AC735EF89F6370E94EE /* Pods-Poketrader.debug.xcconfig */,
 				23A99CFFD5E18EC559A343C5 /* Pods-Poketrader.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -203,6 +202,7 @@
 				413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */,
 				5E8AF1EB2582747000ECC274 /* EsqueciASenhaViewController.swift */,
 				ADD28455255F323600F0DC1A /* EdicaoPokemonViewController.swift */,
+				41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,6 +461,7 @@
 				AD7F6B6825829C1500424C38 /* PokemonWork.swift in Sources */,
 				84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
+				41D0C0692583CB3C005B3A7B /* EscolherImagem.swift in Sources */,
 				AD9A547E257C273500BA0003 /* PokeData.swift in Sources */,
 				AD7F6B50257ED06600424C38 /* OfertasUsuarioViewController.swift in Sources */,
 				AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */,

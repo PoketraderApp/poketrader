@@ -12,11 +12,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var entrarButton: UIButton!
     
+    @IBOutlet weak var backgroudImageLogin: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
+        backgroudImageLogin.image = UIImage(named: "imagemLogin")
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
+        entrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
+
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+                self.view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
@@ -63,4 +72,23 @@ class LoginViewController: UIViewController {
     @IBAction func esqueceuSenhaButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "EsqueciASenhaViewController", sender: nil)
     }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.emailTextField:
+            self.senhaTextField.becomeFirstResponder()
+            
+        case self.senhaTextField:
+            self.senhaTextField.resignFirstResponder()
+            
+        default:
+            
+            break
+        }
+        return true
+    }
+    
 }

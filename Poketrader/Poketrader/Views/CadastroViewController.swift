@@ -23,7 +23,6 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     
     var controller: CadastroController = CadastroController()
-    var imagePicker: UIImagePickerController = UIImagePickerController()
 
     // MARK: TextFields e Labels
     
@@ -57,7 +56,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.telefoneTextField.delegate = self
         self.emailTextField.delegate = self
         self.senhaTextField.delegate = self
-        self.imagePicker.delegate = self
+
         
         self.telefoneTextField.keyboardType = .numberPad
         
@@ -65,13 +64,13 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.verificaSenhaLabel.text = ""
         self.verificaNomeLabel.text = ""
         
-        self.inserirImagemButton.backgroundColor = UIColor(rgb: 0x3B4CCA)
-        self.inserirImagemButton.layer.cornerRadius = 10
+        self.inserirImagemButton.backgroundColor = UIColor(rgb: 0xFF453A)
+        self.inserirImagemButton.layer.cornerRadius = 4
         
         self.imagePerfil.image = UIImage(named: "profilePic")
-        self.imagePerfil.layer.cornerRadius = 5
         
-        self.cadastrarButton.backgroundColor = UIColor(rgb: 0xB3A125)
+        self.cadastrarButton.layer.cornerRadius = 4
+        self.cadastrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
@@ -130,28 +129,26 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     @IBAction func tappedInserirImagem(_ sender: UIButton) {
         dismissKeyboard()
         
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            print("Button capture")
-            imagePicker.sourceType = .savedPhotosAlbum
-            imagePicker.allowsEditing = true
-            present(imagePicker, animated: true, completion: nil)
-        }
+        EscolherImagem().selecionadorImagem(self){ imagem in
+        self.imagePerfil.image = imagem
+    }
         
     }
     
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
-        let valida:Bool = checkFields()
-        if valida {
-            let nome = self.nomeTextField.text ?? ""
-            let telefone = Int(self.telefoneTextField.text ?? "") ?? 0
-            let senha = self.senhaTextField.text ?? ""
-            let email = self.emailTextField.text ?? ""
-            self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
-            
-        }
-        self.dismiss(animated: true, completion: nil)
+                let valida:Bool = checkFields()
+                if valida {
+                    let nome = self.nomeTextField.text ?? ""
+                    let telefone = Int(self.telefoneTextField.text ?? "") ?? 0
+                    let senha = self.senhaTextField.text ?? ""
+                    let email = self.emailTextField.text ?? ""
+                    self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
+                    
+                }
+                self.dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {
@@ -162,6 +159,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.view.endEditing(true)
     }
     
+
 }
 
 // MARK: Text Field Delegate
@@ -192,8 +190,7 @@ extension CadastroViewController: UITextFieldDelegate {
             guard let text = textField.text else { return false }
             
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
-//            textField.text = self.controller.formattedNumber(number: newString)
-            textField.text = newString
+            textField.text = self.controller.formattedNumber(number: newString)
             
             return false
         }
@@ -261,14 +258,3 @@ extension CadastroViewController: UITextFieldDelegate {
     }
     
 }
-
-extension CadastroViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-        
-            self.dismiss(animated: true, completion: { () -> Void in })
-            print("Cheguei aqui - capture")
-            self.imagePerfil.image = image
-    }
-}
-
