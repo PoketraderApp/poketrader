@@ -15,7 +15,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     func usuarioCriado(result: Bool) {
         if result {
-            self.performSegue(withIdentifier: "CadastroVC.FeedVC", sender: nil)
+            self.dismiss(animated: true, completion: nil)
         } else {
             
         }
@@ -151,6 +151,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
             self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
             
         }
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {
