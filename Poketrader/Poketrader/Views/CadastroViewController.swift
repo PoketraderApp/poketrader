@@ -128,27 +128,30 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     @IBAction func tappedInserirImagem(_ sender: UIButton) {
         dismissKeyboard()
+        
         EscolherImagem().selecionadorImagem(self){ imagem in
-                self.imagePerfil.image = imagem
+        self.imagePerfil.image = imagem
+    }
         
     }
     
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
+        
         let valida:Bool = checkFields()
+        
         if valida {
-            let nome = self.nomeTextField.text ?? ""
-            let telefone = Int(self.telefoneTextField.text ?? "") ?? 0
-            let senha = self.senhaTextField.text ?? ""
-            let email = self.emailTextField.text ?? ""
-            self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
+            
+            self.performSegue(withIdentifier: "CadastroVC.FeedVC", sender: nil)
+
             
         }
-        self.dismiss(animated: true, completion: nil)
+        
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {
+        self.dismissKeyboard()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -156,6 +159,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.view.endEditing(true)
     }
     
+
 }
 
 // MARK: Text Field Delegate
@@ -186,8 +190,7 @@ extension CadastroViewController: UITextFieldDelegate {
             guard let text = textField.text else { return false }
             
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
-//            textField.text = self.controller.formattedNumber(number: newString)
-            textField.text = newString
+            textField.text = self.controller.formattedNumber(number: newString)
             
             return false
         }
