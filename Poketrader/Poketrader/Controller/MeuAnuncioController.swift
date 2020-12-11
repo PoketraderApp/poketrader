@@ -10,10 +10,10 @@ import Foundation
 class MeuAnuncioController {
     private var ofertas: Ofertas?
     private var worker: MeuAnuncioWorker? // Usando worker para o JSON
-    private var ofertaID: String?
+    private var ofertaID: Int?
     func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) {
         // Usando worker
-        self.worker?.getOfertaMock(ofertaID: self.ofertaID ?? "") { (ofertas, error) in
+        self.worker?.getOfertaMock(ofertaID: self.ofertaID ?? 0) { (ofertas, error) in
             if let _ofertas = ofertas {
                 print(_ofertas)
                 self.ofertas = _ofertas
@@ -37,8 +37,8 @@ class MeuAnuncioController {
 class MeuAnuncioWorker {
     typealias completion<T> = (_ result: T, _ failure: String?) -> Void
     
-    func getOfertaMock(ofertaID: String, completion: @escaping completion<Ofertas?>) {
-        if let path = Bundle.main.path(forResource: "meus-pkmn", ofType: "json") {
+    func getOfertaMock(ofertaID: Int, completion: @escaping completion<Ofertas?>) {
+        if let path = Bundle.main.path(forResource: "ofertas", ofType: "json") {
             do {
                 let ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)

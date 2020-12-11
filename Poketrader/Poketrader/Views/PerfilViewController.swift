@@ -1,5 +1,5 @@
 //
-//  PerfilNewController.swift
+//  PerfilViewController.swift
 //  Poketrader
 //
 //  Created by AndreLucas on 12/11/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PerfilNewController: UIViewController {
+class PerfilViewController: UIViewController {
     
     // Imagens
     @IBOutlet weak var iconUser: UIImageView!
@@ -69,7 +69,7 @@ class PerfilNewController: UIViewController {
     
 }
 
-extension PerfilNewController : UITextFieldDelegate {
+extension PerfilViewController : UITextFieldDelegate {
     // when user select a textfield, this method will be called
     func textFieldDidBeginEditing(_ textField: UITextField) {
         // set the activeTextField to the selected textfield
