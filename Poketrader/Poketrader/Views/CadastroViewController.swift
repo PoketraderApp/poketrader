@@ -68,13 +68,12 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.inserirImagemButton.layer.cornerRadius = 4
         
         self.imagePerfil.image = UIImage(named: "profilePic")
-        self.cadastrarButton.layer.cornerRadius = 4
         
+        self.cadastrarButton.layer.cornerRadius = 4
         self.cadastrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
-        self.controller.delegate = self
     
     }
     
