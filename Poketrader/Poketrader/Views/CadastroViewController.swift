@@ -74,6 +74,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
+        self.controller.delegate = self
     
     }
     
@@ -137,20 +138,20 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
-        
-        let valida:Bool = checkFields()
-        
-        if valida {
-            
-            self.performSegue(withIdentifier: "CadastroVC.FeedVC", sender: nil)
-
-            
-        }
+                let valida:Bool = checkFields()
+                if valida {
+                    let nome = self.nomeTextField.text ?? ""
+                    let telefone = Int(self.telefoneTextField.text ?? "") ?? 0
+                    let senha = self.senhaTextField.text ?? ""
+                    let email = self.emailTextField.text ?? ""
+                    self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
+                    
+                }
+                self.dismiss(animated: true, completion: nil)
         
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {
-        self.dismissKeyboard()
         self.dismiss(animated: true, completion: nil)
     }
     
