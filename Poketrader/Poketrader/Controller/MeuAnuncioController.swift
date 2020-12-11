@@ -9,7 +9,7 @@ import Foundation
 
 class MeuAnuncioController {
     private var ofertas: Ofertas?
-    private var worker: MeuAnuncioWorker? // Usando worker para o JSON
+    private var worker: OfertasWorker? // Usando worker para o JSON
     private var ofertaID: Int?
     func loadOfertaElement(completion: @escaping (_ result: Bool, _ error: String?) -> Void) {
         // Usando worker
@@ -33,27 +33,3 @@ class MeuAnuncioController {
     }
 }
 
-// MARK: - Mover para arquivo separado
-class MeuAnuncioWorker {
-    typealias completion<T> = (_ result: T, _ failure: String?) -> Void
-    
-    func getOfertaMock(ofertaID: Int, completion: @escaping completion<Ofertas?>) {
-        if let path = Bundle.main.path(forResource: "ofertas", ofType: "json") {
-            do {
-                let ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)
-                let lista = ofertasList.ofertas?.filter({$0.ofertaID == ofertaID})
-                
-                // MARK: - Avaliar
-                // Ajustar tipo
-                // Sem o Ofertas(ofertas: lista) acaba-se criando um [OfertaElement]
-                // -> Verificar lógica
-                let _ofertas = Ofertas(ofertas: lista)
-                completion(_ofertas, nil)
-            } catch {
-                completion(nil, "Don't fail me again")
-            }
-        }
-    }
-    
-}
