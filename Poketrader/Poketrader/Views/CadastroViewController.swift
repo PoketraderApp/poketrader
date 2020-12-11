@@ -15,9 +15,16 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     func usuarioCriado(result: Bool) {
         if result {
-            self.dismiss(animated: true, completion: nil)
-        } else {
+            let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
             
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -147,7 +154,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
                     self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
                     
                 }
-                self.dismiss(animated: true, completion: nil)
+                
         
     }
     
@@ -190,7 +197,8 @@ extension CadastroViewController: UITextFieldDelegate {
             guard let text = textField.text else { return false }
             
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
-            textField.text = self.controller.formattedNumber(number: newString)
+            textField.text = newString
+//            textField.text = self.controller.formattedNumber(number: newString)
             
             return false
         }

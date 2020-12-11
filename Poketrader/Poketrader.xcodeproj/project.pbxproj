@@ -57,6 +57,10 @@
 		CE2C8EA3255E1B41005DE718 /* AddPokemonStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2C8EA2255E1B41005DE718 /* AddPokemonStoryboard.storyboard */; };
 		CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C8EA5255E1B6C005DE718 /* ViewController.swift */; };
 		FE712A872581911100F75732 /* GenericWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE712A862581911100F75732 /* GenericWork.swift */; };
+		FEC49639258403E9004DF8E6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC49638258403E9004DF8E6 /* BaseViewController.swift */; };
+		FEC4963D258405B2004DF8E6 /* LoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC4963C258405B2004DF8E6 /* LoadView.xib */; };
+		FEC4963F25840701004DF8E6 /* load.json in Resources */ = {isa = PBXBuildFile; fileRef = FEC4963E25840701004DF8E6 /* load.json */; };
+		FEC4964125840847004DF8E6 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4964025840847004DF8E6 /* LoadView.swift */; };
 		FEF7BC712574FCEB0084F621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC702574FCEB0084F621 /* User.swift */; };
 		FEF7BC752574FE020084F621 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = FEF7BC742574FE020084F621 /* user.json */; };
 		FEF7BC772574FF040084F621 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC762574FF040084F621 /* LoginController.swift */; };
@@ -121,6 +125,10 @@
 		DE800170E2B4547EE5C63BE3 /* Pods_Poketrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poketrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70E6AC735EF89F6370E94EE /* Pods-Poketrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.debug.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.debug.xcconfig"; sourceTree = "<group>"; };
 		FE712A862581911100F75732 /* GenericWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWork.swift; sourceTree = "<group>"; };
+		FEC49638258403E9004DF8E6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FEC4963C258405B2004DF8E6 /* LoadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadView.xib; sourceTree = "<group>"; };
+		FEC4963E25840701004DF8E6 /* load.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = load.json; sourceTree = "<group>"; };
+		FEC4964025840847004DF8E6 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		FEF7BC702574FCEB0084F621 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FEF7BC742574FE020084F621 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		FEF7BC762574FF040084F621 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
@@ -207,6 +215,7 @@
 				5E8AF1EB2582747000ECC274 /* EsqueciASenhaViewController.swift */,
 				ADD28455255F323600F0DC1A /* EdicaoPokemonViewController.swift */,
 				41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */,
+				FEC49638258403E9004DF8E6 /* BaseViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,6 +272,7 @@
 				AD53A0B0254F164000C81C07 /* Assets.xcassets */,
 				AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */,
 				AD53A0B5254F164000C81C07 /* Info.plist */,
+				FEC4963E25840701004DF8E6 /* load.json */,
 			);
 			path = Poketrader;
 			sourceTree = "<group>";
@@ -272,6 +282,8 @@
 			children = (
 				63B67DE2255CD6E100287636 /* OfertaCell.swift */,
 				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
+				FEC4963C258405B2004DF8E6 /* LoadView.xib */,
+				FEC4964025840847004DF8E6 /* LoadView.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -378,6 +390,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */,
+				FEC4963F25840701004DF8E6 /* load.json in Resources */,
+				FEC4963D258405B2004DF8E6 /* LoadView.xib in Resources */,
 				632C157E255DFE360068BD3E /* 3.png in Resources */,
 				ADD2845B255F32D200F0DC1A /* Feed.storyboard in Resources */,
 				632C1580255DFEEB0068BD3E /* ofertas.json in Resources */,
@@ -456,6 +470,7 @@
 				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
 				AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */,
 				FE712A872581911100F75732 /* GenericWork.swift in Sources */,
+				FEC49639258403E9004DF8E6 /* BaseViewController.swift in Sources */,
 				AD7F6B6C25829F8000424C38 /* ErrorHandler.swift in Sources */,
 				AD7F6B33257ED00000424C38 /* PerfilViewController.swift in Sources */,
 				AD7F6B952583EDDD00424C38 /* FeedController.swift in Sources */,
@@ -472,6 +487,7 @@
 				AD9A547E257C273500BA0003 /* PokeData.swift in Sources */,
 				AD7F6B50257ED06600424C38 /* OfertasUsuarioViewController.swift in Sources */,
 				AD897AD1255E465B00AA8C0F /* MeuAnuncioController.swift in Sources */,
+				FEC4964125840847004DF8E6 /* LoadView.swift in Sources */,
 				FEF7BC772574FF040084F621 /* LoginController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
 				FEF7BC792574FFAA0084F621 /* LoginWork.swift in Sources */,
