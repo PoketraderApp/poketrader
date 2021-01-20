@@ -10,6 +10,7 @@
 		0224055738C98E3AD1B26090 /* Pods_Poketrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */; };
 		4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123AA59255D737B00F5AA2E /* CadastroController.swift */; };
 		413E8AF525B7A95D00DFADBD /* SelecionarPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */; };
+		413E8AF825B7CD2A00DFADBD /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AF725B7CD2A00DFADBD /* PokemonList.swift */; };
 		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
 		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
 		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
@@ -74,6 +75,7 @@
 		23A99CFFD5E18EC559A343C5 /* Pods-Poketrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.release.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.release.xcconfig"; sourceTree = "<group>"; };
 		4123AA59255D737B00F5AA2E /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecionarPokemonVC.swift; sourceTree = "<group>"; };
+		413E8AF725B7CD2A00DFADBD /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
 		413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 		41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				FEF7BC702574FCEB0084F621 /* User.swift */,
 				AD9A547A257C26E100BA0003 /* Pokemon.swift */,
 				AD9A547D257C273500BA0003 /* PokeData.swift */,
+				413E8AF725B7CD2A00DFADBD /* PokemonList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */,
 				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
 				AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */,
+				413E8AF825B7CD2A00DFADBD /* PokemonList.swift in Sources */,
 				FE712A872581911100F75732 /* GenericWork.swift in Sources */,
 				FEC49639258403E9004DF8E6 /* BaseViewController.swift in Sources */,
 				AD7F6B6C25829F8000424C38 /* ErrorHandler.swift in Sources */,
