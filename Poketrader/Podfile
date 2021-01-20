@@ -9,4 +9,8 @@ target 'Poketrader' do
   pod 'Alamofire', '~> 5.2'
   pod 'lottie-ios'
 
+  # Pods do Firebase
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 end
