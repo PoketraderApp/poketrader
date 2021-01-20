@@ -11,6 +11,7 @@
 		4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123AA59255D737B00F5AA2E /* CadastroController.swift */; };
 		413E8AF525B7A95D00DFADBD /* SelecionarPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */; };
 		413E8AF825B7CD2A00DFADBD /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AF725B7CD2A00DFADBD /* PokemonList.swift */; };
+		413E8AFB25B7DAF400DFADBD /* SelecionarPokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AFA25B7DAF400DFADBD /* SelecionarPokemonController.swift */; };
 		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
 		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
 		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
@@ -76,6 +77,7 @@
 		4123AA59255D737B00F5AA2E /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
 		413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecionarPokemonVC.swift; sourceTree = "<group>"; };
 		413E8AF725B7CD2A00DFADBD /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
+		413E8AFA25B7DAF400DFADBD /* SelecionarPokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecionarPokemonController.swift; sourceTree = "<group>"; };
 		413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 		41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */,
 				4123AA59255D737B00F5AA2E /* CadastroController.swift */,
 				FEF7BC762574FF040084F621 /* LoginController.swift */,
+				413E8AFA25B7DAF400DFADBD /* SelecionarPokemonController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */,
 				413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */,
 				4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */,
+				413E8AFB25B7DAF400DFADBD /* SelecionarPokemonController.swift in Sources */,
 				AD7F6B3E257ED02900424C38 /* AnuncioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
