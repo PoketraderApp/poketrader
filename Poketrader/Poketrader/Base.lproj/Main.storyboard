@@ -848,11 +848,42 @@
                         <outlet property="helpMessageView" destination="j5v-zd-54N" id="O8l-rd-sul"/>
                         <outlet property="pokemonImage" destination="3cS-d8-g2f" id="MWm-Qa-8Wm"/>
                         <outlet property="searchPokemon" destination="QVj-Kx-w2n" id="wBp-Mg-jma"/>
+                        <segue destination="iO3-uR-s7m" kind="presentation" identifier="CadastrarVC.SelecionarPokemonVC" id="PaK-AH-kHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4i0-RM-ayv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926" y="1299"/>
+        </scene>
+        <!--Selecionar Pokémon-->
+        <scene sceneID="69H-WS-Pm9">
+            <objects>
+                <viewController title="Selecionar Pokémon" id="iO3-uR-s7m" customClass="SelecionarPokemonVC" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nqf-RO-AYE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-0C-cb7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P3w-tM-Jsk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P3w-tM-Jsk" firstAttribute="trailing" secondItem="y8c-0C-cb7" secondAttribute="trailing" id="DRf-Qq-m44"/>
+                            <constraint firstItem="P3w-tM-Jsk" firstAttribute="bottom" secondItem="y8c-0C-cb7" secondAttribute="bottom" id="NuO-KC-agX"/>
+                            <constraint firstItem="y8c-0C-cb7" firstAttribute="leading" secondItem="P3w-tM-Jsk" secondAttribute="leading" id="nJm-1Q-8ms"/>
+                            <constraint firstItem="y8c-0C-cb7" firstAttribute="top" secondItem="P3w-tM-Jsk" secondAttribute="top" id="wyk-IJ-sLp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="y8c-0C-cb7" id="64D-ZU-fnB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRG-Pr-DAa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1926" y="2085"/>
         </scene>
         <!--Minhas Ofertas-->
         <scene sceneID="J8A-01-b0y">
