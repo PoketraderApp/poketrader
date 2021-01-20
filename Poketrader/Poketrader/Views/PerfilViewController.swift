@@ -32,7 +32,7 @@ class PerfilViewController: UIViewController {
         super.viewDidLoad()
         self.setupView()
         
-//        let service: LoginWork = LoginWork()
+//        let service: AuthenticationWorker = AuthenticationWorker()
 //        self.usuario = service.loadUsuario()
 //        
 //        if let usuario = self.usuario {

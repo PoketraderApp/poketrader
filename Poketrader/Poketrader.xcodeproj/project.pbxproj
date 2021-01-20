@@ -65,7 +65,7 @@
 		FEF7BC712574FCEB0084F621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC702574FCEB0084F621 /* User.swift */; };
 		FEF7BC752574FE020084F621 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = FEF7BC742574FE020084F621 /* user.json */; };
 		FEF7BC772574FF040084F621 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC762574FF040084F621 /* LoginController.swift */; };
-		FEF7BC792574FFAA0084F621 /* LoginWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC782574FFAA0084F621 /* LoginWork.swift */; };
+		FEF7BC792574FFAA0084F621 /* AuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC782574FFAA0084F621 /* AuthenticationWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,7 +134,7 @@
 		FEF7BC702574FCEB0084F621 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FEF7BC742574FE020084F621 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		FEF7BC762574FF040084F621 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		FEF7BC782574FFAA0084F621 /* LoginWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWork.swift; sourceTree = "<group>"; };
+		FEF7BC782574FFAA0084F621 /* AuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -324,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7F6B6725829C1500424C38 /* PokemonWork.swift */,
-				FEF7BC782574FFAA0084F621 /* LoginWork.swift */,
+				FEF7BC782574FFAA0084F621 /* AuthenticationWorker.swift */,
 				FE712A862581911100F75732 /* GenericWork.swift */,
 				AD7F6B6B25829F8000424C38 /* ErrorHandler.swift */,
 				84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */,
@@ -494,7 +494,7 @@
 				FEC4964125840847004DF8E6 /* LoadView.swift in Sources */,
 				FEF7BC772574FF040084F621 /* LoginController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
-				FEF7BC792574FFAA0084F621 /* LoginWork.swift in Sources */,
+				FEF7BC792574FFAA0084F621 /* AuthenticationWorker.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 				AD7F6B99258407E600424C38 /* OfertasWorker.swift in Sources */,
 				AD7F6B42257ED03E00424C38 /* AddPokemonViewController.swift in Sources */,
