@@ -38,7 +38,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
         
         self.controller?.getPokemonData(nomePokemon: nomePokemon){ (result, erro) in
             if(result){
-                let url = URL(fileURLWithPath: self.controller?.pokemonURLImage ?? "")s
+                let url = URL(fileURLWithPath: self.controller?.pokemonURLImage ?? "")
                 self.pokemonImage.load(url: url)
                     
             }
