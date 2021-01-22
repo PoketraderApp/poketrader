@@ -10,6 +10,7 @@ import Alamofire
 
 class PokemonWork: GenericWorker {
     let urlString: String = "https://pokeapi.co/api/v2/pokemon/"
+    let limit: String = "?limit="
     
     func getPokemon(nome: String, completion: @escaping completion<Pokemon?>) {
         let url: URL? = URL(string: urlString + nome)
@@ -62,4 +63,28 @@ class PokemonWork: GenericWorker {
             task.resume()
         }
     }
+    
+    func getTwentyPokemons(urlNext:String? = nil, completion: @escaping completion<PokemonList?>) {
+        let session: URLSession = URLSession.shared
+        var url: URL? = URL(string: urlString)
+        
+        if let _urlNext = urlNext {
+            url = URL(string: _urlNext)
+        }
+        
+        if let _url = url {
+            let task: URLSessionTask = session.dataTask(with: _url) { (data, response, error) in
+                do{
+                    let numberOfPokemons = try JSONDecoder().decode(PokemonList.self, from: data ?? Data())
+                    completion(numberOfPokemons, nil)
+                }
+                catch{
+                    completion(nil, nil)
+                }
+            
+            }
+            task.resume()
+        }
+    }
+    
 }

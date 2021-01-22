@@ -9,10 +9,16 @@
 /* Begin PBXBuildFile section */
 		0224055738C98E3AD1B26090 /* Pods_Poketrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */; };
 		4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123AA59255D737B00F5AA2E /* CadastroController.swift */; };
+		413E8AF525B7A95D00DFADBD /* SelecionarPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */; };
+		413E8AF825B7CD2A00DFADBD /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AF725B7CD2A00DFADBD /* PokemonList.swift */; };
+		413E8AFB25B7DAF400DFADBD /* SelecionarPokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413E8AFA25B7DAF400DFADBD /* SelecionarPokemonController.swift */; };
 		413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */; };
 		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
 		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
 		41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */; };
+		41CAA0DD25BB57E9006E6E9D /* AddPokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA0DC25BB57E9006E6E9D /* AddPokemonController.swift */; };
+		41CAA0E125BB68F1006E6E9D /* ListaDePokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA0DF25BB68F1006E6E9D /* ListaDePokemonCell.swift */; };
+		41CAA0E225BB68F1006E6E9D /* ListaDePokemonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CAA0E025BB68F1006E6E9D /* ListaDePokemonCell.xib */; };
 		41D0C0692583CB3C005B3A7B /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */; };
 		5E020EF5255F10CD008C1705 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E020EF4255F10CD008C1705 /* Login.storyboard */; };
 		5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E020EF7255F1140008C1705 /* LoginViewController.swift */; };
@@ -73,10 +79,16 @@
 		0FE5EE4E62FC8EBEA6DD9DAA /* Pods_Poketrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Poketrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A99CFFD5E18EC559A343C5 /* Pods-Poketrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Poketrader.release.xcconfig"; path = "Target Support Files/Pods-Poketrader/Pods-Poketrader.release.xcconfig"; sourceTree = "<group>"; };
 		4123AA59255D737B00F5AA2E /* CadastroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroController.swift; sourceTree = "<group>"; };
+		413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecionarPokemonVC.swift; sourceTree = "<group>"; };
+		413E8AF725B7CD2A00DFADBD /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
+		413E8AFA25B7DAF400DFADBD /* SelecionarPokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelecionarPokemonController.swift; sourceTree = "<group>"; };
 		413EC59D2550FF7C00C534D7 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 		41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
 		41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
+		41CAA0DC25BB57E9006E6E9D /* AddPokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPokemonController.swift; sourceTree = "<group>"; };
+		41CAA0DF25BB68F1006E6E9D /* ListaDePokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDePokemonCell.swift; sourceTree = "<group>"; };
+		41CAA0E025BB68F1006E6E9D /* ListaDePokemonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaDePokemonCell.xib; sourceTree = "<group>"; };
 		41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
 		5E020EF4255F10CD008C1705 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5E020EF7255F1140008C1705 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +209,7 @@
 				FEF7BC702574FCEB0084F621 /* User.swift */,
 				AD9A547A257C26E100BA0003 /* Pokemon.swift */,
 				AD9A547D257C273500BA0003 /* PokeData.swift */,
+				413E8AF725B7CD2A00DFADBD /* PokemonList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +231,7 @@
 				ADD28455255F323600F0DC1A /* EdicaoPokemonViewController.swift */,
 				41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */,
 				FEC49638258403E9004DF8E6 /* BaseViewController.swift */,
+				413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +301,8 @@
 				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
 				FEC4963C258405B2004DF8E6 /* LoadView.xib */,
 				FEC4964025840847004DF8E6 /* LoadView.swift */,
+				41CAA0DF25BB68F1006E6E9D /* ListaDePokemonCell.swift */,
+				41CAA0E025BB68F1006E6E9D /* ListaDePokemonCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -316,6 +332,8 @@
 				AD897ACE255E465B00AA8C0F /* MeuAnuncioController.swift */,
 				4123AA59255D737B00F5AA2E /* CadastroController.swift */,
 				FEF7BC762574FF040084F621 /* LoginController.swift */,
+				413E8AFA25B7DAF400DFADBD /* SelecionarPokemonController.swift */,
+				41CAA0DC25BB57E9006E6E9D /* AddPokemonController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -417,6 +435,7 @@
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
 				632C157D255DFE360068BD3E /* 7.png in Resources */,
 				ADD28452255F320500F0DC1A /* Perfil.storyboard in Resources */,
+				41CAA0E225BB68F1006E6E9D /* ListaDePokemonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +492,9 @@
 				5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */,
 				63B67DE4255CD6E100287636 /* OfertaCell.swift in Sources */,
 				AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */,
+				413E8AF825B7CD2A00DFADBD /* PokemonList.swift in Sources */,
 				FE712A872581911100F75732 /* GenericWork.swift in Sources */,
+				41CAA0E125BB68F1006E6E9D /* ListaDePokemonCell.swift in Sources */,
 				FEC49639258403E9004DF8E6 /* BaseViewController.swift in Sources */,
 				AD7F6B6C25829F8000424C38 /* ErrorHandler.swift in Sources */,
 				AD7F6B33257ED00000424C38 /* PerfilViewController.swift in Sources */,
@@ -484,6 +505,7 @@
 				AD7F6B3D257ED02900424C38 /* AnuncioController.swift in Sources */,
 				5E8AF1EC2582747000ECC274 /* EsqueciASenhaViewController.swift in Sources */,
 				FEF7BC712574FCEB0084F621 /* User.swift in Sources */,
+				41CAA0DD25BB57E9006E6E9D /* AddPokemonController.swift in Sources */,
 				AD7F6B6825829C1500424C38 /* PokemonWork.swift in Sources */,
 				84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,
@@ -494,6 +516,7 @@
 				FEC4964125840847004DF8E6 /* LoadView.swift in Sources */,
 				FEF7BC772574FF040084F621 /* LoginController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
+				413E8AF525B7A95D00DFADBD /* SelecionarPokemonVC.swift in Sources */,
 				FEF7BC792574FFAA0084F621 /* AuthenticationWorker.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 				AD7F6B99258407E600424C38 /* OfertasWorker.swift in Sources */,
@@ -501,6 +524,7 @@
 				41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */,
 				413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */,
 				4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */,
+				413E8AFB25B7DAF400DFADBD /* SelecionarPokemonController.swift in Sources */,
 				AD7F6B3E257ED02900424C38 /* AnuncioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
