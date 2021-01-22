@@ -87,6 +87,4 @@ class PokemonWork: GenericWorker {
         }
     }
     
-    
-    
 }

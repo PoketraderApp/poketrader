@@ -7,22 +7,28 @@
 
 import UIKit
 
+protocol SelecionarPokemonVCDelegate {
+    func sendDataToCadastroVC(nomePokemon: String)
+}
+
 class SelecionarPokemonVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     private var controller: SelecionarPokemonController?
+    
+    var delegate: SelecionarPokemonVCDelegate? = nil
     var isLoading = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
+        self.tableView.register(UINib(nibName: "ListaDePokemonCell", bundle: nil), forCellReuseIdentifier: "ListaDePokemonCell")
         
         self.controller = SelecionarPokemonController()
         self.controller?.getTwentyPokemons(){ (result, error) in
             if result {
-                self.controller?.teste()
+                //self.controller?.teste()
                 DispatchQueue.main.async {
                     self.tableView.delegate = self
                     self.tableView.dataSource = self
@@ -69,6 +75,8 @@ class SelecionarPokemonVC: UIViewController {
     }
     
 }
+
+
 extension SelecionarPokemonVC: UITableViewDelegate, UITableViewDataSource {
         
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,14 +84,20 @@ extension SelecionarPokemonVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "OfertaCell", for: indexPath) as? OfertaCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ListaDePokemonCell", for: indexPath) as? ListaDePokemonCell {
             cell.setup(nomePokemon: self.controller?.getNomePokemon(at: indexPath.row))
             return cell
         }
         return UITableViewCell()
     }
     
-
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.delegate != nil {
+            let pokemonName = self.controller?.getNomePokemon(at: indexPath.row)?.lowercased()
+            self.delegate?.sendDataToCadastroVC(nomePokemon: pokemonName ?? "")
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
 
 }

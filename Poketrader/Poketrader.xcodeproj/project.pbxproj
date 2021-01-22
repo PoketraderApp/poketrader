@@ -16,6 +16,9 @@
 		41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */; };
 		41AD8EBB255AD5FC00DCAD30 /* Cadastro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */; };
 		41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */; };
+		41CAA0DD25BB57E9006E6E9D /* AddPokemonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA0DC25BB57E9006E6E9D /* AddPokemonController.swift */; };
+		41CAA0E125BB68F1006E6E9D /* ListaDePokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CAA0DF25BB68F1006E6E9D /* ListaDePokemonCell.swift */; };
+		41CAA0E225BB68F1006E6E9D /* ListaDePokemonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41CAA0E025BB68F1006E6E9D /* ListaDePokemonCell.xib */; };
 		41D0C0692583CB3C005B3A7B /* EscolherImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */; };
 		5E020EF5255F10CD008C1705 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E020EF4255F10CD008C1705 /* Login.storyboard */; };
 		5E020EF8255F1140008C1705 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E020EF7255F1140008C1705 /* LoginViewController.swift */; };
@@ -82,6 +85,9 @@
 		41AD8EB7255AD5EA00DCAD30 /* TelaInicial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TelaInicial.storyboard; sourceTree = "<group>"; };
 		41AD8EBA255AD5FC00DCAD30 /* Cadastro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Cadastro.storyboard; sourceTree = "<group>"; };
 		41AD8EBD255AD6A900DCAD30 /* TelaInicialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaInicialViewController.swift; sourceTree = "<group>"; };
+		41CAA0DC25BB57E9006E6E9D /* AddPokemonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPokemonController.swift; sourceTree = "<group>"; };
+		41CAA0DF25BB68F1006E6E9D /* ListaDePokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDePokemonCell.swift; sourceTree = "<group>"; };
+		41CAA0E025BB68F1006E6E9D /* ListaDePokemonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaDePokemonCell.xib; sourceTree = "<group>"; };
 		41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscolherImagem.swift; sourceTree = "<group>"; };
 		5E020EF4255F10CD008C1705 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5E020EF7255F1140008C1705 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +298,8 @@
 				63B67DE3255CD6E100287636 /* OfertaCell.xib */,
 				FEC4963C258405B2004DF8E6 /* LoadView.xib */,
 				FEC4964025840847004DF8E6 /* LoadView.swift */,
+				41CAA0DF25BB68F1006E6E9D /* ListaDePokemonCell.swift */,
+				41CAA0E025BB68F1006E6E9D /* ListaDePokemonCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 				4123AA59255D737B00F5AA2E /* CadastroController.swift */,
 				FEF7BC762574FF040084F621 /* LoginController.swift */,
 				413E8AFA25B7DAF400DFADBD /* SelecionarPokemonController.swift */,
+				41CAA0DC25BB57E9006E6E9D /* AddPokemonController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,6 +431,7 @@
 				AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */,
 				632C157D255DFE360068BD3E /* 7.png in Resources */,
 				ADD28452255F320500F0DC1A /* Perfil.storyboard in Resources */,
+				41CAA0E225BB68F1006E6E9D /* ListaDePokemonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +490,7 @@
 				AD7F6B4F257ED06600424C38 /* MeuAnuncioViewController.swift in Sources */,
 				413E8AF825B7CD2A00DFADBD /* PokemonList.swift in Sources */,
 				FE712A872581911100F75732 /* GenericWork.swift in Sources */,
+				41CAA0E125BB68F1006E6E9D /* ListaDePokemonCell.swift in Sources */,
 				FEC49639258403E9004DF8E6 /* BaseViewController.swift in Sources */,
 				AD7F6B6C25829F8000424C38 /* ErrorHandler.swift in Sources */,
 				AD7F6B33257ED00000424C38 /* PerfilViewController.swift in Sources */,
@@ -490,6 +501,7 @@
 				AD7F6B3D257ED02900424C38 /* AnuncioController.swift in Sources */,
 				5E8AF1EC2582747000ECC274 /* EsqueciASenhaViewController.swift in Sources */,
 				FEF7BC712574FCEB0084F621 /* User.swift in Sources */,
+				41CAA0DD25BB57E9006E6E9D /* AddPokemonController.swift in Sources */,
 				AD7F6B6825829C1500424C38 /* PokemonWork.swift in Sources */,
 				84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */,
 				AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */,

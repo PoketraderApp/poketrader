@@ -27,15 +27,7 @@ class OfertaCell: UITableViewCell {
             self.imagemPkmn.image = UIImage(named: String(oferta.pokemon?.id ?? 3))
         }
     }
-    
-    func setup(nomePokemon: String?){
-        
-        self.nomePkmn.text = nomePokemon
-        self.tituloJogo.text = ""
-        self.nomeJogador.text = ""
-        self.imagemPkmn.image = UIImage(named: nomePokemon ?? String(3)) // mudar p/ download da imagem
-        
-    }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

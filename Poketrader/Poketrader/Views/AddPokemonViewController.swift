@@ -7,19 +7,23 @@
 
 import UIKit
 
-class AddPokemonViewController: UIViewController {
-
+class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
+    
     @IBOutlet weak var gameTitleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var helpMessageView: UIView!
     @IBOutlet weak var searchPokemon: UISearchBar!
     
+    private var controller: AddPokemonController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
+        
+        self.controller = AddPokemonController()
         
         self.gameTitleTextField.delegate = self
         self.descriptionTextField.delegate = self
@@ -28,9 +32,34 @@ class AddPokemonViewController: UIViewController {
     @objc func dismissKeyboard() {
         self.view.endEditing(true);
     }
+    
+    func sendDataToCadastroVC(nomePokemon: String) {
+        print("cliquei no >>>>>>>>\(nomePokemon)")
+        
+        self.controller?.getPokemonData(nomePokemon: nomePokemon){ (result, erro) in
+            if(result){
+                let url = URL(fileURLWithPath: self.controller?.pokemonURLImage ?? "")s
+                self.pokemonImage.load(url: url)
+                    
+            }
+            else{
+                print("deu erro")
+            }
+            
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier ==  "CadastrarVC.SelecionarPokemonVC"){
+            let selecionarPokemonVC: SelecionarPokemonVC = segue.destination as! SelecionarPokemonVC
+            selecionarPokemonVC.delegate = self
+        }
+    }
 
     @IBAction func searchAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "CadastrarVC.SelecionarPokemonVC", sender: nil)
+        
     }
     @IBAction func addPokemon(_ sender: UIButton) {
         let isValid = self.validateFields(textFields: [
@@ -92,5 +121,19 @@ extension AddPokemonViewController {
         }
         
         return true
+    }
+}
+
+extension UIImageView {
+    func load(url: URL) {
+            DispatchQueue.global().async { [weak self] in
+                if let data = try? Data(contentsOf: url) {
+                    if let image = UIImage(data: data) {
+                        DispatchQueue.main.async {
+                            self?.image = image
+                        }
+                    }
+                }
+            }
     }
 }
