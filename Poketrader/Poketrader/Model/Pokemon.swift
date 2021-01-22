@@ -17,7 +17,7 @@ struct Pokemon: Codable {
     init(data: PokeData) {
         id = data.id
         name = data.name
-        sprite = data.sprite?.other?.officialArtwork?.imagePath
+        sprite = data.sprites?.other?.officialArtwork?.imagePath
         stats = []
         if let dataStats = data.stats {
             for stat in dataStats {

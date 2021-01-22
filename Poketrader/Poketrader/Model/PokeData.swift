@@ -10,7 +10,7 @@ import Foundation
 struct PokeData: Codable {
     let id: Int?
     let name: String?
-    let sprite: Sprites?
+    let sprites: Sprites?
     let stats: [StatElement]?
 }
 
