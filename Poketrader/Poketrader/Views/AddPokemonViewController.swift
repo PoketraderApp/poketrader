@@ -29,6 +29,9 @@ class AddPokemonViewController: UIViewController {
         self.view.endEditing(true);
     }
 
+    @IBAction func searchAction(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "CadastrarVC.SelecionarPokemonVC", sender: nil)
+    }
     @IBAction func addPokemon(_ sender: UIButton) {
         let isValid = self.validateFields(textFields: [
             self.gameTitleTextField,

@@ -64,14 +64,18 @@ class PokemonWork: GenericWorker {
         }
     }
     
-    func getNumberOfPokemons(completion: @escaping completion<NumberOfPokemons?>) {
+    func getTwentyPokemons(urlNext:String? = nil, completion: @escaping completion<PokemonList?>) {
         let session: URLSession = URLSession.shared
-        let url: URL? = URL(string: urlString)
+        var url: URL? = URL(string: urlString)
+        
+        if let _urlNext = urlNext {
+            url = URL(string: _urlNext)
+        }
         
         if let _url = url {
             let task: URLSessionTask = session.dataTask(with: _url) { (data, response, error) in
                 do{
-                    let numberOfPokemons = try JSONDecoder().decode(NumberOfPokemons.self, from: data ?? Data())
+                    let numberOfPokemons = try JSONDecoder().decode(PokemonList.self, from: data ?? Data())
                     completion(numberOfPokemons, nil)
                 }
                 catch{
@@ -83,23 +87,6 @@ class PokemonWork: GenericWorker {
         }
     }
     
-    func getAllPokemons(numberOfPokemons: String, completion: @escaping completion<PokemonList?>){
-        let session: URLSession = URLSession.shared
-        let url: URL? = URL(string: urlString + limit + numberOfPokemons)
-        
-        if let _url = url {
-            let task: URLSessionTask = session.dataTask(with: _url) { (data, response, error) in
-                
-                do{
-                    let pokemonList = try JSONDecoder().decode(PokemonList.self, from: data ?? Data())
-                    completion(pokemonList, nil)
-                }
-                catch {
-                    completion(nil, nil)
-                }
-            }
-            task.resume()
-        }
-    }
+    
     
 }
