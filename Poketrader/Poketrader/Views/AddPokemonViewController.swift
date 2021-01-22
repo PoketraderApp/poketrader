@@ -22,7 +22,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
-        
+        self.pokemonImage.contentMode = .scaleToFill
         self.controller = AddPokemonController()
         
         self.gameTitleTextField.delegate = self
@@ -38,8 +38,12 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
         
         self.controller?.getPokemonData(nomePokemon: nomePokemon){ (result, erro) in
             if(result){
-                let url = URL(fileURLWithPath: self.controller?.pokemonURLImage ?? "")
-                self.pokemonImage.load(url: url)
+                let url = URL(string: self.controller?.pokemonURLImage ?? "")
+                if let _url = url {
+                    self.helpMessageView.isHidden = true
+                    self.pokemonImage.load(url: _url)
+                }
+                
                     
             }
             else{
