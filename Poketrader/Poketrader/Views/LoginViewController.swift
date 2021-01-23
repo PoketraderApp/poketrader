@@ -23,6 +23,10 @@ class LoginViewController: BaseViewController {
         backgroudImageLogin.image = UIImage(named: "imagemLogin")
         emailTextField.delegate = self
         senhaTextField.delegate = self
+        
+        self.senhaTextField.textContentType = .password
+        self.senhaTextField.isSecureTextEntry = true
+        
         entrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
 
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
@@ -55,14 +59,10 @@ class LoginViewController: BaseViewController {
         self.showLoading()
         
         if self.checkFields() {
-            LoginController(email: self.emailTextField.text, senha: self.senhaTextField.text).login { (result, error ) in
-                
-                if result {
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
-                        self.hiddenLoading()
-                    }
-                }else{
+            let email = self.emailTextField.text!
+            let senha = self.senhaTextField.text!
+            LoginController().login(email: email, senha: senha) { (error) in
+                if let _ = error {
                     DispatchQueue.main.async {
                         let alert =  UIAlertController(title: "Alerta", message: "Usuário ou senha inválidos", preferredStyle: .alert)
                         let buttonOk = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -70,6 +70,11 @@ class LoginViewController: BaseViewController {
                         self.present(alert, animated: true, completion: nil)
                         self.hiddenLoading()
                     }
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
+                    self.hiddenLoading()
                 }
             }
          } else {

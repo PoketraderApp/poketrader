@@ -49,6 +49,7 @@ class EscolherImagem: NSObject, UIImagePickerControllerDelegate, UINavigationCon
         
         //Declara que o novo delegate do piker são os métodos abaixo
         selecionador.delegate = self
+        selecionador.allowsEditing = true
         
         
         // Adiciona acoes ao alerta
@@ -115,7 +116,7 @@ class EscolherImagem: NSObject, UIImagePickerControllerDelegate, UINavigationCon
         picker.dismiss(animated: true, completion: nil)
         
         //Verifica o arquivo averto é realmente uma imagem
-        guard let image = info[.originalImage] as? UIImage else {
+        guard let image = info[.editedImage] as? UIImage else {
             fatalError("Esperava-se uma imagem, mas foi dado o seguinte: \(info)")
         }
         

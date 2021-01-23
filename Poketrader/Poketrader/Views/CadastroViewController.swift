@@ -63,8 +63,11 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.telefoneTextField.delegate = self
         self.emailTextField.delegate = self
         self.senhaTextField.delegate = self
-
         
+        self.senhaTextField.textContentType = .password
+        self.senhaTextField.isSecureTextEntry = true
+
+        self.emailTextField.keyboardType = .emailAddress
         self.telefoneTextField.keyboardType = .numberPad
         
         self.verificaEmailLabel.text = ""
@@ -148,10 +151,26 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
                 let valida:Bool = checkFields()
                 if valida {
                     let nome = self.nomeTextField.text ?? ""
-                    let telefone = Int(self.telefoneTextField.text ?? "") ?? 0
+                    let telefone = self.telefoneTextField.text ?? ""
                     let senha = self.senhaTextField.text ?? ""
                     let email = self.emailTextField.text ?? ""
-                    self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha)
+                    let image = self.imagePerfil.image?.pngData()
+                    self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha, imagem: image) { (error) in
+                        
+                        if let _ = error {
+                            let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
+                            self.present(alert, animated: true, completion: nil)
+                            return
+                        }
+                        
+                        let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+                            self.dismiss(animated: true, completion: nil)
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    }
                     
                 }
                 
@@ -198,7 +217,7 @@ extension CadastroViewController: UITextFieldDelegate {
             
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
             textField.text = newString
-//            textField.text = self.controller.formattedNumber(number: newString)
+            textField.text = self.controller.formattedNumber(number: newString)
             
             return false
         }
@@ -266,3 +285,4 @@ extension CadastroViewController: UITextFieldDelegate {
     }
     
 }
+

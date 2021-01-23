@@ -35,6 +35,7 @@
 		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
 		842A05A22575CC1A00890EFF /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842A05A12575CC1A00890EFF /* PokemonSolid.ttf */; };
 		84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */; };
+		AD0ED85425B8A35200C85B71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD0ED85325B8A35200C85B71 /* GoogleService-Info.plist */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
 		AD53A0AF254F163F00C81C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD53A0AD254F163F00C81C07 /* Main.storyboard */; };
@@ -70,7 +71,7 @@
 		FEF7BC712574FCEB0084F621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC702574FCEB0084F621 /* User.swift */; };
 		FEF7BC752574FE020084F621 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = FEF7BC742574FE020084F621 /* user.json */; };
 		FEF7BC772574FF040084F621 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC762574FF040084F621 /* LoginController.swift */; };
-		FEF7BC792574FFAA0084F621 /* LoginWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC782574FFAA0084F621 /* LoginWork.swift */; };
+		FEF7BC792574FFAA0084F621 /* AuthenticationWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF7BC782574FFAA0084F621 /* AuthenticationWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
 		842A05A12575CC1A00890EFF /* PokemonSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonSolid.ttf; sourceTree = "<group>"; };
 		84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioWork.swift; sourceTree = "<group>"; };
+		AD0ED85325B8A35200C85B71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +146,7 @@
 		FEF7BC702574FCEB0084F621 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FEF7BC742574FE020084F621 /* user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		FEF7BC762574FF040084F621 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		FEF7BC782574FFAA0084F621 /* LoginWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWork.swift; sourceTree = "<group>"; };
+		FEF7BC782574FFAA0084F621 /* AuthenticationWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +288,7 @@
 				AD53A0B0254F164000C81C07 /* Assets.xcassets */,
 				AD53A0B2254F164000C81C07 /* LaunchScreen.storyboard */,
 				AD53A0B5254F164000C81C07 /* Info.plist */,
+				AD0ED85325B8A35200C85B71 /* GoogleService-Info.plist */,
 				FEC4963E25840701004DF8E6 /* load.json */,
 			);
 			path = Poketrader;
@@ -339,7 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7F6B6725829C1500424C38 /* PokemonWork.swift */,
-				FEF7BC782574FFAA0084F621 /* LoginWork.swift */,
+				FEF7BC782574FFAA0084F621 /* AuthenticationWorker.swift */,
 				FE712A862581911100F75732 /* GenericWork.swift */,
 				AD7F6B6B25829F8000424C38 /* ErrorHandler.swift */,
 				84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */,
@@ -409,6 +412,7 @@
 			files = (
 				41AD8EB8255AD5EA00DCAD30 /* TelaInicial.storyboard in Resources */,
 				FEC4963F25840701004DF8E6 /* load.json in Resources */,
+				AD0ED85425B8A35200C85B71 /* GoogleService-Info.plist in Resources */,
 				FEC4963D258405B2004DF8E6 /* LoadView.xib in Resources */,
 				632C157E255DFE360068BD3E /* 3.png in Resources */,
 				ADD2845B255F32D200F0DC1A /* Feed.storyboard in Resources */,
@@ -513,7 +517,7 @@
 				FEF7BC772574FF040084F621 /* LoginController.swift in Sources */,
 				CE2C8EA6255E1B6C005DE718 /* ViewController.swift in Sources */,
 				413E8AF525B7A95D00DFADBD /* SelecionarPokemonVC.swift in Sources */,
-				FEF7BC792574FFAA0084F621 /* LoginWork.swift in Sources */,
+				FEF7BC792574FFAA0084F621 /* AuthenticationWorker.swift in Sources */,
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 				AD7F6B99258407E600424C38 /* OfertasWorker.swift in Sources */,
 				AD7F6B42257ED03E00424C38 /* AddPokemonViewController.swift in Sources */,
