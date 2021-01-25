@@ -15,7 +15,6 @@ class LoginController {
     func login(email: String, senha: String, completion: @escaping (Error?) -> Void) {
         AuthenticationWorker().login(email: email, senha: senha, completion: completion)
         
-        
 //        AuthenticationWorker().loadUsuario(email: self.email ?? "") { (user, error) in
 //            if let _user = user {
 //                if user?.senha == self.senha && user?.email == self.email {
@@ -28,6 +27,10 @@ class LoginController {
 //                completionHandler(false, error)
 //            }
 //        }
+    }
+    
+    func forgotPassword(email: String, completion: @escaping (Error?) -> Void) {
+        AuthenticationWorker().forgotPassword(email: email, completion: completion)
     }
 }
 

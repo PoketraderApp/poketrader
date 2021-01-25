@@ -119,4 +119,14 @@ class AuthenticationWorker: GenericWorker {
             task.resume()
         }
     }
+    
+    func forgotPassword(email: String, completion: @escaping (Error?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+            if let _error = error {
+                completion(_error)
+            } else {
+                completion(nil)
+            }
+        }
+    }
 }
