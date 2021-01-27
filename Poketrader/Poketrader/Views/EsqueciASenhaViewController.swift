@@ -19,6 +19,7 @@ class EsqueciASenhaViewController: UIViewController {
 
         resetarSenhaButton.layer.cornerRadius = 4
         resetarSenhaButton.clipsToBounds = true
+        resetarSenhaButton.backgroundColor = UIColor(rgb: 0xFF453A)
     }
     
     @IBAction func resetarSenhaButton(_ sender: Any) {
