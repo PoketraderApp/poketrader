@@ -7,9 +7,7 @@
 
 import Foundation
 
-import FirebaseAuth
-import FirebaseFirestore
-import FirebaseStorage
+import Firebase
 
 class AuthenticationWorker: GenericWorker {
     

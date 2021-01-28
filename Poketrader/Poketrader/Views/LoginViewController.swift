@@ -7,12 +7,18 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
-
+    @IBOutlet weak var backgroudImageLogin: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var entrarButton: UIButton!
+    @IBOutlet weak var cadastrarButton: UIButton!
+    @IBOutlet weak var esqueciSenhaButton: UIButton!
     
-    @IBOutlet weak var backgroudImageLogin: UIImageView!
+//    @IBOutlet weak var emailTextField: UITextField!
+//    @IBOutlet weak var senhaTextField: UITextField!
+//    @IBOutlet weak var entrarButton: UIButton!
+//    
+//    @IBOutlet weak var backgroudImageLogin: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +26,22 @@ class LoginViewController: BaseViewController {
 
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
-        backgroudImageLogin.image = UIImage(named: "imagemLogin")
+        backgroudImageLogin.image = UIImage(named: "pokemon")
         emailTextField.delegate = self
         senhaTextField.delegate = self
         
         self.senhaTextField.textContentType = .password
         self.senhaTextField.isSecureTextEntry = true
         
-        entrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
+//        entrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
 
+        cadastrarButton.layer.cornerRadius = 4
+        cadastrarButton.clipsToBounds = true
+
+        esqueciSenhaButton.layer.cornerRadius = 4
+        esqueciSenhaButton.clipsToBounds = true
+        
+        
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
                 self.view.addGestureRecognizer(tap)
         
@@ -49,12 +62,10 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func cadastroButton(_ sender: UIButton) {
- 
         self.performSegue(withIdentifier: "LoginVC.CadastroVC", sender: nil)
     }
     
     @IBAction func entrarButton(_ sender: UIButton) {
-        
         dismissKeyboard()
         self.showLoading()
         
