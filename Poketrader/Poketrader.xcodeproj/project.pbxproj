@@ -35,6 +35,7 @@
 		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
 		842A05A22575CC1A00890EFF /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842A05A12575CC1A00890EFF /* PokemonSolid.ttf */; };
 		84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */; };
+		84AAD60D25C5059D00D22926 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AAD60C25C5059D00D22926 /* SplashViewController.swift */; };
 		84B27B0125C261FC005B622B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27B0025C261FC005B622B /* Configuration.swift */; };
 		AD0ED85425B8A35200C85B71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD0ED85325B8A35200C85B71 /* GoogleService-Info.plist */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
@@ -106,6 +107,7 @@
 		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
 		842A05A12575CC1A00890EFF /* PokemonSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonSolid.ttf; sourceTree = "<group>"; };
 		84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioWork.swift; sourceTree = "<group>"; };
+		84AAD60C25C5059D00D22926 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		84B27B0025C261FC005B622B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		AD0ED85325B8A35200C85B71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +236,7 @@
 				41D0C0682583CB3C005B3A7B /* EscolherImagem.swift */,
 				FEC49638258403E9004DF8E6 /* BaseViewController.swift */,
 				413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */,
+				84AAD60C25C5059D00D22926 /* SplashViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */,
 				413E8AFB25B7DAF400DFADBD /* SelecionarPokemonController.swift in Sources */,
 				AD7F6B3E257ED02900424C38 /* AnuncioViewController.swift in Sources */,
+				84AAD60D25C5059D00D22926 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
