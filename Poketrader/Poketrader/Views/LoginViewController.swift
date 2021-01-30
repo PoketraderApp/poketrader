@@ -5,6 +5,7 @@
 //  Created by Rodolpho on 11/11/20.
 //
 import UIKit
+import Firebase
 
 class LoginViewController: BaseViewController {
     @IBOutlet weak var backgroudImageLogin: UIImageView!
@@ -47,9 +48,9 @@ class LoginViewController: BaseViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
                 self.view.addGestureRecognizer(tap)
         
+        
+        
         self.hiddenLoading()
-        
-        
         // Do any additional setup after loading the view.
     }
     
