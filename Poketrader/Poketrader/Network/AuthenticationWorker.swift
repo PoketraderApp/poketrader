@@ -20,6 +20,10 @@ class AuthenticationWorker: GenericWorker {
                 return
             }
             if let _ = authResult {
+                var usuario = User.userInstance.requestForUser()
+                usuario.nome = authResult?.user.displayName
+                usuario.email = authResult?.user.email
+                usuario.telefone = authResult?.user.phoneNumber
                 completion(nil)
             }
         }
@@ -53,6 +57,7 @@ class AuthenticationWorker: GenericWorker {
                 var photoURL: URL?
                 changeRequest.displayName = nome
                 if let imagemData = imagem {
+                    
                     let profileImageStorageRef = Storage.storage().reference().child("profile_image_urls").child("\(user.uid).png")
                     let uploadTask = profileImageStorageRef.putData(imagemData, metadata: nil) { (metadata, error) in
                         if let error = error {

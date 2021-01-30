@@ -35,6 +35,7 @@
 		63EA394F255CCE73004AB57F /* Ofertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EA394E255CCE73004AB57F /* Ofertas.swift */; };
 		842A05A22575CC1A00890EFF /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842A05A12575CC1A00890EFF /* PokemonSolid.ttf */; };
 		84835AE025819EF9006AF845 /* CriarUsuarioWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */; };
+		84B27B0125C261FC005B622B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B27B0025C261FC005B622B /* Configuration.swift */; };
 		AD0ED85425B8A35200C85B71 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD0ED85325B8A35200C85B71 /* GoogleService-Info.plist */; };
 		AD53A0A8254F163F00C81C07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A7254F163F00C81C07 /* AppDelegate.swift */; };
 		AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD53A0A9254F163F00C81C07 /* SceneDelegate.swift */; };
@@ -105,6 +106,7 @@
 		63EA394E255CCE73004AB57F /* Ofertas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ofertas.swift; sourceTree = "<group>"; };
 		842A05A12575CC1A00890EFF /* PokemonSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonSolid.ttf; sourceTree = "<group>"; };
 		84835ADF25819EF9006AF845 /* CriarUsuarioWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioWork.swift; sourceTree = "<group>"; };
+		84B27B0025C261FC005B622B /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		AD0ED85325B8A35200C85B71 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AD53A0A4254F163F00C81C07 /* Poketrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Poketrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD53A0A7254F163F00C81C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +254,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		84B27AFF25C261E5005B622B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				84B27B0025C261FC005B622B /* Configuration.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		AD53A09B254F163F00C81C07 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +285,7 @@
 		AD53A0A6254F163F00C81C07 /* Poketrader */ = {
 			isa = PBXGroup;
 			children = (
+				84B27AFF25C261E5005B622B /* Util */,
 				842A05A02575CC0600890EFF /* Fonts */,
 				63EA3950255CCF7A004AB57F /* Views */,
 				FEF7BC6C2574FBAB0084F621 /* Controller */,
@@ -521,6 +532,7 @@
 				AD53A0AA254F163F00C81C07 /* SceneDelegate.swift in Sources */,
 				AD7F6B99258407E600424C38 /* OfertasWorker.swift in Sources */,
 				AD7F6B42257ED03E00424C38 /* AddPokemonViewController.swift in Sources */,
+				84B27B0125C261FC005B622B /* Configuration.swift in Sources */,
 				41AD8EBE255AD6A900DCAD30 /* TelaInicialViewController.swift in Sources */,
 				413EC59E2550FF7C00C534D7 /* CadastroViewController.swift in Sources */,
 				4123AA5A255D737B00F5AA2E /* CadastroController.swift in Sources */,

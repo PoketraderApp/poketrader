@@ -14,6 +14,8 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var cadastrarButton: UIButton!
     @IBOutlet weak var esqueciSenhaButton: UIButton!
     
+    var usuarioVC: User?
+    
 //    @IBOutlet weak var emailTextField: UITextField!
 //    @IBOutlet weak var senhaTextField: UITextField!
 //    @IBOutlet weak var entrarButton: UIButton!
@@ -26,7 +28,7 @@ class LoginViewController: BaseViewController {
 
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
-        backgroudImageLogin.image = UIImage(named: "pokemon")
+        backgroudImageLogin.image = UIImage(named: "poketrade_logo")
         emailTextField.delegate = self
         senhaTextField.delegate = self
         
@@ -61,6 +63,7 @@ class LoginViewController: BaseViewController {
         return true
     }
     
+    
     @IBAction func cadastroButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "LoginVC.CadastroVC", sender: nil)
     }
@@ -72,7 +75,7 @@ class LoginViewController: BaseViewController {
         if self.checkFields() {
             let email = self.emailTextField.text!
             let senha = self.senhaTextField.text!
-            LoginController().login(email: email, senha: senha) { (error) in
+            LoginController().login(email: email, senha: senha) { ( error ) in
                 if let _ = error {
                     DispatchQueue.main.async {
                         let alert =  UIAlertController(title: "Alerta", message: "Usuário ou senha inválidos", preferredStyle: .alert)
@@ -84,6 +87,7 @@ class LoginViewController: BaseViewController {
                     return
                 }
                 DispatchQueue.main.async {
+//                    Configuration.value(defaultValue: usuario, forKey: "usuarioSalvoLocal")
                     self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
                     self.hiddenLoading()
                 }
@@ -97,6 +101,7 @@ class LoginViewController: BaseViewController {
             self.hiddenLoading()
         }
     }
+    
     
     @IBAction func esqueceuSenhaButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "EsqueciASenhaViewController", sender: nil)
