@@ -77,6 +77,8 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.inserirImagemButton.backgroundColor = UIColor(rgb: 0xFF453A)
         self.inserirImagemButton.layer.cornerRadius = 4
         
+        let size = self.imagePerfil.frame.size.height / 2
+        self.imagePerfil.layer.cornerRadius = size
         self.imagePerfil.image = UIImage(named: "profilePic")
         
         self.cadastrarButton.layer.cornerRadius = 4
