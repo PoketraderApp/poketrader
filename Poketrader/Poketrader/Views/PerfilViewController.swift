@@ -8,11 +8,15 @@
 import UIKit
 import Firebase
 
+protocol perfilViewControllerDelegate: class {
+    func usuarioCriado(result: Bool)
+}
+
 class PerfilViewController: BaseViewController {
     
     // Imagens
     @IBOutlet weak var iconUser: UIImageView!
-    private var usuario: User?
+    @IBOutlet weak var editarIconUser: UIImageView!
     
     // Label
     @IBOutlet weak var fullNameLabel: UILabel!
@@ -28,7 +32,11 @@ class PerfilViewController: BaseViewController {
     
     // Button
     @IBOutlet weak var editarOuSalvarUiButton: UIButton!
+    
+    // Variaveis
+    private var usuario: User?
     var singleTap: Any?
+    var perfil: PerfilController = PerfilController()
     
     // to store the current active textfield
     var activeTextField : UITextField? = nil
@@ -62,7 +70,10 @@ class PerfilViewController: BaseViewController {
     
     //Action
     @objc func tapDetected() {
-        print("Imageview Clicked")
+        dismissKeyboard()
+        EscolherImagem().selecionadorImagem(self){ imagem in
+            self.iconUser.image = imagem
+        }
     }
     
     private func getTelephone() {
@@ -79,6 +90,34 @@ class PerfilViewController: BaseViewController {
                 }
             }
         }
+    }
+    
+    private func checkFields() -> Bool {
+        
+        //        let obrigatorio:String = "Campo obrigatório"
+        var isValid:Bool = true
+        
+        if  self.fullNameTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true {
+            print("nome invalido")
+            isValid = false
+            
+        }
+        
+        //        if self.consoleTextField.text?.isEmpty ?? true {
+        //
+        //            self.verificaEmailLabel.text = obrigatorio
+        //            self.verificaEmailLabel.textColor = .red
+        //
+        //            isValid = false
+        //
+        //        }
+        
+        if (self.telephoneTextField.text?.isEqual("") ?? true) && (self.telephoneTextField.text?.isEmpty ?? true) {
+            print("telephone invalido")
+            isValid = false
+        }
+        
+        return isValid
     }
     
     private func fetchImage() {
@@ -122,6 +161,8 @@ class PerfilViewController: BaseViewController {
     }
     
     fileprivate func liberarTextField() {
+        self.editarIconUser.isHidden = false
+        
         self.fullNameTextField.isUserInteractionEnabled = true
         self.fullNameTextField.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0) /* #ffffff */
         
@@ -135,6 +176,8 @@ class PerfilViewController: BaseViewController {
     }
     
     fileprivate func bloquearTextField() {
+        self.editarIconUser.isHidden = true
+        
         self.fullNameTextField.isUserInteractionEnabled = false
         self.fullNameTextField.backgroundColor = UIColor(red: 198/255, green: 198/255, blue: 200/255, alpha: 1.0) /* #c6c6c8 */
         self.fullNameTextField.layer.borderWidth = 0.1
@@ -166,19 +209,35 @@ class PerfilViewController: BaseViewController {
             self.liberarTextField()
             sender.setTitle("Salvar", for: .normal)
         } else {
-            //            self.bloquearTextField()
-            //            sender.titleLabel?.text = "Editar"
-            let user = User()
-            user.nome = self.fullNameTextField.text
-            user.email = self.emailTextField.text
-            user.console = self.consoleTextField.text
-            user.telefone = self.telephoneTextField.text
-            //            Auth.auth().updateCurrentUser(user, completion: { (error) in
-            //                print("error \(error)")
-            //            })
-            let alert = UIAlertController(title: "Sucesso", message: "Dados salvos com sucesso.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let valido:Bool = checkFields()
+            if valido {
+//                let user = User()
+//                user.nome = self.fullNameTextField.text
+//                user.email = self.emailTextField.text
+//                user.console = self.consoleTextField.text
+//                user.telefone = self.telephoneTextField.text
+                
+                    let nome = self.fullNameTextField.text ?? ""
+                    let telefone = self.telephoneTextField.text ?? ""
+                    let email = self.emailTextField.text ?? ""
+                    let image = self.iconUser.image?.pngData()
+                    let console = self.consoleTextField.text ?? ""
+                    self.perfil.atualizarUsuario(nome: nome, telefone: telefone, email: email, console: console, imagem: image) { (error) in
+                        
+                        if let _ = error {
+                            let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
+                            self.present(alert, animated: true, completion: nil)
+                            return
+                        }
+                        
+                        let alert = UIAlertController(title: "Sucesso", message: "Usuario atualizado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        
+                    }
+                    
+                }
         }
         
     }
@@ -193,11 +252,37 @@ class PerfilViewController: BaseViewController {
 }
 
 extension PerfilViewController : UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField.isEqual(self.telephoneTextField){
+            
+            guard let text = textField.text else { return false }
+            
+            let newString = (text as NSString).replacingCharacters(in: range, with: string)
+            textField.text = newString
+            textField.text = self.perfil.formattedNumber(number: newString)
+            
+            return false
+        }
+        else if textField.isEqual(self.fullNameTextField){
+            let nome: String = self.fullNameTextField.text ?? ""
+            
+            let newNome: String = (nome as NSString).replacingCharacters(in: range, with: string)
+            
+            if (nome.isEqual("") || nome.isEmpty) && (!newNome.isEqual("") || !newNome.isEmpty){
+                
+                return false
+            }
+            
+        }
+        
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case self.fullNameTextField:
-            self.emailTextField.becomeFirstResponder()
-        case self.emailTextField:
             self.consoleTextField.becomeFirstResponder()
         case self.consoleTextField:
             self.telephoneTextField.becomeFirstResponder()
@@ -216,33 +301,7 @@ extension PerfilViewController : UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeTextField = nil
     }
-    @objc func keyboardWillShow(notification: NSNotification) {
-        
-        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-            
-            // if keyboard size is not available for some reason, dont do anything
-            return
-        }
-        
-        var shouldMoveViewUp = false
-        
-        // if active text field is not nil
-        if let activeTextField = activeTextField {
-            
-            let bottomOfTextField = activeTextField.convert(activeTextField.bounds, to: self.view).maxY;
-            
-            let topOfKeyboard = self.view.frame.height - keyboardSize.height
-            
-            // if the bottom of Textfield is below the top of keyboard, move up
-            if bottomOfTextField > topOfKeyboard {
-                shouldMoveViewUp = true
-            }
-        }
-        
-        if(shouldMoveViewUp) {
-            self.view.frame.origin.y = 0 - keyboardSize.height
-        }
-    }
+    
 }
 
 

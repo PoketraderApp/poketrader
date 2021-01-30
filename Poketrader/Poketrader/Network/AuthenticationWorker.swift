@@ -132,4 +132,67 @@ class AuthenticationWorker: GenericWorker {
             }
         }
     }
+    
+    func upload(nome: String, telefone: String, email: String, console: String, imagem: Data?, completion: @escaping (Error?) -> Void) {
+//        Auth.auth().createUser(withEmail: email, password: senha) { (authResult, error) in
+//            if let error = error {
+//                // erro ao criar o usuário
+//                completion(error)
+//                return
+//            }
+//            if let authResult = authResult {
+                // usuário criado
+//                let user = authResult.user
+                // salvando o telefone do usuário no firestore
+                // melhor alternativa que encontrei
+                // pois para salvar no perfil do usuário é preciso
+                // usar autenticação por telefone
+                let db = Firestore.firestore()
+                db.collection("telefones").document(Auth.auth().currentUser!.uid).setData([
+                    "telefone": telefone
+                ]) { error in
+                    // erro ao salvar o telefone do usuário
+                    if let error = error {
+                        print("Erro ao adicionar o telefone...")
+                    }
+                }
+                // informações adicionais no perfil do usuário
+                let changeRequest = Auth.auth().currentUser!.createProfileChangeRequest()
+                var photoURL: URL?
+                changeRequest.displayName = nome
+                if let imagemData = imagem {
+
+                    let profileImageStorageRef = Storage.storage().reference().child("profile_image_urls").child("\(Auth.auth().currentUser!.uid).png")
+                    let uploadTask = profileImageStorageRef.putData(imagemData, metadata: nil) { (metadata, error) in
+                        if let error = error {
+                            print("Erro ao adicionar a imagem")
+                        } else {
+                            profileImageStorageRef.downloadURL { (url, error) in
+                                if let error = error {
+                                    print("Erro ao pegar imagem no Firebase")
+                                } else {
+                                    if let url = url {
+                                        photoURL = url
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                if photoURL != nil {
+                    changeRequest.photoURL = photoURL!
+                }
+
+                changeRequest.commitChanges { (error) in
+                    if let error = error {
+                        print("Deu ruim ao commitar alterações")
+                    }
+                }
+
+                completion(nil)
+
+//            }
+//        }
+        
+    }
 }
