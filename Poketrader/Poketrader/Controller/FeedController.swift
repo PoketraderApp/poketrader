@@ -24,7 +24,7 @@ class FeedController {
     }
     
     func loadOfertas(completion: @escaping (Bool, String?) -> ()) {
-        OfertasWorker().loadOfertas() { (ofertas, erro) in
+        OfertasWorker().loadAnuncios { (ofertas, erro) in
             if erro == nil {
                 self.ofertas = ofertas
                 completion(true, "")

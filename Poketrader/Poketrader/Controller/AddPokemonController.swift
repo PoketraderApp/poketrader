@@ -10,8 +10,8 @@ import Foundation
 class AddPokemonController {
     private var pokemon: Pokemon?
     
-    func savePokemon(url: String?, game: String?, obs: String?) {
-        PokemonWork().savePokemon(url: url, game: game, obs: obs)
+    func savePokemon(name: String?, url: String?, game: String?, obs: String?) {
+        PokemonWork().savePokemon(name: name, url: url, game: game, obs: obs)
     }
     
     var pokemonURLImage: String {

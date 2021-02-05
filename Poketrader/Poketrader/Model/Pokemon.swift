@@ -14,10 +14,10 @@ struct Pokemon: Codable {
     let sprite: String? // URL com imagem do pokémon
     var stats: [Stat]?
 
-    init(data: PokeData) {
+    init(sprt: String, data: PokeData) {
         id = data.id
         name = data.name
-        sprite = data.sprites?.other?.officialArtwork?.imagePath
+        self.sprite = sprt // data.sprites?.other?.officialArtwork?.imagePath 
         stats = []
         if let dataStats = data.stats {
             for stat in dataStats {

@@ -15,6 +15,8 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     @IBOutlet weak var helpMessageView: UIView!
     @IBOutlet weak var searchPokemon: UISearchBar!
     
+    var namePokemon: String?
+    
     private var controller: AddPokemonController?
     
     override func viewDidLoad() {
@@ -42,6 +44,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
                 if let _url = url {
                     self.helpMessageView.isHidden = true
                     self.pokemonImage.load(url: _url)
+                    self.namePokemon = nomePokemon
                 }
                 
                     
@@ -72,7 +75,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
         ])
         
         if isValid {
-            controller?.savePokemon(url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, obs: self.descriptionTextField.text)
+            controller?.savePokemon(name: namePokemon, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, obs: self.descriptionTextField.text)
             let alert = UIAlertController(title: "Confirmação", message: "Pokémon adicionado com sucesso!", preferredStyle: .alert)
             
             let button = UIAlertAction(title: "OK", style: .default) { (success) in

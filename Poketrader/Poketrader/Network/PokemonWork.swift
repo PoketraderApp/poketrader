@@ -15,11 +15,11 @@ class PokemonWork: GenericWorker {
     let urlString: String = "https://pokeapi.co/api/v2/pokemon/"
     let limit: String = "?limit="
     
-    func savePokemon(url: String?, game: String?, obs: String?) {
+    func savePokemon(name: String?, url: String?, game: String?, obs: String?) {
         if let userData = Auth.auth().currentUser {
             var ref: DocumentReference? = nil
             let db = Firestore.firestore()
-            ref = db.collection("anuncio").addDocument(data: ["uid": Auth.auth().currentUser?.uid, "url": url, "game": game, "obs": obs]) { err in
+            ref = db.collection("anuncio").addDocument(data: ["name": name, "uid": Auth.auth().currentUser?.uid, "url": url, "game": game, "obs": obs]) { err in
                 if let err = err {
                     print("deu ruim")
                 } else {
@@ -40,7 +40,7 @@ class PokemonWork: GenericWorker {
                 if response.response?.statusCode == 200 {
                     do {
                         let pokemonData = try JSONDecoder().decode(PokeData.self, from: response.data ?? Data())
-                        let pokemon = Pokemon(data: pokemonData)
+                        let pokemon = Pokemon(sprt: pokemonData.sprites?.other?.officialArtwork?.imagePath ?? "", data: pokemonData)
                         completion(pokemon, nil)
                     } catch {
                         // deu ruim no parse
@@ -68,7 +68,7 @@ class PokemonWork: GenericWorker {
                 if let data = data {
                     do {
                         let pokemonData = try JSONDecoder().decode(PokeData.self, from: data)
-                        let pokemon = Pokemon(data: pokemonData)
+                        let pokemon = Pokemon(sprt: "", data: pokemonData)
                         completion(pokemon, nil)
                     } catch {
                         // deu ruim

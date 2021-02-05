@@ -31,5 +31,6 @@ class MeuAnuncioController {
     func loadCurrentOffer(indexPath: Int) -> OfertaElement? {
         return self.ofertas?.ofertas?[indexPath]
     }
+    
 }
 

@@ -6,6 +6,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+
+class Oferta: Codable {
+    var url: String?
+    var game: String?
+
+}
 
 class OfertasUsuarioViewController: UIViewController {
 
@@ -17,8 +25,13 @@ class OfertasUsuarioViewController: UIViewController {
     let pkmn_img  = ["4", "7", "148"]
     let jogadorNome = "Player 1"
     
+    var controller: MeuAnuncioController = MeuAnuncioController()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         self.tableViewOfertas.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
         self.tableViewOfertas.delegate = self
@@ -46,7 +59,6 @@ extension OfertasUsuarioViewController: UITableViewDelegate, UITableViewDataSour
             cell.nomeJogador.text = jogadorNome
             
             cell.imagemPkmn.image = UIImage(named: self.pkmn_img[indexPath.row])
-            
             
             return cell
         }
