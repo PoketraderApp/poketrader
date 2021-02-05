@@ -25,8 +25,12 @@ class FeedViewController: UIViewController {
         self.feedTableView.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
         
         self.controller = FeedController()
+        
         self.controller?.loadOfertas { (result, erro) in
             if result {
+                
+                
+                
                 DispatchQueue.main.async {
                     self.feedTableView.delegate = self
                     self.feedTableView.dataSource = self

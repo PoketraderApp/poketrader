@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class OfertaCell: UITableViewCell {
 
@@ -19,12 +20,34 @@ class OfertaCell: UITableViewCell {
         // Initialization code
     }
     
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { [weak self] in
+                self?.imagemPkmn.image = UIImage(data: data)
+            }
+        }
+    }
+    
     func setup(oferta: OfertaElement?) {
         if let oferta = oferta {
             self.nomePkmn.text = oferta.pokemon?.name
             self.tituloJogo.text = "JOGO XPTO"
             self.nomeJogador.text = oferta.nome
-            self.imagemPkmn.image = UIImage(named: String(oferta.pokemon?.id ?? 3))
+            
+            let urlText = oferta.pokemon?.sprite! ?? ""
+            
+            let url = URL(string: urlText)
+            if let _url = url {
+                downloadImage(from: _url)
+            }
         }
     }
 

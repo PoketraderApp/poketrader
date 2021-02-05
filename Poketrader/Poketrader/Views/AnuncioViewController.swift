@@ -64,7 +64,7 @@ class AnuncioViewController: UIViewController {
                     self.nomePokemonLabel.text = self.controller?.pokemonName
                     
                     // se nÃo achar imagem, bota a imagem 3 como default
-                    self.pokemonImage.image = UIImage(named: self.controller?.imageID ?? "3")
+//                    self.pokemonImage.image = UIImage(named: self.controller?.imageID ?? "3")
                     
                     
                 }
