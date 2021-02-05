@@ -30,13 +30,13 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     
     var controller: CadastroController = CadastroController()
-
+    
     // MARK: TextFields e Labels
     
     @IBOutlet var viewTelaCadastro: UIView!
     
     @IBOutlet weak var imagePerfil: UIImageView!
-    @IBOutlet weak var inserirImagemButton: UIButton!
+    @IBOutlet weak var inserirImagemButton: UIImageView!
     
     
     @IBOutlet weak var nomeTextField: UITextField!
@@ -54,11 +54,13 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var cadastrarButton: UIButton!
     
+    var singleTap: Any?
+    
     // MARK: viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.nomeTextField.delegate = self
         self.telefoneTextField.delegate = self
         self.emailTextField.delegate = self
@@ -66,16 +68,16 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         
         self.senhaTextField.textContentType = .password
         self.senhaTextField.isSecureTextEntry = true
-
+        
         self.emailTextField.keyboardType = .emailAddress
         self.telefoneTextField.keyboardType = .numberPad
         
         self.verificaEmailLabel.text = ""
         self.verificaSenhaLabel.text = ""
         self.verificaNomeLabel.text = ""
-        
-        self.inserirImagemButton.backgroundColor = UIColor(rgb: 0xFF453A)
-        self.inserirImagemButton.layer.cornerRadius = 4
+        self.singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
+        //        self.inserirImagemButton.backgroundColor = UIColor(rgb: 0xFF453A)
+        //        self.inserirImagemButton.layer.cornerRadius = 4
         
         let size = self.imagePerfil.frame.size.height / 2
         self.imagePerfil.layer.cornerRadius = size
@@ -87,7 +89,10 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
         self.controller.delegate = self
-    
+        
+        self.imagePerfil.isUserInteractionEnabled = true
+        self.imagePerfil.addGestureRecognizer(singleTap as! UITapGestureRecognizer)
+        
     }
     
     // MARK: Validation
@@ -138,44 +143,44 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     // MARK: actions
     
-    @IBAction func tappedInserirImagem(_ sender: UIButton) {
+    @objc func tapDetected() {
         dismissKeyboard()
         
         EscolherImagem().selecionadorImagem(self){ imagem in
-        self.imagePerfil.image = imagem
-    }
+            self.imagePerfil.image = imagem
+        }
         
     }
     
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
-                let valida:Bool = checkFields()
-                if valida {
-                    let nome = self.nomeTextField.text ?? ""
-                    let telefone = self.telefoneTextField.text ?? ""
-                    let senha = self.senhaTextField.text ?? ""
-                    let email = self.emailTextField.text ?? ""
-                    let image = self.imagePerfil.image?.pngData()
-                    self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha, imagem: image) { (error) in
-                        
-                        if let _ = error {
-                            let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
-                            self.present(alert, animated: true, completion: nil)
-                            return
-                        }
-                        
-                        let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
-                            self.dismiss(animated: true, completion: nil)
-                        }))
-                        self.present(alert, animated: true, completion: nil)
-                        
-                    }
-                    
+        let valida:Bool = checkFields()
+        if valida {
+            let nome = self.nomeTextField.text ?? ""
+            let telefone = self.telefoneTextField.text ?? ""
+            let senha = self.senhaTextField.text ?? ""
+            let email = self.emailTextField.text ?? ""
+            let image = self.imagePerfil.image?.pngData()
+            self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha, imagem: image) { (error) in
+                
+                if let _ = error {
+                    let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
+                    self.present(alert, animated: true, completion: nil)
+                    return
                 }
                 
+                let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+        }
+        
         
     }
     
@@ -187,7 +192,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.view.endEditing(true)
     }
     
-
+    
 }
 
 // MARK: Text Field Delegate
@@ -248,7 +253,7 @@ extension CadastroViewController: UITextFieldDelegate {
             }
             
         }
-    
+        
         return true
     }
     
@@ -272,7 +277,7 @@ extension CadastroViewController: UITextFieldDelegate {
             
         case self.telefoneTextField:
             self.emailTextField.becomeFirstResponder()
-        
+            
         case self.emailTextField:
             self.senhaTextField.becomeFirstResponder()
             
