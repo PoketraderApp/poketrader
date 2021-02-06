@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: BaseViewController {
 
  
     @IBOutlet weak var navigation: UINavigationItem!
@@ -19,18 +19,27 @@ class FeedViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
         
+        self.showLoading()
+        
+        self.setup()
+        
+        self.hiddenLoading()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    func setup() {
         self.feedTableView.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
         
         self.controller = FeedController()
         
         self.controller?.loadOfertas { (result, erro) in
             if result {
-                
-                
-                
                 DispatchQueue.main.async {
                     self.feedTableView.delegate = self
                     self.feedTableView.dataSource = self
@@ -40,8 +49,6 @@ class FeedViewController: UIViewController {
                 print("deu ruim")
             }
         }
-
-        // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
