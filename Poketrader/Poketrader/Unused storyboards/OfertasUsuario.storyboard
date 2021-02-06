@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="opG-hm-gRs">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="opG-hm-gRs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ofertas Usuario-->
+        <!--Ofertas Usuario View Controller-->
         <scene sceneID="GJv-jN-QmR">
             <objects>
-                <viewController id="opG-hm-gRs" customClass="OfertasUsuario" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="opG-hm-gRs" customClass="OfertasUsuarioViewController" customModule="Poketrader" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hnw-0s-RIM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QuZ-4c-eAf">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="OwV-dW-DaN"/>
@@ -30,18 +30,18 @@
                                 </items>
                             </tabBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W4Q-4h-WAl">
-                                <rect key="frame" x="0.0" y="87" width="414" height="726"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="43" width="600" height="508"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEu-Ag-QDv">
-                                <rect key="frame" x="364" y="47" width="30" height="35.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEu-Ag-QDv">
+                                <rect key="frame" x="550" y="3" width="30" height="35.5"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" systemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="+"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokétrader" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgk-9I-F4d">
-                                <rect key="frame" x="123" y="54" width="168" height="23"/>
+                                <rect key="frame" x="123" y="10" width="168" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="PWQ-44-eod"/>
                                     <constraint firstAttribute="height" constant="23" id="gWX-f7-D9Y"/>
@@ -51,7 +51,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FvP-vz-Zxm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="QuZ-4c-eAf" firstAttribute="top" secondItem="W4Q-4h-WAl" secondAttribute="bottom" id="5Oi-r1-QMN"/>
                             <constraint firstItem="bgk-9I-F4d" firstAttribute="leading" secondItem="FvP-vz-Zxm" secondAttribute="leading" constant="123" id="Nt3-vS-QtB"/>
@@ -67,7 +68,6 @@
                             <constraint firstItem="W4Q-4h-WAl" firstAttribute="trailing" secondItem="FvP-vz-Zxm" secondAttribute="trailing" id="r9F-Ip-QhK"/>
                             <constraint firstItem="W4Q-4h-WAl" firstAttribute="top" secondItem="bgk-9I-F4d" secondAttribute="bottom" constant="10" id="rkF-Me-djd"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FvP-vz-Zxm"/>
                     </view>
                     <connections>
                         <outlet property="botaoAdicionarOferta" destination="LEu-Ag-QDv" id="uFF-0g-js8"/>
@@ -79,4 +79,12 @@
             <point key="canvasLocation" x="-763.768115942029" y="-484.82142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

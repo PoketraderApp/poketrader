@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MeuAnuncioViewController: UIViewController {
+class MeuAnuncioViewController: BaseViewController {
     
     // Imagens
     @IBOutlet weak var pokemonImage: UIImageView!
@@ -37,10 +37,63 @@ class MeuAnuncioViewController: UIViewController {
     @IBOutlet weak var velocidadeValueLabel: UILabel!
     @IBOutlet weak var ataqueSPValueLabel: UILabel!
     @IBOutlet weak var defesaSPValueLabel: UILabel!
+    
+    var controller: MeuAnuncioController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Entrou editar")
+        self.showLoading()
+        
+        self.controller?.loadAnuncio(completion: { (oferta, erro) in
+            if let _oferta = oferta {
+                DispatchQueue.main.async {
+//                    self.profileImage.isHidden = true
+                    
+                    self.usuarioValueLabel.text = oferta?.nome  //self.controller?.nomeUsuario
+                    self.emailValueLabel.text =  oferta?.email //self.controller?.emailUsuario
+                    self.telefoneValueLabel.text = oferta?.telefone //self.controller?.telefoneUsuario
+                    self.jogoValueLabel.text = oferta?.game
+                    self.observacoesValueLabel.text = oferta?.observacoes //self.controller?.observacoes
+                    
+                    self.nomePokemonLabel.text = oferta?.pokemon?.name //self.controller?.pokemonName
+                    
+                    // se nÃo achar imagem, bota a imagem 3 como default
+//                    self.pokemonImage.image = UIImage(named: self.controller?.imageID ?? "3")
+                    let urlText = oferta?.pokemon?.sprite! ?? ""
+                    let url = URL(string: urlText)
+                    if let _url = url {
+                        self.downloadImage(from: _url)
+                        self.hiddenLoading()
+                    }
+                    
+                    
+                    
+                    
+                    
+                }
+            } else {
+                print("\(erro)")
+            }
+        })
+        
 
+    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+    }
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { [weak self] in
+                self?.pokemonImage.image = UIImage(data: data)
+            }
+        }
     }
     
     @IBAction func pressedEditarButton(_ sender: UIButton) {

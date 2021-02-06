@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="OfertaCell" customModule="Poketrader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ntr-MF-4Kb">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5ho-b5-Ti1">
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="5Az-To-u1U"/>
+                                    <constraint firstAttribute="width" constant="120" id="70C-ZH-2i5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon (Numero)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-W1-p0E">
+                                <rect key="frame" x="128" y="12" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jogo: (nome do Jogo)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOn-8J-dak">
+                                <rect key="frame" x="128" y="41" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuário: (nome do Jogador)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unW-tt-kKj">
+                                <rect key="frame" x="128" y="70" width="213.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mOn-8J-dak" firstAttribute="leading" secondItem="5ho-b5-Ti1" secondAttribute="trailing" constant="8" id="0HW-pz-Skv"/>
+                            <constraint firstItem="unW-tt-kKj" firstAttribute="top" secondItem="mOn-8J-dak" secondAttribute="bottom" constant="8" id="2hj-WD-HQq"/>
+                            <constraint firstItem="unW-tt-kKj" firstAttribute="top" secondItem="mOn-8J-dak" secondAttribute="bottom" constant="8" id="4Se-xl-RDt"/>
+                            <constraint firstAttribute="bottom" secondItem="5ho-b5-Ti1" secondAttribute="bottom" id="Gxd-db-yHI"/>
+                            <constraint firstItem="KaS-W1-p0E" firstAttribute="leading" secondItem="5ho-b5-Ti1" secondAttribute="trailing" constant="8" id="InZ-lw-7u6"/>
+                            <constraint firstItem="unW-tt-kKj" firstAttribute="leading" secondItem="5ho-b5-Ti1" secondAttribute="trailing" constant="8" id="MLP-fK-LAz"/>
+                            <constraint firstItem="5ho-b5-Ti1" firstAttribute="top" secondItem="Ntr-MF-4Kb" secondAttribute="top" id="s12-BY-c85"/>
+                            <constraint firstItem="mOn-8J-dak" firstAttribute="top" secondItem="KaS-W1-p0E" secondAttribute="bottom" constant="8" id="su2-ih-UZQ"/>
+                            <constraint firstAttribute="bottom" secondItem="unW-tt-kKj" secondAttribute="bottom" constant="29" id="t40-Lc-hCv"/>
+                            <constraint firstItem="5ho-b5-Ti1" firstAttribute="leading" secondItem="Ntr-MF-4Kb" secondAttribute="leading" id="wJe-Ob-XGn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ntr-MF-4Kb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9ch-ai-OTT"/>
+                    <constraint firstAttribute="trailing" secondItem="Ntr-MF-4Kb" secondAttribute="trailing" id="Mhk-LC-Red"/>
+                    <constraint firstAttribute="bottom" secondItem="Ntr-MF-4Kb" secondAttribute="bottom" id="NB3-wO-0YT"/>
+                    <constraint firstItem="Ntr-MF-4Kb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NRI-GL-cVX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imagemPkmn" destination="5ho-b5-Ti1" id="dJJ-aE-HgO"/>
+                <outlet property="nomeJogador" destination="unW-tt-kKj" id="5d3-Mh-g11"/>
+                <outlet property="nomePkmn" destination="KaS-W1-p0E" id="57k-hC-W3H"/>
+                <outlet property="tituloJogo" destination="mOn-8J-dak" id="r7J-Um-LWh"/>
+            </connections>
+            <point key="canvasLocation" x="86.956521739130437" y="12.053571428571429"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

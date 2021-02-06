@@ -1,0 +1,115 @@
+{
+    "ofertas" :[ {
+        "ofertaID": 3290,
+        "pokemon": {
+            "id": 3,
+            "name": "charmander",
+            "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+            "stats": [ {
+                "name": "hp",
+                "value": 45
+            },
+            {
+                "name": "attack",
+                "value": 45
+            },
+            {
+                "name": "defense",
+                "value": 45
+            },
+            {
+                "name": "special-attack",
+                "value": 45
+            },
+            {
+                "name": "special-defense",
+                "value": 45
+            },
+            {
+                "name": "speed",
+                "value": 45
+            }
+            ]
+        },
+        "nome": "Beltrano",
+        "email": "beltrano@gmail.com",
+        "telefone": "11 99999-9999",
+        "observacoes": "Quero trocar por um Squirtle."
+    },
+    {
+        "ofertaID": 3291,
+        "pokemon": {
+            "id": 7,
+            "name": "squirtle",
+            "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+            "stats": [ {
+                "name": "hp",
+                "value": 45
+            },
+            {
+                "name": "attack",
+                "value": 45
+            },
+            {
+                "name": "defense",
+                "value": 45
+            },
+            {
+                "name": "special-attack",
+                "value": 45
+            },
+            {
+                "name": "special-defense",
+                "value": 45
+            },
+            {
+                "name": "speed",
+                "value": 45
+            }
+            ]
+        },
+        "nome": "Ciclano",
+        "email": "ciclano@gmail.com",
+        "telefone": "11 99999-9999",
+        "observacoes": "Quero trocar por um Dragonair."
+    },
+    {
+        "ofertaID": 3292,
+        "pokemon": {
+            "id": 148,
+            "name": "dragonair",
+            "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/148.png",
+            "stats": [ {
+                "name": "hp",
+                "value": 45
+            },
+            {
+                "name": "attack",
+                "value": 45
+            },
+            {
+                "name": "defense",
+                "value": 45
+            },
+            {
+                "name": "special-attack",
+                "value": 45
+            },
+            {
+                "name": "special-defense",
+                "value": 45
+            },
+            {
+                "name": "speed",
+                "value": 45
+            }
+            ]
+        },
+        "nome": "Fulano",
+        "email": "fulano@gmail.com",
+        "telefone": "11 99999-9999",
+        "observacoes": "Quero trocar por um Charizard."
+    }
+    ]
+}
+
