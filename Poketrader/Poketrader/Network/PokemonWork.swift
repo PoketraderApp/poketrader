@@ -17,11 +17,10 @@ class PokemonWork: GenericWorker {
     
     func savePokemon(name: String?, url: String?, game: String?, obs: String?) {
         if let userData = Auth.auth().currentUser {
-            var ref: DocumentReference? = nil
             let db = Firestore.firestore()
-            db.collection("anuncio").document(Auth.auth().currentUser?.uid ?? "").setData(["userName": userData.displayName, "name": name, "uid": Auth.auth().currentUser?.uid, "url": url, "game": game, "obs": obs]) { err in
-                if let err = err {
-                    print("deu ruim")
+            db.collection("anuncio").addDocument(data: ["userName": userData.displayName ?? "No name", "name": name ?? "No name", "uid": Auth.auth().currentUser?.uid ?? "No Uid", "url": url ?? "No url", "game": game ?? "No game", "obs": obs ?? "No obs"]) { err in
+                if let _err = err {
+                    print("deu ruim \(_err)")
                 } else {
                     print("deu bom")
                 }

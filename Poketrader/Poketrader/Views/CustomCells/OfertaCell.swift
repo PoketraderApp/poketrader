@@ -8,7 +8,13 @@
 import UIKit
 import Firebase
 
+protocol OfertaCellDelegate: class {
+    func addOffer()
+}
+
 class OfertaCell: UITableViewCell {
+    
+    weak var delegate: OfertaCellDelegate?
 
     @IBOutlet weak var imagemPkmn: UIImageView!
     @IBOutlet weak var nomePkmn: UILabel!
@@ -18,6 +24,19 @@ class OfertaCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setup(oferta: OfertaElement?) {
+        if let oferta = oferta {
+            self.nomePkmn.text = oferta.pokemon?.name
+            self.tituloJogo.text = oferta.game
+            self.nomeJogador.text = oferta.nome
+            let urlText = oferta.pokemon?.sprite! ?? ""
+            let url = URL(string: urlText)
+            if let _url = url {
+                downloadImage(from: _url)
+            }
+        }
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
@@ -36,21 +55,6 @@ class OfertaCell: UITableViewCell {
         }
     }
     
-    func setup(oferta: OfertaElement?) {
-        if let oferta = oferta {
-            self.nomePkmn.text = oferta.pokemon?.name
-            self.tituloJogo.text = oferta.game
-            self.nomeJogador.text = oferta.nome
-            
-            let urlText = oferta.pokemon?.sprite! ?? ""
-            let url = URL(string: urlText)
-            if let _url = url {
-                downloadImage(from: _url)
-            }
-        }
-    }
-
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

@@ -8,21 +8,15 @@
 import UIKit
 
 class TelaInicialViewController: UIViewController {
-
     @IBOutlet weak var tituloLabel: UILabel!
-    
     @IBOutlet weak var imageTelaInicial: UIImageView!
-    
     @IBOutlet weak var cadastroButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.cadastroButton.backgroundColor = UIColor(rgb: 0xB3A125)
         self.imageTelaInicial.image = UIImage(named: "telaInicialPokeTrader")
         self.imageTelaInicial.layer.cornerRadius = 100
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func tappedCadastro(_ sender: UIButton) {
@@ -32,8 +26,6 @@ class TelaInicialViewController: UIViewController {
     @IBAction func tappedEntrar(_ sender: UIButton) {
         self.performSegue(withIdentifier: "InicioVC.LoginVC", sender: nil)
     }
-
-
 }
 
 extension UIColor {

@@ -226,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				AD7F6B812582C89000424C38 /* CustomCells */,
-				AD7F6B32257ED00000424C38 /* PerfilViewController.swift */,
 				AD7F6B36257ED02900424C38 /* FeedViewController.swift */,
 				AD7F6B3A257ED02900424C38 /* AnuncioViewController.swift */,
 				AD7F6B4D257ED06600424C38 /* OfertasUsuarioViewController.swift */,
@@ -241,6 +240,7 @@
 				FEC49638258403E9004DF8E6 /* BaseViewController.swift */,
 				413E8AF425B7A95D00DFADBD /* SelecionarPokemonVC.swift */,
 				84AAD60C25C5059D00D22926 /* SplashViewController.swift */,
+				AD7F6B32257ED00000424C38 /* PerfilViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

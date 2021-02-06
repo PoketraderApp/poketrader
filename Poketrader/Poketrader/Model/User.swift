@@ -20,7 +20,7 @@ class User: Codable {
     var console: String?
     var email: String?
     var senha: String?
-    var dictionary: [String: Any] {
+    var dictionary: [String: Any?] {
         return ["nome": nome,
                 "telefone": telefone,
                 "email": email,
