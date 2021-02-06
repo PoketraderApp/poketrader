@@ -57,7 +57,6 @@ class PerfilViewController: BaseViewController {
         
     }
     
-    
     @IBAction func buttonLogout(_ sender: UIBarButtonItem) {
         do {
             try Auth.auth().signOut()
@@ -93,24 +92,11 @@ class PerfilViewController: BaseViewController {
     }
     
     private func checkFields() -> Bool {
-        
-        //        let obrigatorio:String = "Campo obrigatório"
         var isValid:Bool = true
-        
         if  self.fullNameTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true {
             print("nome invalido")
             isValid = false
-            
         }
-        
-        //        if self.consoleTextField.text?.isEmpty ?? true {
-        //
-        //            self.verificaEmailLabel.text = obrigatorio
-        //            self.verificaEmailLabel.textColor = .red
-        //
-        //            isValid = false
-        //
-        //        }
         
         if (self.telephoneTextField.text?.isEqual("") ?? true) && (self.telephoneTextField.text?.isEmpty ?? true) {
             print("telephone invalido")
@@ -121,10 +107,6 @@ class PerfilViewController: BaseViewController {
     }
     
     private func fetchImage() {
-        //get DAta
-        //converter o data em imagem
-        //set imagem no imageView
-        
         if let uid = (Auth.auth().currentUser?.uid){
             let profileImageStorageRef = Storage.storage().reference().child("profile_image_urls").child("\(uid).png")
             
@@ -144,8 +126,6 @@ class PerfilViewController: BaseViewController {
             }
             
         }
-        
-        
     }
     
     private func setupView() {
@@ -211,35 +191,26 @@ class PerfilViewController: BaseViewController {
         } else {
             let valido:Bool = checkFields()
             if valido {
-//                let user = User()
-//                user.nome = self.fullNameTextField.text
-//                user.email = self.emailTextField.text
-//                user.console = self.consoleTextField.text
-//                user.telefone = self.telephoneTextField.text
-                
-                    let nome = self.fullNameTextField.text ?? ""
-                    let telefone = self.telephoneTextField.text ?? ""
-                    let email = self.emailTextField.text ?? ""
-                    let image = self.iconUser.image?.pngData()
-                    let console = self.consoleTextField.text ?? ""
-                    self.perfil.atualizarUsuario(nome: nome, telefone: telefone, email: email, console: console, imagem: image) { (error) in
+                let nome = self.fullNameTextField.text ?? ""
+                let telefone = self.telephoneTextField.text ?? ""
+                let email = self.emailTextField.text ?? ""
+                let image = self.iconUser.image?.pngData()
+                let console = self.consoleTextField.text ?? ""
+                self.perfil.atualizarUsuario(nome: nome, telefone: telefone, email: email, console: console, imagem: image) { (error) in
                         
-                        if let _ = error {
-                            let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
-                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
+                    if let _ = error {
+                        let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
                             self.present(alert, animated: true, completion: nil)
                             return
-                        }
-                        
-                        let alert = UIAlertController(title: "Sucesso", message: "Usuario atualizado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                        self.present(alert, animated: true, completion: nil)
-                        
                     }
-                    
+                        
+                    let alert = UIAlertController(title: "Sucesso", message: "Usuario atualizado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
+            }
         }
-        
     }
     
     //Calls this function when the tap is recognized.
@@ -247,16 +218,12 @@ class PerfilViewController: BaseViewController {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
     }
-    
-    
 }
 
 extension PerfilViewController : UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         if textField.isEqual(self.telephoneTextField){
-            
             guard let text = textField.text else { return false }
             
             let newString = (text as NSString).replacingCharacters(in: range, with: string)
@@ -267,16 +234,11 @@ extension PerfilViewController : UITextFieldDelegate {
         }
         else if textField.isEqual(self.fullNameTextField){
             let nome: String = self.fullNameTextField.text ?? ""
-            
             let newNome: String = (nome as NSString).replacingCharacters(in: range, with: string)
-            
             if (nome.isEqual("") || nome.isEmpty) && (!newNome.isEqual("") || !newNome.isEmpty){
-                
                 return false
             }
-            
         }
-        
         return true
     }
     
