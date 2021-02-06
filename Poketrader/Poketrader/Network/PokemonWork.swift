@@ -10,23 +10,9 @@ import Alamofire
 import Firebase
 import FirebaseFirestore
 
-
 class PokemonWork: GenericWorker {
     let urlString: String = "https://pokeapi.co/api/v2/pokemon/"
     let limit: String = "?limit="
-    
-    func savePokemon(name: String?, url: String?, game: String?, obs: String?) {
-        if let userData = Auth.auth().currentUser {
-            let db = Firestore.firestore()
-            db.collection("anuncio").addDocument(data: ["userName": userData.displayName ?? "No name", "name": name ?? "No name", "uid": Auth.auth().currentUser?.uid ?? "No Uid", "url": url ?? "No url", "game": game ?? "No game", "obs": obs ?? "No obs"]) { err in
-                if let _err = err {
-                    print("deu ruim \(_err)")
-                } else {
-                    print("deu bom")
-                }
-            }
-        }
-    }
     
     func getPokemon(nome: String, completion: @escaping completion<Pokemon?>) {
         let url: URL? = URL(string: urlString + nome)

@@ -13,7 +13,7 @@ class OfertasUsuarioController {
     private var oferta: OfertaElement?
     
     func loadOfertas(completion: @escaping (Bool, String?) -> ()) {
-        OfertasWorker().loadAnunciosPorIUD { (ofertas, erro) in
+        OfertasWorker().loadOffersForIUD { (ofertas, erro) in
             if erro == nil {
                 self.ofertas = ofertas
                 completion(true, "")
@@ -22,6 +22,10 @@ class OfertasUsuarioController {
             }
             
         }
+    }
+    
+    func editOffer(obs: String) {
+        OfertasWorker().updateOffer(offer: self.oferta ?? OfertaElement(), obs: obs)
     }
     
     func getOferta(at posicao: Int) -> OfertaElement? {
