@@ -20,12 +20,7 @@ class OfertasUsuarioViewController: UIViewController {
     @IBOutlet weak var botaoAdicionarOferta: UIButton!
     @IBOutlet weak var tableViewOfertas: UITableView!
     
-    let pkmn_name = ["Charmander Nº004", "Squirtle Nº007", "Dragonair Nº148"]
-    let pkmn_game = ["Pokemon Blue", "Pokemon Blue", "Pokemon Blue"]
-    let pkmn_img  = ["4", "7", "148"]
-    let jogadorNome = "Player 1"
-    
-    var controller: MeuAnuncioController?
+    var controller: OfertasUsuarioController?
     
     
     
@@ -38,7 +33,7 @@ class OfertasUsuarioViewController: UIViewController {
         self.tableViewOfertas.dataSource = self
         
         
-        self.controller = MeuAnuncioController()
+        self.controller = OfertasUsuarioController()
         
         self.controller?.loadOfertas { (result, erro) in
             if result {
@@ -54,16 +49,33 @@ class OfertasUsuarioViewController: UIViewController {
         
         
     }
+    
     @IBAction func tappedAddButton(_ sender: UIBarButtonItem) {
         self.performSegue(withIdentifier: "MinhasOfertasVC.CadastrarVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "MinhasOfertasVC.MeuAnuncioVC" {
+            if let vc = segue.destination as? MeuAnuncioViewController {
+                if let selectedIndexPath = self.tableViewOfertas.indexPathForSelectedRow {
+//                    let posicao = selectedIndexPath.row
+//                    let ofertaID = self.controller?.getOfertaID(at: posicao) ?? 0
+                    
+                    let ofer: OfertaElement = (self.controller?.getOferta(at: selectedIndexPath.row))!
+                    
+                    vc.controller = MeuAnuncioController()
+                    
+                    vc.controller?.insereOferta(oferta: ofer) //setID(id: ofertaID)
+                }
+            }
+        }
     }
 }
 
 //MARK: TableView delegate & data source
 extension OfertasUsuarioViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.pkmn_name.count
-        
         return self.controller?.numberOfRows ?? 1
     }
     
@@ -75,13 +87,6 @@ extension OfertasUsuarioViewController: UITableViewDelegate, UITableViewDataSour
         if let cell = tableView.dequeueReusableCell(withIdentifier: "OfertaCell", for: indexPath) as? OfertaCell {
             
             cell.setup(oferta: self.controller?.getOferta(at: indexPath.row))
-            
-            
-//            cell.nomePkmn.text = self.pkmn_name[indexPath.row]
-//            cell.tituloJogo.text = self.pkmn_game[indexPath.row]
-//            cell.nomeJogador.text = jogadorNome
-//            
-//            cell.imagemPkmn.image = UIImage(named: self.pkmn_img[indexPath.row])
             
             return cell
         }

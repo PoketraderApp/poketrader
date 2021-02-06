@@ -19,9 +19,6 @@ class FeedController {
         return ofertas?.ofertas?[posicao].ofertaID ?? 0
     }
     
-    
-    
-    
     func getOferta(at posicao: Int) -> OfertaElement? {
         return ofertas?.ofertas?[posicao]
     }

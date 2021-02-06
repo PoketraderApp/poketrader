@@ -19,7 +19,7 @@ class PokemonWork: GenericWorker {
         if let userData = Auth.auth().currentUser {
             var ref: DocumentReference? = nil
             let db = Firestore.firestore()
-            ref = db.collection("anuncio").addDocument(data: ["userName": userData.displayName, "name": name, "uid": Auth.auth().currentUser?.uid, "url": url, "game": game, "obs": obs]) { err in
+            db.collection("anuncio").document(Auth.auth().currentUser?.uid ?? "").setData(["userName": userData.displayName, "name": name, "uid": Auth.auth().currentUser?.uid, "url": url, "game": game, "obs": obs]) { err in
                 if let err = err {
                     print("deu ruim")
                 } else {
