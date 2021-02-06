@@ -38,6 +38,8 @@ class MeuAnuncioViewController: BaseViewController {
     @IBOutlet weak var ataqueSPValueLabel: UILabel!
     @IBOutlet weak var defesaSPValueLabel: UILabel!
     
+    private var oferta: OfertaElement?
+    
     var controller: MeuAnuncioController?
 
     override func viewDidLoad() {
@@ -47,6 +49,7 @@ class MeuAnuncioViewController: BaseViewController {
         
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
+                self.oferta = _oferta
                 DispatchQueue.main.async {
 //                    self.profileImage.isHidden = true
                     
@@ -92,6 +95,30 @@ class MeuAnuncioViewController: BaseViewController {
             print("Download Finished")
             DispatchQueue.main.async() { [weak self] in
                 self?.pokemonImage.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MeuAnuncioVC.EditarVC" {
+            if let vc = segue.destination as? EdicaoPokemonViewController {
+                
+                
+                vc.controller = OfertasUsuarioController()
+                
+                vc.controller?.setOferta(ofer: self.oferta ?? OfertaElement())
+                
+//                vc.controller?.
+//                if let selectedIndexPath = self.feedTableView.indexPathForSelectedRow {
+//                    let posicao = selectedIndexPath.row
+//                    let ofertaID = self.controller?.getOfertaID(at: posicao) ?? 0
+//
+//                    var ofer: OfertaElement = (self.controller?.getOferta(at: selectedIndexPath.row))!
+//
+//                    vc.controller = AnuncioController()
+//
+//                    vc.controller?.insereOferta(oferta: ofer) //setID(id: ofertaID)
+//                }
             }
         }
     }

@@ -20,7 +20,6 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
                 self.dismiss(animated: true, completion: nil)
             }))
             self.present(alert, animated: true, completion: nil)
-            
         } else {
             let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
@@ -290,6 +289,4 @@ extension CadastroViewController: UITextFieldDelegate {
         
         return true
     }
-    
 }
-
