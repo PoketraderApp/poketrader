@@ -51,7 +51,7 @@ class OfertasWorker: GenericWorker {
     func loadAnunciosPorIUD(completion: @escaping (Ofertas?, String?) -> ()) {
         self.ofersList.ofertas = []
         
-        db.collection("anuncio").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? ").getDocuments { (query, err) in
+        db.collection("anuncio").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? "").getDocuments { (query, err) in
             if let e = err {
                 print("Deu ruim \(e)")
             } else {
