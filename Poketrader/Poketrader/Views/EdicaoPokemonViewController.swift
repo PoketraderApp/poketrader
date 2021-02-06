@@ -29,9 +29,6 @@ class EdicaoPokemonViewController: UIViewController {
         
         self.tittleTextField.delegate = self
         self.descriptionTextView.delegate = self
-
-        
-        // self.avatarImageView.image = UIImage(named: "charmeleon")
         self.tittleTextField.text = self.controller?.getOferta()?.nome
         self.descriptionTextView.text = self.controller?.getOferta()?.observacoes
         self.nameTextLabel.text = self.controller?.getOferta()?.pokemon?.name

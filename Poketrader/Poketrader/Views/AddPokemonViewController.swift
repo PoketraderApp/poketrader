@@ -8,7 +8,6 @@
 import UIKit
 
 class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
-    
     @IBOutlet weak var gameTitleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var pokemonImage: UIImageView!
@@ -16,17 +15,14 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     @IBOutlet weak var searchPokemon: UISearchBar!
     
     var namePokemon: String?
-    
     private var controller: AddPokemonController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         self.pokemonImage.contentMode = .scaleToFill
         self.controller = AddPokemonController()
-        
         self.gameTitleTextField.delegate = self
         self.descriptionTextField.delegate = self
     }
@@ -37,7 +33,6 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     
     func sendDataToCadastroVC(nomePokemon: String) {
         print("cliquei no >>>>>>>>\(nomePokemon)")
-        
         self.controller?.getPokemonData(nomePokemon: nomePokemon){ (result, erro) in
             if(result){
                 let url = URL(string: self.controller?.pokemonURLImage ?? "")
@@ -46,15 +41,11 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
                     self.pokemonImage.load(url: _url)
                     self.namePokemon = nomePokemon
                 }
-                
-                    
             }
             else{
                 print("deu erro")
             }
-            
         }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,28 +64,19 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
             self.gameTitleTextField,
             self.descriptionTextField
         ])
-        
         if isValid {
             controller?.savePokemon(name: namePokemon, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, obs: self.descriptionTextField.text)
             let alert = UIAlertController(title: "Confirmação", message: "Pokémon adicionado com sucesso!", preferredStyle: .alert)
-            
             let button = UIAlertAction(title: "OK", style: .default) { (success) in
-//                self.dismiss(animated: true, completion: nil)
             }
-            
             alert.addAction(button)
-            
             self.present(alert, animated: true, completion: nil)
-            
         } else {
             let alert = UIAlertController(title: "Alerta", message: "Preencha todos os campos!", preferredStyle: .alert)
             let buttonOk = UIAlertAction(title: "OK", style: .default, handler: nil)
-            
             alert.addAction(buttonOk)
-            
             self.present(alert, animated: true, completion: nil)
         }
-        
     }
     
     @IBAction func cancelPokemon(_ sender: UIButton) {
@@ -112,14 +94,12 @@ extension AddPokemonViewController: UITextFieldDelegate {
         default:
             self.descriptionTextField.becomeFirstResponder()
         }
-        
         return true
     }
 }
 
 extension AddPokemonViewController {
     func validateFields(textFields: [UITextField]) -> Bool {
-        
         for field in textFields {
             guard let fieldText = field.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return false }
             
@@ -127,21 +107,20 @@ extension AddPokemonViewController {
                 return false
             }
         }
-        
         return true
     }
 }
 
 extension UIImageView {
     func load(url: URL) {
-            DispatchQueue.global().async { [weak self] in
-                if let data = try? Data(contentsOf: url) {
-                    if let image = UIImage(data: data) {
-                        DispatchQueue.main.async {
-                            self?.image = image
-                        }
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
                     }
                 }
             }
+        }
     }
 }

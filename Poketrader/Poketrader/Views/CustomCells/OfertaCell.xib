@@ -71,6 +71,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentView" destination="H2p-sc-9uM" id="H8y-uO-kNC"/>
                 <outlet property="imagemPkmn" destination="5ho-b5-Ti1" id="dJJ-aE-HgO"/>
                 <outlet property="nomeJogador" destination="unW-tt-kKj" id="5d3-Mh-g11"/>
                 <outlet property="nomePkmn" destination="KaS-W1-p0E" id="57k-hC-W3H"/>
