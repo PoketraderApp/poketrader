@@ -39,10 +39,6 @@ class AuthenticationWorker: GenericWorker {
             if let authResult = authResult {
                 // usuário criado
                 let user = authResult.user
-                // salvando o telefone do usuário no firestore
-                // melhor alternativa que encontrei
-                // pois para salvar no perfil do usuário é preciso
-                // usar autenticação por telefone
                 let db = Firestore.firestore()
                 db.collection("telefones").document(user.uid).setData([
                     "telefone": telefone
@@ -134,19 +130,6 @@ class AuthenticationWorker: GenericWorker {
     }
     
     func upload(nome: String, telefone: String, email: String, console: String, imagem: Data?, completion: @escaping (Error?) -> Void) {
-//        Auth.auth().createUser(withEmail: email, password: senha) { (authResult, error) in
-//            if let error = error {
-//                // erro ao criar o usuário
-//                completion(error)
-//                return
-//            }
-//            if let authResult = authResult {
-                // usuário criado
-//                let user = authResult.user
-                // salvando o telefone do usuário no firestore
-                // melhor alternativa que encontrei
-                // pois para salvar no perfil do usuário é preciso
-                // usar autenticação por telefone
                 let db = Firestore.firestore()
                 db.collection("telefones").document(Auth.auth().currentUser!.uid).setData([
                     "telefone": telefone

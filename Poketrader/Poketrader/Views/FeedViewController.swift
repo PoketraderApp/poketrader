@@ -78,11 +78,6 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if self.delegate != nil {
-////            let pokemonName = self.controller?.getNomePokemon(at: indexPath.row)?.lowercased()
-//            self.delegate?.sendOferToAnuncioVC(ofer: (self.controller?.getOferta(at: indexPath.row))!)
-////            dismiss(animated: true, completion: nil)
-//        }
         self.performSegue(withIdentifier: "FeedVC.AnuncioVC", sender: self)
     }
     
@@ -95,6 +90,4 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
-    
 }
