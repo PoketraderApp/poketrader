@@ -289,6 +289,4 @@ extension CadastroViewController: UITextFieldDelegate {
         
         return true
     }
-    
 }
-
