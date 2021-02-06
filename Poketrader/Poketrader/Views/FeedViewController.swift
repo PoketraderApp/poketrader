@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class FeedViewController: BaseViewController {
 
  
@@ -52,12 +53,18 @@ class FeedViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "FeedVC.AnuncioVC" {
             if let vc = segue.destination as? AnuncioViewController {
                 if let selectedIndexPath = self.feedTableView.indexPathForSelectedRow {
                     let posicao = selectedIndexPath.row
                     let ofertaID = self.controller?.getOfertaID(at: posicao) ?? 0
-                    vc.controller?.setID(id: ofertaID)
+                    
+                    var ofer: OfertaElement = (self.controller?.getOferta(at: selectedIndexPath.row))!
+                    
+                    vc.controller = AnuncioController()
+                    
+                    vc.controller?.insereOferta(oferta: ofer) //setID(id: ofertaID)
                 }
             }
         }
@@ -71,6 +78,11 @@ extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        if self.delegate != nil {
+////            let pokemonName = self.controller?.getNomePokemon(at: indexPath.row)?.lowercased()
+//            self.delegate?.sendOferToAnuncioVC(ofer: (self.controller?.getOferta(at: indexPath.row))!)
+////            dismiss(animated: true, completion: nil)
+//        }
         self.performSegue(withIdentifier: "FeedVC.AnuncioVC", sender: self)
     }
     

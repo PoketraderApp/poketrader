@@ -98,18 +98,20 @@ class OfertasWorker: GenericWorker {
     }
     
     func getOferta(id: Int, completion: @escaping completion<OfertaElement?>) {
-        if let path = Bundle.main.path(forResource: "ofertas", ofType: "json") {
-            do {
-                let ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)
-                let lista = ofertasList.ofertas?.filter({$0.ofertaID == id})
-                
-                let oferta = lista?.first
-                completion(oferta, nil)
-            } catch {
-                completion(nil, "Don't fail me again")
-            }
-        }
+        
+        
+//        if let path = Bundle.main.path(forResource: "ofertas", ofType: "json") {
+//            do {
+//                let ofertas = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+//                let ofertasList = try JSONDecoder().decode(Ofertas.self, from: ofertas)
+//                let lista = ofertasList.ofertas?.filter({$0.ofertaID == id})
+//                
+//                let oferta = lista?.first
+//                completion(oferta, nil)
+//            } catch {
+//                completion(nil, "Don't fail me again")
+//            }
+//        }
     }
     
     func getOfertaMock(ofertaID: Int, completion: @escaping completion<Ofertas?>) {
