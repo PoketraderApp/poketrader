@@ -29,7 +29,7 @@ class FeedViewController: BaseViewController {
         
         self.setup()
         
-        self.hiddenLoading()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -45,6 +45,7 @@ class FeedViewController: BaseViewController {
                     self.feedTableView.delegate = self
                     self.feedTableView.dataSource = self
                     self.feedTableView.reloadData()
+                    self.hiddenLoading()
                 }
             } else {
                 print("deu ruim")

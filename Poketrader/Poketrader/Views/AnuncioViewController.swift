@@ -76,6 +76,7 @@ class AnuncioViewController: BaseViewController {
                     let url = URL(string: urlText)
                     if let _url = url {
                         self.downloadImage(from: _url)
+                        self.hiddenLoading()
                     }
                     
                     
@@ -88,7 +89,7 @@ class AnuncioViewController: BaseViewController {
             }
         })
         
-        self.hiddenLoading()
+        
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {

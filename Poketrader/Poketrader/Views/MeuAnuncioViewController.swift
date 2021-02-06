@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MeuAnuncioViewController: UIViewController {
+class MeuAnuncioViewController: BaseViewController {
     
     // Imagens
     @IBOutlet weak var pokemonImage: UIImageView!
@@ -43,6 +43,7 @@ class MeuAnuncioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Entrou editar")
+        self.showLoading()
         
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
@@ -63,6 +64,7 @@ class MeuAnuncioViewController: UIViewController {
                     let url = URL(string: urlText)
                     if let _url = url {
                         self.downloadImage(from: _url)
+                        self.hiddenLoading()
                     }
                     
                     
@@ -74,6 +76,7 @@ class MeuAnuncioViewController: UIViewController {
                 print("\(erro)")
             }
         })
+        
 
     }
     
