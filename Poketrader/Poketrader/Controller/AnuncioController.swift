@@ -41,19 +41,22 @@ class AnuncioController {
         
     }
     
-    func loadAnuncio(completion: @escaping (Bool, String?) -> ()) {
-        if let ofertaID = ofertaID {
-            OfertasWorker().getOferta(id: ofertaID) { (oferta, erro) in
-                if erro == nil {
+    func insereOferta(oferta: OfertaElement) {
+        print("Entrou setOferta")
+        self.oferta = oferta
+    }
+    
+    func loadAnuncio(completion: @escaping (OfertaElement?, String?) -> ()) {
+        if let oferta = self.oferta {
+//            OfertasWorker().getOferta(id: ofertaID) { (oferta, erro) in
+//                if erro == nil {
                     self.oferta = oferta
-                    completion(true, nil)
+                    completion(oferta, nil)
                 } else {
                     print("deu ruim")
-                    completion(false,"deu ruim")
+                    completion(nil,"deu ruim")
                 }
             }
-        }
-    }
     
     
     
