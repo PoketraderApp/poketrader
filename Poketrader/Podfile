@@ -9,7 +9,7 @@ target 'Poketrader' do
   pod 'Alamofire', '~> 5.2'
   pod 'lottie-ios'
   pod 'IQKeyboardManagerSwift'
-  
+  pod 'PasswordTextField'
   # Pods do Firebase
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'

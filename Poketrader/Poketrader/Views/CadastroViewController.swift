@@ -84,7 +84,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.imagePerfil.image = UIImage(named: "profilePic")
         
         self.cadastrarButton.layer.cornerRadius = 4
-        self.cadastrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
+//        self.cadastrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
         
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
@@ -105,7 +105,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         if  self.nomeTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true {
             
             self.verificaNomeLabel.text = obrigatorio
-            self.verificaNomeLabel.textColor = .red
+            self.verificaNomeLabel.textColor = UIColor(rgb: 0xffcd00)
             isValid = false
             
         }
@@ -113,7 +113,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         if self.emailTextField.text?.isEmpty ?? true {
             
             self.verificaEmailLabel.text = obrigatorio
-            self.verificaEmailLabel.textColor = .red
+            self.verificaEmailLabel.textColor = UIColor(rgb: 0xffcd00)
             
             isValid = false
             
@@ -127,7 +127,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         if self.senhaTextField.text?.isEmpty ?? true {
             
             self.verificaSenhaLabel.text = obrigatorio
-            self.verificaSenhaLabel.textColor = .red
+            self.verificaSenhaLabel.textColor = UIColor(rgb: 0xffcd00)
             
             isValid = false
         }
@@ -211,7 +211,7 @@ extension CadastroViewController: UITextFieldDelegate {
                 
                 self.verificaEmailLabel.text = "Email inválido"
                 
-                self.verificaEmailLabel.textColor = .red
+                self.verificaEmailLabel.textColor = UIColor(rgb: 0xffcd00)
             }
             else {
                 self.verificaEmailLabel.text = ""
