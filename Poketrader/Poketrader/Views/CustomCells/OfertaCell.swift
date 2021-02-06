@@ -39,11 +39,10 @@ class OfertaCell: UITableViewCell {
     func setup(oferta: OfertaElement?) {
         if let oferta = oferta {
             self.nomePkmn.text = oferta.pokemon?.name
-            self.tituloJogo.text = "JOGO XPTO"
+            self.tituloJogo.text = oferta.game
             self.nomeJogador.text = oferta.nome
             
             let urlText = oferta.pokemon?.sprite! ?? ""
-            
             let url = URL(string: urlText)
             if let _url = url {
                 downloadImage(from: _url)
