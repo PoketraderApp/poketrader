@@ -1833,14 +1833,11 @@
             <point key="canvasLocation" x="3694" y="530"/>
         </scene>
     </scenes>
-<<<<<<< HEAD
-=======
     <inferredMetricsTieBreakers>
         <segue reference="HQN-gQ-Y4R"/>
         <segue reference="Zaf-Ff-y0m"/>
         <segue reference="RpH-Kd-j4Y"/>
     </inferredMetricsTieBreakers>
->>>>>>> develop
     <resources>
         <image name="7" width="475" height="475"/>
         <image name="camera" width="64" height="64"/>

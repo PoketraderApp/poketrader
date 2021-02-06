@@ -15,16 +15,11 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     func usuarioCriado(result: Bool) {
         if result {
-<<<<<<< HEAD
-            self.dismiss(animated: true, completion: nil)
-        } else {
-=======
             let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
                 self.dismiss(animated: true, completion: nil)
             }))
             self.present(alert, animated: true, completion: nil)
->>>>>>> develop
             
         } else {
             let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
