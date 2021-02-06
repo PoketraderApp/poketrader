@@ -14,6 +14,7 @@ struct Ofertas: Codable {
 // MARK: - Lista de ofertas
 struct OfertaElement: Codable {
     
+    var game: String?
     // Parte do Pokémon
     var pokemon: Pokemon?
     

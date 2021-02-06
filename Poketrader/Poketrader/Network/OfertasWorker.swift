@@ -27,14 +27,14 @@ class OfertasWorker: GenericWorker {
                     for doc in document {
                         let data = doc.data()
                         
-                        if let nameText = data["name"] as? String, let urlText = data["url"] as? String, let _ = data["game"] as? String, let obsText = data["obs"] as? String {
+                        if let userName = data["userName"] as? String, let nameText = data["name"] as? String, let urlText = data["url"] as? String, let gameText = data["game"] as? String, let obsText = data["obs"] as? String {
                             
                             let officialArt = OfficialArtwork(imagePath: urlText)
                             let other = Other(dreamWorld: nil, officialArtwork: officialArt)
                             let sprites = Sprites(other: other)
                             let pokeData = PokeData(id: nil, name: nameText, sprites: sprites, stats: nil)
                             let pokemon = Pokemon(sprt: urlText, data: pokeData)
-                            let newOfer = OfertaElement(pokemon: pokemon, observacoes: obsText, ofertaID: nil, nome: nil, email: nil, telefone: nil)
+                            let newOfer = OfertaElement(game: gameText, pokemon: pokemon, observacoes: obsText, ofertaID: nil, nome: userName, email: nil, telefone: nil)
                             
                             self.ofersList.ofertas?.append(newOfer)
                             
