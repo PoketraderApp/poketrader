@@ -29,20 +29,13 @@ class LoginViewController: BaseViewController {
 
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
-<<<<<<< HEAD
-        
-        
-        self.emailTextField.text = "teste@gmail.com"
-        self.senhaTextField.text = "12345678"
-=======
+
         backgroudImageLogin.image = UIImage(named: "poketrade_logo")
         emailTextField.delegate = self
         senhaTextField.delegate = self
         
         self.senhaTextField.textContentType = .password
         self.senhaTextField.isSecureTextEntry = true
-        
-//        entrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
 
         cadastrarButton.layer.cornerRadius = 4
         cadastrarButton.clipsToBounds = true
@@ -57,7 +50,6 @@ class LoginViewController: BaseViewController {
         
         
         self.hiddenLoading()
->>>>>>> develop
         // Do any additional setup after loading the view.
     }
     
