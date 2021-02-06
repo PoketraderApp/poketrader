@@ -15,7 +15,7 @@ class Oferta: Codable {
 
 }
 
-class OfertasUsuarioViewController: UIViewController {
+class OfertasUsuarioViewController: BaseViewController {
 
     @IBOutlet weak var botaoAdicionarOferta: UIButton!
     @IBOutlet weak var tableViewOfertas: UITableView!
@@ -26,6 +26,7 @@ class OfertasUsuarioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showLoading()
         
         // Do any additional setup after loading the view.
         self.tableViewOfertas.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
@@ -41,6 +42,7 @@ class OfertasUsuarioViewController: UIViewController {
                     self.tableViewOfertas.delegate = self
                     self.tableViewOfertas.dataSource = self
                     self.tableViewOfertas.reloadData()
+                    self.hiddenLoading()
                 }
             } else {
                 print("deu ruim")
