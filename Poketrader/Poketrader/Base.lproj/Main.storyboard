@@ -1824,6 +1824,7 @@
                         <outlet property="avatarImageView" destination="RHh-R4-RDi" id="tzn-AA-XCh"/>
                         <outlet property="cancelButton" destination="JvE-gc-zxz" id="Kmu-fP-U7V"/>
                         <outlet property="descriptionTextView" destination="rvy-Oi-zMm" id="RBN-uj-v16"/>
+                        <outlet property="nameTextLabel" destination="B5W-bV-DaG" id="jLf-po-jDz"/>
                         <outlet property="saveButton" destination="2u4-X2-rk9" id="IF5-LP-Oz6"/>
                         <outlet property="tittleTextField" destination="kwL-Br-hVM" id="JwV-3f-4Lk"/>
                     </connections>
