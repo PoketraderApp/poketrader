@@ -48,6 +48,41 @@ class OfertasWorker: GenericWorker {
         }
     }
     
+    func loadAnunciosPorIUD(completion: @escaping (Ofertas?, String?) -> ()) {
+        self.ofersList.ofertas = []
+        
+        db.collection("anuncio").whereField("uid", isEqualTo: Auth.auth().currentUser?.uid ?? ").getDocuments { (query, err) in
+            if let e = err {
+                print("Deu ruim \(e)")
+            } else {
+                print("\(self.ofersList)")
+                if let document = query?.documents {
+                    for doc in document {
+                        let data = doc.data()
+                        
+                        //let capitalCities = db.collection("cities").whereField("capital", isEqualTo: true)
+                        
+                        if let nameText = data["name"] as? String, let urlText = data["url"] as? String, let _ = data["game"] as? String, let obsText = data["obs"] as? String {
+                            
+                            let officialArt = OfficialArtwork(imagePath: urlText)
+                            let other = Other(dreamWorld: nil, officialArtwork: officialArt)
+                            let sprites = Sprites(other: other)
+                            let pokeData = PokeData(id: nil, name: nameText, sprites: sprites, stats: nil)
+                            let pokemon = Pokemon(sprt: urlText, data: pokeData)
+                            let newOfer = OfertaElement(pokemon: pokemon, observacoes: obsText, ofertaID: nil, nome: nil, email: nil, telefone: nil)
+                            
+                            self.ofersList.ofertas?.append(newOfer)
+                            
+                            
+                        }
+                    }
+                }
+                completion(self.ofersList, nil)
+                print("Deu bom: \(query)")
+            }
+        }
+    }
+    
     
     func loadOfertas(completion: @escaping (Ofertas?, String?) -> ()) {
         if let path = Bundle.main.path(forResource: "ofertas", ofType: "json") {

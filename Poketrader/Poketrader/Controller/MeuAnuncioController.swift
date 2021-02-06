@@ -24,6 +24,22 @@ class MeuAnuncioController {
         }
     }
     
+    func loadOfertas(completion: @escaping (Bool, String?) -> ()) {
+        OfertasWorker().loadAnunciosPorIUD { (ofertas, erro) in
+            if erro == nil {
+                self.ofertas = ofertas
+                completion(true, "")
+            } else {
+                completion(false, "deu ruim")
+            }
+            
+        }
+    }
+    
+    func getOferta(at posicao: Int) -> OfertaElement? {
+        return ofertas?.ofertas?[posicao]
+    }
+    
     var numberOfRows: Int {
         return self.ofertas?.ofertas?.count ?? 0
     }
