@@ -803,7 +803,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="back"/>
                                         <constraints>
                                             <constraint firstItem="py8-uT-mpR" firstAttribute="top" secondItem="FgZ-68-cBB" secondAttribute="bottom" id="B98-go-rCX"/>
                                             <constraint firstItem="RRN-Lw-jX0" firstAttribute="top" secondItem="py8-uT-mpR" secondAttribute="bottom" constant="8" id="Drc-D3-frB"/>
@@ -818,6 +818,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="back"/>
                                 <constraints>
                                     <constraint firstItem="HB6-Sb-Rgt" firstAttribute="top" secondItem="nFa-wq-Tg2" secondAttribute="top" id="48r-6J-nry"/>
                                     <constraint firstItem="HB6-Sb-Rgt" firstAttribute="leading" secondItem="nFa-wq-Tg2" secondAttribute="leading" id="J5r-Bm-c7c"/>
