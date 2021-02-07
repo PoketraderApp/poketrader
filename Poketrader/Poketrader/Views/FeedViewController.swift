@@ -17,6 +17,17 @@ class FeedViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //remove a borda em baixo do navigation
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
+        
+        //ate aqui
+        self.feedTableView.backgroundColor = UIColor(rgb: 0x355774)
+        self.feedTableView.delegate = self
+        self.feedTableView.dataSource = self
+
         self.showLoading()
         self.setup()
     }

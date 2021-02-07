@@ -45,6 +45,9 @@ class PerfilViewController: BaseViewController {
         super.viewDidLoad()
         self.setupView()
         self.showLoading()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
         self.bloquearTextField()
         let size = self.iconUser.frame.size.height / 2
         self.iconUser.layer.cornerRadius = size
@@ -61,7 +64,8 @@ class PerfilViewController: BaseViewController {
         do {
             try Auth.auth().signOut()
             let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
-            UIApplication.shared.keyWindow?.rootViewController = loginViewController
+            let windows = UIApplication.shared.windows.first { $0.isKeyWindow }
+            windows?.rootViewController = loginViewController
         } catch let signOutError as NSError {
             print("ERROR %@", signOutError)
         }
@@ -158,6 +162,9 @@ class PerfilViewController: BaseViewController {
     fileprivate func bloquearTextField() {
         self.editarIconUser.isHidden = true
         
+        self.editarOuSalvarUiButton.backgroundColor = UIColor(named: "colorButton")
+        self.editarOuSalvarUiButton.setTitle("Editar", for: .normal)
+        
         self.fullNameTextField.isUserInteractionEnabled = false
         self.fullNameTextField.backgroundColor = UIColor(red: 198/255, green: 198/255, blue: 200/255, alpha: 1.0) /* #c6c6c8 */
         self.fullNameTextField.layer.borderWidth = 0.1
@@ -188,6 +195,7 @@ class PerfilViewController: BaseViewController {
         if buttonTitle == "Editar" {
             self.liberarTextField()
             sender.setTitle("Salvar", for: .normal)
+            sender.backgroundColor = UIColor(rgb: 0x082E35)
         } else {
             let valido:Bool = checkFields()
             if valido {
@@ -199,12 +207,12 @@ class PerfilViewController: BaseViewController {
                 self.perfil.atualizarUsuario(nome: nome, telefone: telefone, email: email, console: console, imagem: image) { (error) in
                         
                     if let _ = error {
-                        let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+                        let alert = UIAlertController(title: "Error", message: "Tivemos um problema em atualizar seu perfil.", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
                             self.present(alert, animated: true, completion: nil)
                             return
                     }
-                        
+                    self.bloquearTextField()
                     let alert = UIAlertController(title: "Sucesso", message: "Usuario atualizado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)

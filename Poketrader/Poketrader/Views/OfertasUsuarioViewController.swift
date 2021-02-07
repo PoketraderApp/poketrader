@@ -19,7 +19,16 @@ class OfertasUsuarioViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showLoading()
+        //remove a borda em baixo do navigation
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
         
+
+        //ate aqui
+        self.tableViewOfertas.backgroundColor = UIColor(named: "back")
+        // Do any additional setup after loading the view.
+
         self.tableViewOfertas.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
         self.tableViewOfertas.delegate = self
         self.tableViewOfertas.dataSource = self
