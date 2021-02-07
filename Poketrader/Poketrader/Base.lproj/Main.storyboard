@@ -560,7 +560,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <color key="backgroundColor" name="back"/>
                                                 <constraints>
                                                     <constraint firstItem="SEF-IP-Nc1" firstAttribute="centerY" secondItem="FgZ-68-cBB" secondAttribute="centerY" id="Hme-RN-ceo"/>
                                                     <constraint firstItem="SEF-IP-Nc1" firstAttribute="centerX" secondItem="FgZ-68-cBB" secondAttribute="centerX" id="Qhc-9h-xnj"/>
