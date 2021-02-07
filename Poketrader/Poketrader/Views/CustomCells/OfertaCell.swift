@@ -14,6 +14,9 @@ class OfertaCell: UITableViewCell {
     @IBOutlet weak var nomePkmn: UILabel!
     @IBOutlet weak var tituloJogo: UILabel!
     @IBOutlet weak var nomeJogador: UILabel!
+    @IBOutlet weak var pokebola: UIImageView!
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var subContainer: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +44,12 @@ class OfertaCell: UITableViewCell {
             self.nomePkmn.text = oferta.pokemon?.name
             self.tituloJogo.text = oferta.game
             self.nomeJogador.text = oferta.nome
+            self.container.layer.cornerRadius = 7
+            self.container.backgroundColor = UIColor(named: "colorButton")
+            self.subContainer.backgroundColor = UIColor(named: "colorButton")
+            
+            self.pokebola.image = self.pokebola.image?.withRenderingMode(.alwaysTemplate)
+            self.pokebola.tintColor = UIColor(named: "back")
             
             let urlText = oferta.pokemon?.sprite! ?? ""
             let url = URL(string: urlText)
@@ -55,6 +64,14 @@ class OfertaCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+// estou sobrescrevendo o metodo e colocando espaçamento entre as celulas
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 0 , right: 10))
+        
     }
     
 }
