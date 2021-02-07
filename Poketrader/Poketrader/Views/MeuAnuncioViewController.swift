@@ -82,5 +82,6 @@ class MeuAnuncioViewController: BaseViewController {
     }
     
     @IBAction func pressedExcluirButton(_ sender: UIButton) {
+        self.controller!.removeOffer(id: self.oferta!.id!)
     }
 }
