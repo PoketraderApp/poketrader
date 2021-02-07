@@ -14,7 +14,10 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     @IBOutlet weak var helpMessageView: UIView!
     @IBOutlet weak var searchPokemon: UISearchBar!
     
+    @IBOutlet weak var saveButton: UIButton!
     var namePokemon: String?
+    @IBOutlet weak var cancelButton: UIButton!
+    
     private var controller: AddPokemonController?
     
     override func viewDidLoad() {
@@ -25,6 +28,11 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
         self.controller = AddPokemonController()
         self.gameTitleTextField.delegate = self
         self.descriptionTextField.delegate = self
+        self.saveButton.layer.cornerRadius = 4
+        self.saveButton.clipsToBounds = true
+        self.cancelButton.layer.cornerRadius = 4
+        self.cancelButton.clipsToBounds = true
+        
     }
     
     @objc func dismissKeyboard() {

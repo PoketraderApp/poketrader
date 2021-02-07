@@ -56,6 +56,9 @@ class PerfilViewController: BaseViewController {
         self.telephoneTextField.text = Auth.auth().currentUser?.phoneNumber
         self.fetchImage()
         self.getTelephone()
+        self.editarOuSalvarUiButton.layer.cornerRadius = 4
+        self.editarOuSalvarUiButton.clipsToBounds = true
+        
         self.singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
         
     }
@@ -162,7 +165,7 @@ class PerfilViewController: BaseViewController {
     fileprivate func bloquearTextField() {
         self.editarIconUser.isHidden = true
         
-        self.editarOuSalvarUiButton.backgroundColor = UIColor(named: "colorButton")
+        self.editarOuSalvarUiButton.backgroundColor = UIColor(rgb: 0x84A9AC)
         self.editarOuSalvarUiButton.setTitle("Editar", for: .normal)
         
         self.fullNameTextField.isUserInteractionEnabled = false
@@ -195,7 +198,7 @@ class PerfilViewController: BaseViewController {
         if buttonTitle == "Editar" {
             self.liberarTextField()
             sender.setTitle("Salvar", for: .normal)
-            sender.backgroundColor = UIColor(rgb: 0x082E35)
+            sender.backgroundColor = UIColor(rgb: 0xCAE8D5)
         } else {
             let valido:Bool = checkFields()
             if valido {
