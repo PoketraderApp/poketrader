@@ -13,6 +13,16 @@ class OfertasWorker: GenericWorker {
     var ofersList = Ofertas()
     let db = Firestore.firestore()
     
+    func deleteOffer(id: String) {
+        db.collection("anuncio").document(id).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+    }
+    
     func updateOffer(offer: OfertaElement, obs: String) {
         let ref = db.collection("anuncio").document(offer.id!)
         ref.updateData([
