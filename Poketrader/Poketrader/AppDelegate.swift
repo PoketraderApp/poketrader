@@ -21,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
+        
+        //moficação na NavigationBar bar, tint, and title text color
+        UINavigationBar.appearance().barTintColor = UIColor(rgb: 0x234A6B)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        
 //        let db = Firestore.firestore()
 //        let storage = Storage.storage()
         return true
