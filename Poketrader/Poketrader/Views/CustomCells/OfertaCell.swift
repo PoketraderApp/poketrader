@@ -64,11 +64,11 @@ class OfertaCell: UITableViewCell {
             self.tituloJogo.text = oferta.game
             self.nomeJogador.text = oferta.nome
             self.container.layer.cornerRadius = 7
-            self.container.backgroundColor = UIColor(named: "colorButton")
-            self.subContainer.backgroundColor = UIColor(named: "colorButton")
+            self.container.backgroundColor = UIColor(rgb: 0x3B6978)
+            self.subContainer.backgroundColor = UIColor(rgb: 0x3B6978)
             
             self.pokebola.image = self.pokebola.image?.withRenderingMode(.alwaysTemplate)
-            self.pokebola.tintColor = UIColor(named: "back")
+            self.pokebola.tintColor = UIColor(rgb: 0x193342)
             
             let urlText = oferta.pokemon?.sprite! ?? ""
             let url = URL(string: urlText)

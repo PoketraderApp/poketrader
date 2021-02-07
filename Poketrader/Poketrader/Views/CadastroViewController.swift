@@ -27,6 +27,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var cadastrarButton: UIButton!
+    @IBOutlet weak var entrarButton: UIButton!
     
     var singleTap: Any?
     var controller: CadastroController = CadastroController()
@@ -49,6 +50,9 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.imagePerfil.layer.cornerRadius = size
         self.imagePerfil.image = UIImage(named: "profilePic")
         self.cadastrarButton.layer.cornerRadius = 4
+        self.cadastrarButton.clipsToBounds = true
+        self.entrarButton.layer.cornerRadius = 4
+        self.entrarButton.clipsToBounds = true
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         self.view.addGestureRecognizer(tap)
         self.controller.delegate = self

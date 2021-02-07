@@ -24,7 +24,7 @@ class FeedViewController: BaseViewController {
         self.navigationController?.navigationBar.layoutIfNeeded()
         
         //ate aqui
-        self.feedTableView.backgroundColor = UIColor(rgb: 0x355774)
+        self.feedTableView.backgroundColor = UIColor(rgb: 0x193342)
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
 

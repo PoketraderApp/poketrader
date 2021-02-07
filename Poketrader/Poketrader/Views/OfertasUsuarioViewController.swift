@@ -26,7 +26,7 @@ class OfertasUsuarioViewController: BaseViewController {
         
 
         //ate aqui
-        self.tableViewOfertas.backgroundColor = UIColor(named: "back")
+        self.tableViewOfertas.backgroundColor = UIColor(rgb: 0x193342)
         // Do any additional setup after loading the view.
 
         self.tableViewOfertas.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
