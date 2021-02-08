@@ -748,7 +748,9 @@
                             <constraint firstItem="qV6-rK-hl5" firstAttribute="top" secondItem="Pyx-i4-aOg" secondAttribute="bottom" constant="20" id="ySc-Hy-WX6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Detalhe do Anúncio" id="woC-hg-RjC"/>
+                    <navigationItem key="navigationItem" title="Detalhe do Anúncio" id="woC-hg-RjC">
+                        <barButtonItem key="backBarButtonItem" title="&quot;&quot;" id="pJX-Xc-0zq"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="ataqueSPValueLabel" destination="N74-mf-9fh" id="Yyc-0f-6Ar"/>
                         <outlet property="ataqueValueLabel" destination="0Yb-ah-zLT" id="3yV-yp-k3Y"/>

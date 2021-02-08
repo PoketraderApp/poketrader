@@ -36,6 +36,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.view.addGestureRecognizer(tap)
         self.pokemonImage.contentMode = .scaleToFill
         self.controller = AddPokemonController()

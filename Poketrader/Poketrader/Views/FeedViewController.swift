@@ -22,6 +22,7 @@ class FeedViewController: BaseViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         //ate aqui
         self.feedTableView.backgroundColor = UIColor(rgb: 0x193342)

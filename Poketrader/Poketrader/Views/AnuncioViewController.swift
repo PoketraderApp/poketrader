@@ -36,6 +36,7 @@ class AnuncioViewController: BaseViewController {
         self.showLoading()
         self.statusView.layer.cornerRadius = 4
         self.infoView.layer.cornerRadius = 4
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
                 DispatchQueue.main.async {
