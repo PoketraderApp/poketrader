@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor(rgb: 0x234A6B)
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
-        
+        UINavigationBar.appearance().barStyle = .black
 //        let db = Firestore.firestore()
 //        let storage = Storage.storage()
         return true
