@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import FirebaseFirestore
+import SCLAlertView
 
 class OfertasWorker: GenericWorker {
     var ofersList = Ofertas()
@@ -17,9 +18,19 @@ class OfertasWorker: GenericWorker {
     func deleteOffer(id: String) {
         db.collection("anuncio").document(id).delete() { err in
             if let err = err {
-                print("Error removing document: \(err)")
+                let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false
+                )
+                let alertView = SCLAlertView(appearance: appearance)
+                alertView.addButton("OK") {}
+                alertView.showError("Alerta", subTitle: err.localizedDescription)
             } else {
-                print("Document successfully removed!")
+                let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false
+                )
+                let alertView = SCLAlertView(appearance: appearance)
+                alertView.addButton("OK") {}
+                alertView.showSuccess("Com Sucesso", subTitle: "Pokemon foi excluido com sucesso.")
             }
         }
     }
@@ -37,8 +48,19 @@ class OfertasWorker: GenericWorker {
             "obs": obs
         ]) { err in
             if let err = err {
-                print("Error updating document: \(err)")
+                let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false
+                )
+                let alertView = SCLAlertView(appearance: appearance)
+                alertView.addButton("OK") {}
+                alertView.showError("Alerta", subTitle: err.localizedDescription)
             } else {
+                let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false
+                )
+                let alertView = SCLAlertView(appearance: appearance)
+                alertView.addButton("OK") {}
+                alertView.showSuccess("Com Sucesso", subTitle: "Atualização feita com sucesso.")
                 print("Document successfully updated")
             }
         }
