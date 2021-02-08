@@ -35,7 +35,6 @@ class MeuAnuncioViewController: BaseViewController {
         self.editButton.clipsToBounds = true
         self.deleteButton.layer.cornerRadius = 4
         self.deleteButton.clipsToBounds = true
-        
         self.nvTextField.keyboardType = .numberPad
         self.hpTextField.keyboardType = .numberPad
         self.defTextField.keyboardType = .numberPad
@@ -101,3 +100,4 @@ class MeuAnuncioViewController: BaseViewController {
         self.controller!.removeOffer(id: self.oferta!.id!)
     }
 }
+
