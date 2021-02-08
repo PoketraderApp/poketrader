@@ -29,7 +29,6 @@ class MeuAnuncioViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Entrou editar")
         self.statusView.layer.cornerRadius = 4
         self.statusView.clipsToBounds = true
         self.editButton.layer.cornerRadius = 4
@@ -41,6 +40,13 @@ class MeuAnuncioViewController: BaseViewController {
             if let _oferta = oferta {
                 self.oferta = _oferta
                 DispatchQueue.main.async {
+                    self.nvTextField.text = _oferta.nv
+                    self.hpTextField.text = _oferta.hp
+                    self.defTextField.text = _oferta.def
+                    self.ataTextField.text = _oferta.ata
+                    self.velTextField.text = _oferta.vel
+                    self.ataSpTetField.text = _oferta.ataSp
+                    self.defSpTextField.text = _oferta.defSp
                     self.obsTextView.text = oferta?.observacoes
                     self.nomePokemonLabel.text = oferta?.pokemon?.name
                     let urlText = oferta?.pokemon?.sprite! ?? ""
@@ -61,11 +67,8 @@ class MeuAnuncioViewController: BaseViewController {
     }
     
     func downloadImage(from url: URL) {
-        print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
             DispatchQueue.main.async() { [weak self] in
                 self?.pokemonImage.image = UIImage(data: data)
             }
