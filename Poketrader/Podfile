@@ -10,6 +10,7 @@ target 'Poketrader' do
   pod 'lottie-ios'
   pod 'IQKeyboardManagerSwift'
   pod 'PasswordTextField'
+  pod 'SCLAlertView'
   # Pods do Firebase
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
