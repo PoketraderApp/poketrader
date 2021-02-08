@@ -13,6 +13,7 @@ class EscolherImagem: NSObject, UIImagePickerControllerDelegate, UINavigationCon
     var selecionador = UIImagePickerController();
     
     //Cria um alerta
+
     var alerta = UIAlertController(title: "Escolha uma opção", message: nil, preferredStyle: .actionSheet)
     
     //Cria um UIViewController
