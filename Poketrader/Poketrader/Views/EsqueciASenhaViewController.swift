@@ -62,13 +62,17 @@ class EsqueciASenhaViewController: UIViewController {
                 print(_error)
             }
         } else {
-            let alert = UIAlertController(title: "Esqueci a senha", message: "Favor preencher o seu email!", preferredStyle: .alert)
             
-            let botao = UIAlertAction(title: "Fechar", style: .default, handler: nil)
-            
-            alert.addAction(botao)
-            
-            self.present(alert, animated: true, completion: nil)
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("Fechar") {}
+            alertView.showError("Esqueci a senha", subTitle: "Favor preencher o seu email!")
+//            let alert = UIAlertController(title: "Esqueci a senha", message: "Favor preencher o seu email!", preferredStyle: .alert)
+//
+//            let botao = UIAlertAction(title: "Fechar", style: .default, handler: nil)
+//
+//            alert.addAction(botao)
+//
+//            self.present(alert, animated: true, completion: nil)
         }
     }
     
