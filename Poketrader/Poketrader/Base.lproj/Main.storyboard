@@ -1530,7 +1530,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-fn-R2R">
-                                <rect key="frame" x="20" y="508" width="374" height="83"/>
+                                <rect key="frame" x="20" y="478" width="374" height="83"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcB-YC-yzn">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="39"/>
@@ -1557,10 +1557,10 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L5x-FI-RM0">
-                                <rect key="frame" x="20" y="388" width="374" height="100"/>
+                                <rect key="frame" x="20" y="388" width="374" height="70"/>
                                 <color key="backgroundColor" red="0.097635753450000001" green="0.19912800189999999" blue="0.25749424100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="qay-sY-hDZ"/>
+                                    <constraint firstAttribute="height" constant="70" id="JeM-wu-DCq"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.79215686269999996" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1572,16 +1572,16 @@
                         <color key="backgroundColor" red="0.097635753450000001" green="0.19912800189999999" blue="0.25749424100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iaH-Ue-9c6" firstAttribute="top" secondItem="54B-GW-c4h" secondAttribute="top" id="4CB-BS-vn6"/>
-                            <constraint firstItem="54B-GW-c4h" firstAttribute="trailing" secondItem="FQx-fn-R2R" secondAttribute="trailing" constant="20" id="8XV-Uu-R2q"/>
-                            <constraint firstItem="FQx-fn-R2R" firstAttribute="leading" secondItem="54B-GW-c4h" secondAttribute="leading" constant="20" id="PYM-kL-x5u"/>
+                            <constraint firstItem="L5x-FI-RM0" firstAttribute="leading" secondItem="54B-GW-c4h" secondAttribute="leading" constant="20" id="B37-JK-jhC"/>
+                            <constraint firstItem="54B-GW-c4h" firstAttribute="trailing" secondItem="FQx-fn-R2R" secondAttribute="trailing" constant="20" id="KV6-JW-1O7"/>
+                            <constraint firstItem="FQx-fn-R2R" firstAttribute="leading" secondItem="54B-GW-c4h" secondAttribute="leading" constant="20" id="TOY-UK-Veh"/>
                             <constraint firstItem="iaH-Ue-9c6" firstAttribute="leading" secondItem="54B-GW-c4h" secondAttribute="leading" id="WW9-LL-0cK"/>
                             <constraint firstItem="vaw-gG-RLR" firstAttribute="top" secondItem="iaH-Ue-9c6" secondAttribute="bottom" id="Wec-0o-FOb"/>
                             <constraint firstItem="vaw-gG-RLR" firstAttribute="leading" secondItem="54B-GW-c4h" secondAttribute="leading" constant="20" id="Wzw-CB-OrZ"/>
-                            <constraint firstItem="L5x-FI-RM0" firstAttribute="top" secondItem="vaw-gG-RLR" secondAttribute="bottom" constant="20" id="YHx-aD-NRU"/>
-                            <constraint firstItem="L5x-FI-RM0" firstAttribute="leading" secondItem="54B-GW-c4h" secondAttribute="leading" constant="20" id="dxv-r4-OmB"/>
-                            <constraint firstItem="54B-GW-c4h" firstAttribute="trailing" secondItem="L5x-FI-RM0" secondAttribute="trailing" constant="20" id="l3k-Uy-zht"/>
-                            <constraint firstItem="FQx-fn-R2R" firstAttribute="top" secondItem="L5x-FI-RM0" secondAttribute="bottom" constant="20" id="ncv-RR-wZ9"/>
+                            <constraint firstItem="FQx-fn-R2R" firstAttribute="top" secondItem="L5x-FI-RM0" secondAttribute="bottom" constant="20" id="XTy-aq-Jat"/>
+                            <constraint firstItem="54B-GW-c4h" firstAttribute="trailing" secondItem="L5x-FI-RM0" secondAttribute="trailing" constant="20" id="oqZ-97-TFT"/>
                             <constraint firstItem="54B-GW-c4h" firstAttribute="trailing" secondItem="vaw-gG-RLR" secondAttribute="trailing" constant="20" id="qp7-Sg-GLi"/>
+                            <constraint firstItem="L5x-FI-RM0" firstAttribute="top" secondItem="vaw-gG-RLR" secondAttribute="bottom" constant="20" id="y72-aE-Wvh"/>
                             <constraint firstItem="iaH-Ue-9c6" firstAttribute="trailing" secondItem="54B-GW-c4h" secondAttribute="trailing" id="zhP-GB-2jW"/>
                         </constraints>
                     </view>
