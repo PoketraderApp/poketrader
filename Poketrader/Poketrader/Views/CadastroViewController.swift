@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 protocol cadastroViewControllerDelegate: class {
     func usuarioCriado(result: Bool)
@@ -64,16 +65,27 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     }
     
     func usuarioCriado(result: Bool) {
+        let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false
+                )
         if result {
-            let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("OK") {
                 self.dismiss(animated: true, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
+            }
+            alertView.showSuccess("Sucesso", subTitle: "Usuario criado com sucesso :D.")
+//            let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+//                self.dismiss(animated: true, completion: nil)
+//            }))
+//            self.present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
-            self.present(alert, animated: true, completion: nil)
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("OK") {}
+            alertView.showError("Error", subTitle: "Tivemos um problema em criar o seu usuario.")
+//            let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
+//            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -116,6 +128,9 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
+        let appearance = SCLAlertView.SCLAppearance(
+            showCloseButton: false
+        )
         let valida:Bool = checkFields()
         if valida {
             let nome = self.nomeTextField.text ?? ""
@@ -126,17 +141,29 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
             let image = self.imagePerfil.image?.pngData()
             self.controller.cadastrarUsuario(nome: nome, telefone: telefone, console: console, email: email, senha: senha, imagem: image) { (error) in
                 if let _ = error {
-                    let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
-                    self.present(alert, animated: true, completion: nil)
+                    let alertView = SCLAlertView(appearance: appearance)
+                    alertView.addButton("OK") {}
+                    alertView.showSuccess("Error", subTitle: "Tivemos um problema em criar o seu usuario.")
+//                    let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
+//                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
+//                    self.present(alert, animated: true, completion: nil)
                     return
                 }
-                let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+                let alertView = SCLAlertView(appearance: appearance)
+                alertView.addButton("OK") {
                     self.dismiss(animated: true, completion: nil)
-                }))
-                self.present(alert, animated: true, completion: nil)
+                }
+                alertView.showSuccess("Sucesso", subTitle: "Usuario criado com sucesso :D.")
+//                let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
+//                    self.dismiss(animated: true, completion: nil)
+//                }))
+//                self.present(alert, animated: true, completion: nil)
             }
+        } else {
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("OK") {}
+            alertView.showError("Alerta", subTitle: "Preencha todos os campos obrigatorios!")
         }
     }
     

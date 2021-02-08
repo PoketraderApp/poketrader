@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SCLAlertView
 
 class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, UITextViewDelegate {
     @IBOutlet weak var gameTitleTextField: UITextField!
@@ -95,15 +96,31 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
         ])
         if isValid {
             controller?.savePokemon(name: namePokemon, telefone: self.phoneNumber, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, nv: self.nvtextField.text, hp: self.hpTextField.text, def: self.defTextField.text, ata: self.ataSpTextField.text, vel: self.velTextField.text, defSp: self.defSptextField.text, ataSp: self.ataSpTextField.text, obs: self.descriptionTextView.text)
-            let alert = UIAlertController(title: "Confirmação", message: "Pokémon adicionado com sucesso!", preferredStyle: .alert)
-            let button = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(button)
-            self.present(alert, animated: true, completion: nil)
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false
+                //                        showCircularIcon: true
+            )
+            let alertView = SCLAlertView(appearance: appearance)
+            //                    let alertViewIcon = UIImage(named: "poke")
+            alertView.addButton("OK") {}
+            alertView.showSuccess("Confirmação", subTitle: "Pokémon adicionado com sucesso!")
+//            let alert = UIAlertController(title: "Confirmação", message: "Pokémon adicionado com sucesso!", preferredStyle: .alert)
+//            let button = UIAlertAction(title: "OK", style: .default, handler: nil)
+//            alert.addAction(button)
+//            self.present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Alerta", message: "Preencha todos os campos!", preferredStyle: .alert)
-            let buttonOk = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(buttonOk)
-            self.present(alert, animated: true, completion: nil)
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false
+            )
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("OK") {}
+            alertView.showError("Alerta", subTitle: "Preencha todos os campos!")
+            
+            
+//            let alert = UIAlertController(title: "Alerta", message: "Preencha todos os campos!", preferredStyle: .alert)
+//            let buttonOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+//            alert.addAction(buttonOk)
+//            self.present(alert, animated: true, completion: nil)
         }
         self.gameTitleTextField.text = ""
         self.descriptionTextView.text = ""

@@ -26,32 +26,15 @@ class OfertaCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-    
-//    func setup(oferta: OfertaElement?) {
-//        if let oferta = oferta {
-//            self.nomePkmn.text = oferta.pokemon?.name
-//            self.tituloJogo.text = oferta.game
-//            self.nomeJogador.text = oferta.nome
-//            let urlText = oferta.pokemon?.sprite! ?? ""
-//            let url = URL(string: urlText)
-//            if let _url = url {
-//                downloadImage(from: _url)
-//            }
-//        }
-//    }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
     func downloadImage(from url: URL) {
-        print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
             DispatchQueue.main.async() { [weak self] in
                 self?.imagemPkmn.image = UIImage(data: data)
             }
@@ -61,8 +44,8 @@ class OfertaCell: UITableViewCell {
     func setup(oferta: OfertaElement?) {
         if let oferta = oferta {
             self.nomePkmn.text = oferta.pokemon?.name
-            self.tituloJogo.text = oferta.game
-            self.nomeJogador.text = oferta.nome
+            self.tituloJogo.text = "Jogo: \(String(describing: oferta.game!))"
+            self.nomeJogador.text = "Nv: \(String(describing: oferta.nv!))"
             self.container.layer.cornerRadius = 7
             self.container.backgroundColor = UIColor(rgb: 0x3B6978)
             self.subContainer.backgroundColor = UIColor(rgb: 0x3B6978)

@@ -6,6 +6,7 @@
 //
 import UIKit
 import Firebase
+import SCLAlertView
 
 class LoginViewController: BaseViewController {
     @IBOutlet weak var backgroudImageLogin: UIImageView!
@@ -52,6 +53,9 @@ class LoginViewController: BaseViewController {
     
     @IBAction func entrarButton(_ sender: UIButton) {
         dismissKeyboard()
+        let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false
+                )
         self.showLoading()
         if self.checkFields() {
             let email = self.emailTextField.text!
@@ -59,10 +63,9 @@ class LoginViewController: BaseViewController {
             LoginController().login(email: email, senha: senha) { ( error ) in
                 if let _ = error {
                     DispatchQueue.main.async {
-                        let alert =  UIAlertController(title: "Alerta", message: "Usuário ou senha inválidos", preferredStyle: .alert)
-                        let buttonOk = UIAlertAction(title: "OK", style: .default, handler: nil)
-                        alert.addAction(buttonOk)
-                        self.present(alert, animated: true, completion: nil)
+                        let alertView = SCLAlertView(appearance: appearance)
+                        alertView.addButton("OK") {}
+                        alertView.showError("Alerta", subTitle: "Usuário ou senha inválidos")
                         self.hiddenLoading()
                     }
                     return
@@ -73,11 +76,14 @@ class LoginViewController: BaseViewController {
                 }
             }
          } else {
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("OK") {}
+            alertView.showError("Alerta", subTitle: "Campos obrigatórios vazio.")
             
-            let alert =  UIAlertController(title: "Alerta", message: "Campos obrigatórios vazio.", preferredStyle: .alert)
-            let buttonOk = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(buttonOk)
-            self.present(alert, animated: true, completion: nil)
+//            let alert =  UIAlertController(title: "Alerta", message: "Campos obrigatórios vazio.", preferredStyle: .alert)
+//            let buttonOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+//            alert.addAction(buttonOk)
+//            self.present(alert, animated: true, completion: nil)
             self.hiddenLoading()
         }
     }

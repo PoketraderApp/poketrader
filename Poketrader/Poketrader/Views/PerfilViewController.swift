@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SCLAlertView
 
 protocol perfilViewControllerDelegate: class {
     func usuarioCriado(result: Bool)
@@ -88,9 +89,11 @@ class PerfilViewController: BaseViewController {
             let db = Firestore.firestore()
             db.collection("telefones").document(uid).getDocument { (document, error) in
                 if let document = document, document.exists {
-                    if let teamInfo = document.data()?["telefone"] {
+                    if let teamInfo = document.data()?["telefone"], let console = document.data()?["console"] {
                         let telefone = teamInfo as? String ?? ""
+                        let conso = console as? String ?? ""
                         self.telephoneTextField.text = telefone
+                        self.consoleTextField.text = conso
                     }
                 } else {
                     print("Document does not exist")
@@ -209,18 +212,30 @@ class PerfilViewController: BaseViewController {
                 let image = self.iconUser.image?.pngData()
                 let console = self.consoleTextField.text ?? ""
                 self.perfil.atualizarUsuario(nome: nome, telefone: telefone, email: email, console: console, imagem: image) { (error) in
-                        
+                    
                     if let _ = error {
-                        let alert = UIAlertController(title: "Error", message: "Tivemos um problema em atualizar seu perfil.", preferredStyle: UIAlertController.Style.alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
-                            self.present(alert, animated: true, completion: nil)
-                            return
+                        SCLAlertView().showError("Alerta", subTitle: "Tivemos um problema em atualizar seu perfil.")
+                        
+                        return
                     }
                     self.bloquearTextField()
-                    let alert = UIAlertController(title: "Sucesso", message: "Usuario atualizado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    
+                    let appearance = SCLAlertView.SCLAppearance(
+                        showCloseButton: false
+                        //                        showCircularIcon: true
+                    )
+                    let alertView = SCLAlertView(appearance: appearance)
+                    //                    let alertViewIcon = UIImage(named: "poke")
+                    alertView.addButton("OK") {}
+                    alertView.showSuccess("", subTitle: "Usuario atualizado com sucesso")
                 }
+            } else {
+                let appearance = SCLAlertView.SCLAppearance(
+                    showCloseButton: false
+                )
+                let alertView = SCLAlertView(appearance: appearance)
+                alertView.addButton("OK") {}
+                alertView.showError("Alerta", subTitle: "Preencha todos os campos obrigatorios!")
             }
         }
     }
