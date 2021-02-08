@@ -45,6 +45,13 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
         self.saveButton.clipsToBounds = true
         self.cancelButton.layer.cornerRadius = 4
         self.cancelButton.clipsToBounds = true
+        self.nvtextField.keyboardType = .numberPad
+        self.hpTextField.keyboardType = .numberPad
+        self.defTextField.keyboardType = .numberPad
+        self.atatextField.keyboardType = .numberPad
+        self.velTextField.keyboardType = .numberPad
+        self.ataSpTextField.keyboardType = .numberPad
+        self.defSptextField.keyboardType = .numberPad
         self.getTelephone()
     }
     

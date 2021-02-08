@@ -28,7 +28,7 @@ class AuthenticationWorker: GenericWorker {
         }
     }
     
-    func signup(nome: String, telefone: String, email: String, senha: String, imagem: Data?, completion: @escaping (Error?) -> Void) {
+    func signup(nome: String, telefone: String,  console: String, email: String, senha: String, imagem: Data?, completion: @escaping (Error?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: senha) { (authResult, error) in
             if let error = error {
                 completion(error)
@@ -38,7 +38,8 @@ class AuthenticationWorker: GenericWorker {
                 let user = authResult.user
                 let db = Firestore.firestore()
                 db.collection("telefones").document(user.uid).setData([
-                    "telefone": telefone
+                    "telefone": telefone,
+                    "console": console
                 ]) { err in
                     if let _error = error {
                         print("Erro ao adicionar o telefone... \(_error)")

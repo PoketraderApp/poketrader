@@ -24,6 +24,7 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
     @IBOutlet weak var verificaSenhaLabel: UILabel!
     @IBOutlet weak var verificaNomeLabel: UILabel!
     @IBOutlet weak var telefoneTextField: UITextField!
+    @IBOutlet weak var consoleTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
     @IBOutlet weak var cadastrarButton: UIButton!
@@ -42,6 +43,8 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         self.senhaTextField.isSecureTextEntry = true
         self.emailTextField.keyboardType = .emailAddress
         self.telefoneTextField.keyboardType = .numberPad
+        self.consoleTextField.delegate = self
+        self.consoleTextField.text = ""
         self.verificaEmailLabel.text = ""
         self.verificaSenhaLabel.text = ""
         self.verificaNomeLabel.text = ""
@@ -117,10 +120,11 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         if valida {
             let nome = self.nomeTextField.text ?? ""
             let telefone = self.telefoneTextField.text ?? ""
+            let console = self.consoleTextField.text ?? ""
             let senha = self.senhaTextField.text ?? ""
             let email = self.emailTextField.text ?? ""
             let image = self.imagePerfil.image?.pngData()
-            self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha, imagem: image) { (error) in
+            self.controller.cadastrarUsuario(nome: nome, telefone: telefone, console: console, email: email, senha: senha, imagem: image) { (error) in
                 if let _ = error {
                     let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
@@ -209,16 +213,16 @@ extension CadastroViewController: UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.borderStyle = .bezel
-        textField.layer.borderColor = UIColor.black.cgColor
-        
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.borderStyle = .roundedRect
-        textField.layer.borderColor = UIColor.gray.cgColor
-    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        textField.borderStyle = .bezel
+//        textField.layer.borderColor = UIColor.black.cgColor
+//        
+//    }
+//    
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        textField.borderStyle = .roundedRect
+//        textField.layer.borderColor = UIColor.gray.cgColor
+//    }
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
