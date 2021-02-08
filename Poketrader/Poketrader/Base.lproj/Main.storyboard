@@ -494,10 +494,10 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="dk1-XL-xNQ">
-                                                <rect key="frame" x="318" y="90" width="76" height="171"/>
+                                                <rect key="frame" x="220" y="90" width="174" height="171"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Tq-S5-prt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="174" height="23.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d1-Lk-WMj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="23.5"/>
@@ -506,7 +506,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0W5-cM-Aet">
-                                                                <rect key="frame" x="25" y="0.0" width="51" height="23.5"/>
+                                                                <rect key="frame" x="25" y="0.0" width="149" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.79215686269999996" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -514,7 +514,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MA3-74-7yC">
-                                                        <rect key="frame" x="0.0" y="29.5" width="76" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="29.5" width="174" height="23.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Def" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abu-Q9-Lge">
                                                                 <rect key="frame" x="0.0" y="0.0" width="28.5" height="23.5"/>
@@ -523,7 +523,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Jb-2p-KGy">
-                                                                <rect key="frame" x="28.5" y="0.0" width="47.5" height="23.5"/>
+                                                                <rect key="frame" x="28.5" y="0.0" width="145.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.79215686269999996" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -531,7 +531,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opb-Y2-Gug">
-                                                        <rect key="frame" x="0.0" y="59" width="76" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="59" width="174" height="23.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tff-ll-NRl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="23.5"/>
@@ -540,7 +540,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-ah-zLT">
-                                                                <rect key="frame" x="28" y="0.0" width="48" height="23.5"/>
+                                                                <rect key="frame" x="28" y="0.0" width="146" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.51764705879999995" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -548,7 +548,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8H-S7-9wA">
-                                                        <rect key="frame" x="0.0" y="88.5" width="76" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="88.5" width="174" height="23.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mww-ql-w4W">
                                                                 <rect key="frame" x="0.0" y="0.0" width="25.5" height="23.5"/>
@@ -557,7 +557,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dtv-mb-fQM">
-                                                                <rect key="frame" x="25.5" y="0.0" width="50.5" height="23.5"/>
+                                                                <rect key="frame" x="25.5" y="0.0" width="148.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.51764705879999995" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -565,16 +565,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgu-QI-6W7">
-                                                        <rect key="frame" x="0.0" y="118" width="76" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="118" width="174" height="23.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Ata SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm3-sl-j2v">
-                                                                <rect key="frame" x="0.0" y="0.0" width="56.5" height="23.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="154.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.23137254900000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N74-mf-9fh">
-                                                                <rect key="frame" x="56.5" y="0.0" width="19.5" height="23.5"/>
+                                                                <rect key="frame" x="154.5" y="0.0" width="19.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.23137254900000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -582,16 +582,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aHL-BC-buG">
-                                                        <rect key="frame" x="0.0" y="147.5" width="76" height="23.5"/>
+                                                        <rect key="frame" x="0.0" y="147.5" width="174" height="23.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Def SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwR-4u-UCX">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Def SP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwR-4u-UCX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="56.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.23137254900000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-QS-iiY">
-                                                                <rect key="frame" x="56.5" y="0.0" width="19.5" height="23.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMn-QS-iiY">
+                                                                <rect key="frame" x="56.5" y="0.0" width="117.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.23137254900000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -663,7 +663,7 @@
                                                                 <color key="textColor" red="0.51764705879999995" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(99)99999-9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-bn-kIy">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="(99)99999-9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsI-bn-kIy">
                                                                 <rect key="frame" x="69.5" y="0.0" width="304.5" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                                                 <color key="textColor" red="0.51764705879999995" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -685,15 +685,16 @@
                                         <constraints>
                                             <constraint firstItem="RRN-Lw-jX0" firstAttribute="leading" secondItem="HB6-Sb-Rgt" secondAttribute="leading" constant="20" id="9Qi-KR-ERS"/>
                                             <constraint firstAttribute="trailing" secondItem="RRN-Lw-jX0" secondAttribute="trailing" constant="20" id="Gie-64-owN"/>
-                                            <constraint firstAttribute="trailing" secondItem="dk1-XL-xNQ" secondAttribute="trailing" constant="20" id="PLF-pg-FoH"/>
                                             <constraint firstItem="RRN-Lw-jX0" firstAttribute="top" secondItem="py8-uT-mpR" secondAttribute="bottom" id="Pec-wf-ltF"/>
                                             <constraint firstItem="py8-uT-mpR" firstAttribute="top" secondItem="FgZ-68-cBB" secondAttribute="bottom" id="S9x-Z8-gtv"/>
+                                            <constraint firstItem="dk1-XL-xNQ" firstAttribute="leading" secondItem="py8-uT-mpR" secondAttribute="trailing" id="VAv-0T-xcG"/>
+                                            <constraint firstItem="dk1-XL-xNQ" firstAttribute="top" secondItem="FgZ-68-cBB" secondAttribute="bottom" constant="20" id="WYM-pb-rXU"/>
+                                            <constraint firstAttribute="trailing" secondItem="dk1-XL-xNQ" secondAttribute="trailing" constant="20" id="fUL-qD-0Em"/>
                                             <constraint firstItem="FgZ-68-cBB" firstAttribute="top" secondItem="HB6-Sb-Rgt" secondAttribute="top" id="fm2-7S-sVZ"/>
                                             <constraint firstItem="qV6-rK-hl5" firstAttribute="leading" secondItem="HB6-Sb-Rgt" secondAttribute="leading" constant="20" id="jq1-w4-nUa"/>
                                             <constraint firstAttribute="trailing" secondItem="qV6-rK-hl5" secondAttribute="trailing" constant="20" id="qCb-Rp-VRP"/>
                                             <constraint firstItem="py8-uT-mpR" firstAttribute="leading" secondItem="HB6-Sb-Rgt" secondAttribute="leading" id="qKP-DH-KIN"/>
                                             <constraint firstAttribute="trailing" secondItem="FgZ-68-cBB" secondAttribute="trailing" id="qj6-Mr-p6e"/>
-                                            <constraint firstItem="dk1-XL-xNQ" firstAttribute="top" secondItem="FgZ-68-cBB" secondAttribute="bottom" constant="20" id="rL6-Sl-VbL"/>
                                             <constraint firstItem="qV6-rK-hl5" firstAttribute="top" secondItem="RRN-Lw-jX0" secondAttribute="bottom" constant="20" id="tSy-dH-SQT"/>
                                             <constraint firstItem="FgZ-68-cBB" firstAttribute="leading" secondItem="HB6-Sb-Rgt" secondAttribute="leading" id="uhB-9X-VDO"/>
                                         </constraints>
