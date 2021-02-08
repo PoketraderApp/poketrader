@@ -75,8 +75,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
         if isValid {
             controller?.savePokemon(name: namePokemon, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, obs: self.descriptionTextField.text)
             let alert = UIAlertController(title: "Confirmação", message: "Pokémon adicionado com sucesso!", preferredStyle: .alert)
-            let button = UIAlertAction(title: "OK", style: .default) { (success) in
-            }
+            let button = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(button)
             self.present(alert, animated: true, completion: nil)
         } else {
