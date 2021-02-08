@@ -28,12 +28,27 @@ class OfertasUsuarioViewController: BaseViewController {
         //ate aqui
         self.tableViewOfertas.backgroundColor = UIColor(rgb: 0x193342)
         // Do any additional setup after loading the view.
-
+        
         self.tableViewOfertas.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
         self.tableViewOfertas.delegate = self
         self.tableViewOfertas.dataSource = self
         
         self.controller = OfertasUsuarioController()
+        self.controller?.loadOfertas { (result, erro) in
+            if result {
+                DispatchQueue.main.async {
+                    self.tableViewOfertas.delegate = self
+                    self.tableViewOfertas.dataSource = self
+                    self.tableViewOfertas.reloadData()
+                    self.hiddenLoading()
+                }
+            } else {
+                print("deu ruim")
+            }
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        
         self.controller?.loadOfertas { (result, erro) in
             if result {
                 DispatchQueue.main.async {
