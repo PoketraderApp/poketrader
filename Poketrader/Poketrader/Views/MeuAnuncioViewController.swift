@@ -43,7 +43,7 @@ class MeuAnuncioViewController: BaseViewController {
         self.velTextField.keyboardType = .numberPad
         self.ataSpTetField.keyboardType = .numberPad
         self.defSpTextField.keyboardType = .numberPad
-        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.showLoading()
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
