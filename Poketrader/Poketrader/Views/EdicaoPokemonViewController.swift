@@ -52,15 +52,15 @@ class EdicaoPokemonViewController: UIViewController {
     }
     
     
-    @IBAction func editPokemon(_ sender: UIButton) {
-        self.controller?.editOffer(obs: self.descriptionTextView.text) 
-        
-        
-        self.gameTitle =  String(describing: self.tittleTextField.text)
-        self.shortDescription = String(describing: self.descriptionTextView.text)
+//    @IBAction func editPokemon(_ sender: UIButton) {
+//        self.controller?.editOffer(obs: self.descriptionTextView.text)
+//
+//
+//        self.gameTitle =  String(describing: self.tittleTextField.text)
+//        self.shortDescription = String(describing: self.descriptionTextView.text)
 //        self.dismiss(animated: true, completion: nil)
-        
-    }
+//
+//    }
     
     @IBAction func cancelEditPokemon(_ sender: UIButton) {
         
