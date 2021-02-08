@@ -45,8 +45,8 @@ class CadastroController {
         return result
     }
     
-    func cadastrarUsuario(nome: String, telefone: String, email: String, senha: String, imagem: Data?, completion: @escaping (Error?) -> Void) {
-        AuthenticationWorker().signup(nome: nome, telefone: telefone, email: email, senha: senha, imagem: imagem, completion: completion)
+    func cadastrarUsuario(nome: String, telefone: String, console: String, email: String, senha: String, imagem: Data?, completion: @escaping (Error?) -> Void) {
+        AuthenticationWorker().signup(nome: nome, telefone: telefone, console: console, email: email, senha: senha, imagem: imagem, completion: completion)
 
         
 //        worker?.criarUsuario(completion: { (resposta) in

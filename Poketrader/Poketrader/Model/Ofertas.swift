@@ -16,6 +16,14 @@ struct OfertaElement: Codable {
     
     var id: String?
     
+    var nv: String?
+    var hp: String?
+    var def: String?
+    var ata: String?
+    var vel: String?
+    var defSp: String?
+    var ataSp: String?
+    
     var game: String?
     // Parte do Pokémon
     var pokemon: Pokemon?

@@ -9,7 +9,6 @@ import UIKit
 
 class AnuncioViewController: BaseViewController {
     @IBOutlet weak var pokemonImage: UIImageView!
-    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nomePokemonLabel: UILabel!
     @IBOutlet weak var usuarioLabel: UILabel!
     @IBOutlet weak var usuarioValueLabel: UILabel!
@@ -19,26 +18,35 @@ class AnuncioViewController: BaseViewController {
     @IBOutlet weak var jogoValueLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var emailValueLabel: UILabel!
-    @IBOutlet weak var observacoesLabel: UILabel!
     @IBOutlet weak var observacoesValueLabel: UILabel!
-    @IBOutlet weak var atributosLabel: UILabel!
-    @IBOutlet weak var atributosStackView: UIStackView!
     @IBOutlet weak var hpValueLabel: UILabel!
     @IBOutlet weak var defesaValueLabel: UILabel!
     @IBOutlet weak var ataqueValueLabel: UILabel!
     @IBOutlet weak var velocidadeValueLabel: UILabel!
     @IBOutlet weak var ataqueSPValueLabel: UILabel!
     @IBOutlet weak var defesaSPValueLabel: UILabel!
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var infoView: UIView!
+    @IBOutlet weak var nvTextLabel: UILabel!
     
     var controller: AnuncioController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showLoading()
+        self.statusView.layer.cornerRadius = 4
+        self.infoView.layer.cornerRadius = 4
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
                 DispatchQueue.main.async {
-//                    self.profileImage.isHidden = true
+                    self.nvTextLabel.text = _oferta.nv
+                    self.hpValueLabel.text = _oferta.hp
+                    self.defesaValueLabel.text = _oferta.def
+                    self.ataqueValueLabel.text = _oferta.ata
+                    self.velocidadeValueLabel.text = _oferta.vel
+                    self.ataqueSPValueLabel.text = _oferta.ataSp
+                    self.defesaSPValueLabel.text = _oferta.defSp
                     self.usuarioValueLabel.text = _oferta.nome
                     self.emailValueLabel.text =  _oferta.email
                     self.telefoneValueLabel.text = _oferta.telefone

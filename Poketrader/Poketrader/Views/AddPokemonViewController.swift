@@ -6,10 +6,21 @@
 //
 
 import UIKit
+import Firebase
 
-class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
+class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, UITextViewDelegate {
     @IBOutlet weak var gameTitleTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    
+    @IBOutlet weak var nvtextField: UITextField!
+    @IBOutlet weak var hpTextField: UITextField!
+    @IBOutlet weak var atatextField: UITextField!
+    @IBOutlet weak var defTextField: UITextField!
+    @IBOutlet weak var velTextField: UITextField!
+    @IBOutlet weak var defSptextField: UITextField!
+    @IBOutlet weak var ataSpTextField: UITextField!
+//    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var helpMessageView: UIView!
     @IBOutlet weak var searchPokemon: UISearchBar!
@@ -18,21 +29,31 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     var namePokemon: String?
     @IBOutlet weak var cancelButton: UIButton!
     
+    var phoneNumber: String?
+    
     private var controller: AddPokemonController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.view.addGestureRecognizer(tap)
         self.pokemonImage.contentMode = .scaleToFill
         self.controller = AddPokemonController()
         self.gameTitleTextField.delegate = self
-        self.descriptionTextField.delegate = self
+        self.descriptionTextView.delegate = self
         self.saveButton.layer.cornerRadius = 4
         self.saveButton.clipsToBounds = true
         self.cancelButton.layer.cornerRadius = 4
         self.cancelButton.clipsToBounds = true
-        
+        self.nvtextField.keyboardType = .numberPad
+        self.hpTextField.keyboardType = .numberPad
+        self.defTextField.keyboardType = .numberPad
+        self.atatextField.keyboardType = .numberPad
+        self.velTextField.keyboardType = .numberPad
+        self.ataSpTextField.keyboardType = .numberPad
+        self.defSptextField.keyboardType = .numberPad
+        self.getTelephone()
     }
     
     @objc func dismissKeyboard() {
@@ -69,11 +90,11 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     }
     @IBAction func addPokemon(_ sender: UIButton) {
         let isValid = self.validateFields(textFields: [
-            self.gameTitleTextField,
-            self.descriptionTextField
+            self.gameTitleTextField
+//            self.descriptionTextView
         ])
         if isValid {
-            controller?.savePokemon(name: namePokemon, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, obs: self.descriptionTextField.text)
+            controller?.savePokemon(name: namePokemon, telefone: self.phoneNumber, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, nv: self.nvtextField.text, hp: self.hpTextField.text, def: self.defTextField.text, ata: self.ataSpTextField.text, vel: self.velTextField.text, defSp: self.defSptextField.text, ataSp: self.ataSpTextField.text, obs: self.descriptionTextView.text)
             let alert = UIAlertController(title: "Confirmação", message: "Pokémon adicionado com sucesso!", preferredStyle: .alert)
             let button = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(button)
@@ -84,11 +105,29 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
             alert.addAction(buttonOk)
             self.present(alert, animated: true, completion: nil)
         }
+        self.gameTitleTextField.text = ""
+        self.descriptionTextView.text = ""
     }
     
     @IBAction func cancelPokemon(_ sender: UIButton) {
         //self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func getTelephone() {
+        if let uid = (Auth.auth().currentUser?.uid){
+            let db = Firestore.firestore()
+            db.collection("telefones").document(uid).getDocument { (document, error) in
+                if let document = document, document.exists {
+                    if let teamInfo = document.data()?["telefone"] {
+                        let telefone = teamInfo as? String ?? ""
+                        self.phoneNumber = telefone
+                    }
+                } else {
+                    print("Document does not exist")
+                }
+            }
+        }
     }
 }
 
@@ -96,10 +135,10 @@ extension AddPokemonViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case self.gameTitleTextField:
-            self.descriptionTextField.becomeFirstResponder()
+            self.descriptionTextView.becomeFirstResponder()
             break;
         default:
-            self.descriptionTextField.becomeFirstResponder()
+            self.descriptionTextView.becomeFirstResponder()
         }
         return true
     }
