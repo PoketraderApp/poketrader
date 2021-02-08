@@ -88,9 +88,11 @@ class PerfilViewController: BaseViewController {
             let db = Firestore.firestore()
             db.collection("telefones").document(uid).getDocument { (document, error) in
                 if let document = document, document.exists {
-                    if let teamInfo = document.data()?["telefone"] {
+                    if let teamInfo = document.data()?["telefone"], let console = document.data()?["console"] {
                         let telefone = teamInfo as? String ?? ""
+                        let conso = console as? String ?? ""
                         self.telephoneTextField.text = telefone
+                        self.consoleTextField.text = conso
                     }
                 } else {
                     print("Document does not exist")
