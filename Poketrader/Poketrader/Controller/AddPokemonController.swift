@@ -11,7 +11,7 @@ class AddPokemonController {
     private var pokemon: Pokemon?
     
     func savePokemon(name: String?, url: String?, game: String?, obs: String?) {
-        PokemonWork().savePokemon(name: name, url: url, game: game, obs: obs)
+        OfertasWorker().saveOffer(name: name, url: url, game: game, obs: obs)
     }
     
     var pokemonURLImage: String {

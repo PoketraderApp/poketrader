@@ -17,44 +17,26 @@ class LoginViewController: BaseViewController {
     
     var usuarioVC: User?
     
-//    @IBOutlet weak var emailTextField: UITextField!
-//    @IBOutlet weak var senhaTextField: UITextField!
-//    @IBOutlet weak var entrarButton: UIButton!
-//    
-//    @IBOutlet weak var backgroudImageLogin: UIImageView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showLoading()
-
         entrarButton.layer.cornerRadius = 4
         entrarButton.clipsToBounds = true
-
         backgroudImageLogin.image = UIImage(named: "poketrade_logo")
         emailTextField.delegate = self
         senhaTextField.delegate = self
-        
         self.senhaTextField.textContentType = .password
         self.senhaTextField.isSecureTextEntry = true
-
         cadastrarButton.layer.cornerRadius = 4
         cadastrarButton.clipsToBounds = true
-
         esqueciSenhaButton.layer.cornerRadius = 4
         esqueciSenhaButton.clipsToBounds = true
-        
-        
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
                 self.view.addGestureRecognizer(tap)
-        
-        
-        
         self.hiddenLoading()
-        // Do any additional setup after loading the view.
     }
     
     private func checkFields() -> Bool {
-        
         if self.emailTextField.text?.isEmpty ?? true {
             return false
         } else if self.senhaTextField.text?.isEmpty ?? true {
@@ -71,7 +53,6 @@ class LoginViewController: BaseViewController {
     @IBAction func entrarButton(_ sender: UIButton) {
         dismissKeyboard()
         self.showLoading()
-        
         if self.checkFields() {
             let email = self.emailTextField.text!
             let senha = self.senhaTextField.text!
@@ -87,7 +68,6 @@ class LoginViewController: BaseViewController {
                     return
                 }
                 DispatchQueue.main.async {
-//                    Configuration.value(defaultValue: usuario, forKey: "usuarioSalvoLocal")
                     self.performSegue(withIdentifier: "LoginVC.FeedVC", sender: nil)
                     self.hiddenLoading()
                 }
@@ -113,7 +93,6 @@ class LoginViewController: BaseViewController {
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case self.emailTextField:
@@ -128,5 +107,4 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
-    
 }

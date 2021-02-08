@@ -9,12 +9,6 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-class Oferta: Codable {
-    var url: String?
-    var game: String?
-
-}
-
 class OfertasUsuarioViewController: BaseViewController {
 
     @IBOutlet weak var botaoAdicionarOferta: UIButton!
@@ -22,19 +16,38 @@ class OfertasUsuarioViewController: BaseViewController {
     
     var controller: OfertasUsuarioController?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showLoading()
+        //remove a borda em baixo do navigation
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for:.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.layoutIfNeeded()
         
+
+        //ate aqui
+        self.tableViewOfertas.backgroundColor = UIColor(rgb: 0x193342)
         // Do any additional setup after loading the view.
+        
         self.tableViewOfertas.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")
         self.tableViewOfertas.delegate = self
         self.tableViewOfertas.dataSource = self
         
-        
         self.controller = OfertasUsuarioController()
+        self.controller?.loadOfertas { (result, erro) in
+            if result {
+                DispatchQueue.main.async {
+                    self.tableViewOfertas.delegate = self
+                    self.tableViewOfertas.dataSource = self
+                    self.tableViewOfertas.reloadData()
+                    self.hiddenLoading()
+                }
+            } else {
+                print("deu ruim")
+            }
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
         
         self.controller?.loadOfertas { (result, erro) in
             if result {
@@ -48,8 +61,6 @@ class OfertasUsuarioViewController: BaseViewController {
                 print("deu ruim")
             }
         }
-        
-        
     }
     
     @IBAction func tappedAddButton(_ sender: UIBarButtonItem) {
@@ -57,17 +68,11 @@ class OfertasUsuarioViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "MinhasOfertasVC.MeuAnuncioVC" {
             if let vc = segue.destination as? MeuAnuncioViewController {
                 if let selectedIndexPath = self.tableViewOfertas.indexPathForSelectedRow {
-//                    let posicao = selectedIndexPath.row
-//                    let ofertaID = self.controller?.getOfertaID(at: posicao) ?? 0
-                    
                     let ofer: OfertaElement = (self.controller?.getOferta(at: selectedIndexPath.row))!
-                    
                     vc.controller = MeuAnuncioController()
-                    
                     vc.controller?.insereOferta(oferta: ofer) //setID(id: ofertaID)
                 }
             }
@@ -86,13 +91,9 @@ extension OfertasUsuarioViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "OfertaCell", for: indexPath) as? OfertaCell {
-            
-            cell.setup(oferta: self.controller?.getOferta(at: indexPath.row))
-            
-            return cell
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OfertaCell", for: indexPath) as? OfertaCell
+            cell?.setup(oferta: self.controller?.getOferta(at: indexPath.row))
+            return cell ?? UITableViewCell()
     }
 }
 

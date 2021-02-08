@@ -12,6 +12,53 @@ protocol cadastroViewControllerDelegate: class {
 }
 
 class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
+    @IBOutlet var viewTelaCadastro: UIView!
+    @IBOutlet weak var imagePerfil: UIImageView!
+    @IBOutlet weak var inserirImagemButton: UIImageView!
+    @IBOutlet weak var nomeTextField: UITextField!
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var telefoneLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var senhaLabel: UILabel!
+    @IBOutlet weak var verificaEmailLabel: UILabel!
+    @IBOutlet weak var verificaSenhaLabel: UILabel!
+    @IBOutlet weak var verificaNomeLabel: UILabel!
+    @IBOutlet weak var telefoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var senhaTextField: UITextField!
+    @IBOutlet weak var cadastrarButton: UIButton!
+    @IBOutlet weak var entrarButton: UIButton!
+    
+    var singleTap: Any?
+    var controller: CadastroController = CadastroController()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.nomeTextField.delegate = self
+        self.telefoneTextField.delegate = self
+        self.emailTextField.delegate = self
+        self.senhaTextField.delegate = self
+        self.senhaTextField.textContentType = .password
+        self.senhaTextField.isSecureTextEntry = true
+        self.emailTextField.keyboardType = .emailAddress
+        self.telefoneTextField.keyboardType = .numberPad
+        self.verificaEmailLabel.text = ""
+        self.verificaSenhaLabel.text = ""
+        self.verificaNomeLabel.text = ""
+        self.singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
+        let size = self.imagePerfil.frame.size.height / 2
+        self.imagePerfil.layer.cornerRadius = size
+        self.imagePerfil.image = UIImage(named: "profilePic")
+        self.cadastrarButton.layer.cornerRadius = 4
+        self.cadastrarButton.clipsToBounds = true
+        self.entrarButton.layer.cornerRadius = 4
+        self.entrarButton.clipsToBounds = true
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        self.view.addGestureRecognizer(tap)
+        self.controller.delegate = self
+        self.imagePerfil.isUserInteractionEnabled = true
+        self.imagePerfil.addGestureRecognizer(singleTap as! UITapGestureRecognizer)
+    }
     
     func usuarioCriado(result: Bool) {
         if result {
@@ -27,130 +74,42 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
         }
     }
     
-    
-    var controller: CadastroController = CadastroController()
-    
-    // MARK: TextFields e Labels
-    
-    @IBOutlet var viewTelaCadastro: UIView!
-    
-    @IBOutlet weak var imagePerfil: UIImageView!
-    @IBOutlet weak var inserirImagemButton: UIImageView!
-    
-    
-    @IBOutlet weak var nomeTextField: UITextField!
-    
-    @IBOutlet weak var nomeLabel: UILabel!
-    @IBOutlet weak var telefoneLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var senhaLabel: UILabel!
-    @IBOutlet weak var verificaEmailLabel: UILabel!
-    @IBOutlet weak var verificaSenhaLabel: UILabel!
-    @IBOutlet weak var verificaNomeLabel: UILabel!
-    
-    @IBOutlet weak var telefoneTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var senhaTextField: UITextField!
-    @IBOutlet weak var cadastrarButton: UIButton!
-    
-    var singleTap: Any?
-    
-    // MARK: viewDidLoad
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.nomeTextField.delegate = self
-        self.telefoneTextField.delegate = self
-        self.emailTextField.delegate = self
-        self.senhaTextField.delegate = self
-        
-        self.senhaTextField.textContentType = .password
-        self.senhaTextField.isSecureTextEntry = true
-        
-        self.emailTextField.keyboardType = .emailAddress
-        self.telefoneTextField.keyboardType = .numberPad
-        
-        self.verificaEmailLabel.text = ""
-        self.verificaSenhaLabel.text = ""
-        self.verificaNomeLabel.text = ""
-        self.singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
-        //        self.inserirImagemButton.backgroundColor = UIColor(rgb: 0xFF453A)
-        //        self.inserirImagemButton.layer.cornerRadius = 4
-        
-        let size = self.imagePerfil.frame.size.height / 2
-        self.imagePerfil.layer.cornerRadius = size
-        self.imagePerfil.image = UIImage(named: "profilePic")
-        
-        self.cadastrarButton.layer.cornerRadius = 4
-//        self.cadastrarButton.backgroundColor = UIColor(rgb: 0xFF453A)
-        
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        self.view.addGestureRecognizer(tap)
-        self.controller.delegate = self
-        
-        self.imagePerfil.isUserInteractionEnabled = true
-        self.imagePerfil.addGestureRecognizer(singleTap as! UITapGestureRecognizer)
-        
-    }
-    
     // MARK: Validation
-    
     private func checkFields() -> Bool {
-        
         let obrigatorio:String = "Campo obrigatório"
         var isValid:Bool = true
-        
         if  self.nomeTextField.text?.trimmingCharacters(in: .whitespaces).isEmpty ?? true {
-            
             self.verificaNomeLabel.text = obrigatorio
             self.verificaNomeLabel.textColor = UIColor(rgb: 0xffcd00)
             isValid = false
-            
         }
-        
         if self.emailTextField.text?.isEmpty ?? true {
-            
             self.verificaEmailLabel.text = obrigatorio
             self.verificaEmailLabel.textColor = UIColor(rgb: 0xffcd00)
-            
             isValid = false
-            
         }
-        
         if !(self.verificaEmailLabel.text?.isEqual("") ?? true) && !(self.verificaEmailLabel.text?.isEmpty ?? true) {
-            
             isValid = false
         }
-        
         if self.senhaTextField.text?.isEmpty ?? true {
-            
             self.verificaSenhaLabel.text = obrigatorio
             self.verificaSenhaLabel.textColor = UIColor(rgb: 0xffcd00)
-            
             isValid = false
         }
-        
         if !(self.verificaSenhaLabel.text?.isEqual("") ?? true) && !(self.verificaSenhaLabel.text?.isEmpty ?? true) {
-            
             isValid = false
         }
-        
         return isValid
     }
     
-    
     // MARK: actions
-    
     @objc func tapDetected() {
         dismissKeyboard()
         
         EscolherImagem().selecionadorImagem(self){ imagem in
             self.imagePerfil.image = imagem
         }
-        
     }
-    
     
     @IBAction func tappedCadastrarButton(_ sender: UIButton) {
         dismissKeyboard()
@@ -162,25 +121,19 @@ class CadastroViewController: UIViewController, cadastroViewControllerDelegate {
             let email = self.emailTextField.text ?? ""
             let image = self.imagePerfil.image?.pngData()
             self.controller.cadastrarUsuario(nome: nome, telefone: telefone, email: email, senha: senha, imagem: image) { (error) in
-                
                 if let _ = error {
                     let alert = UIAlertController(title: "Error", message: "Tivemos um problema em criar o seu usuario.", preferredStyle: UIAlertController.Style.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil ))
                     self.present(alert, animated: true, completion: nil)
                     return
                 }
-                
                 let alert = UIAlertController(title: "Sucesso", message: "Usuario criado com sucesso :D.", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { action in
                     self.dismiss(animated: true, completion: nil)
                 }))
                 self.present(alert, animated: true, completion: nil)
-                
             }
-            
         }
-        
-        
     }
     
     @IBAction func tappedEntrarButton(_ sender: Any) {

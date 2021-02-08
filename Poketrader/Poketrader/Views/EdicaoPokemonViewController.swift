@@ -29,9 +29,6 @@ class EdicaoPokemonViewController: UIViewController {
         
         self.tittleTextField.delegate = self
         self.descriptionTextView.delegate = self
-
-        
-        // self.avatarImageView.image = UIImage(named: "charmeleon")
         self.tittleTextField.text = self.controller?.getOferta()?.nome
         self.descriptionTextView.text = self.controller?.getOferta()?.observacoes
         self.nameTextLabel.text = self.controller?.getOferta()?.pokemon?.name
@@ -56,16 +53,18 @@ class EdicaoPokemonViewController: UIViewController {
     
     
     @IBAction func editPokemon(_ sender: UIButton) {
+        self.controller?.editOffer(obs: self.descriptionTextView.text) 
+        
         
         self.gameTitle =  String(describing: self.tittleTextField.text)
         self.shortDescription = String(describing: self.descriptionTextView.text)
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
         
     }
     
     @IBAction func cancelEditPokemon(_ sender: UIButton) {
         
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {

@@ -10,6 +10,7 @@ import Foundation
 class FeedController {
     //TODO:- private var worker: OfertasWork()
     private var ofertas: Ofertas?
+    private var isReloadCollection: Bool = false
     
     var numberOfRows: Int {
         return ofertas?.ofertas?.count ?? 0
@@ -23,16 +24,19 @@ class FeedController {
         return ofertas?.ofertas?[posicao]
     }
     
-    func loadOfertas(completion: @escaping (Bool, String?) -> ()) {
-        OfertasWorker().loadAnuncios { (ofertas, erro) in
+    func loadOfertas(completion: @escaping (Ofertas?, String?) -> ()) {
+        OfertasWorker().loadOffers { (ofertas, erro) in
             if erro == nil {
                 self.ofertas = ofertas
-                completion(true, "")
+                completion(ofertas!, "")
             } else {
-                completion(false, "deu ruim")
+                completion(Ofertas(), "deu ruim")
             }
-            
         }
+    }
+    
+    var reloadFeed: Bool {
+        return self.isReloadCollection
     }
     
 }
