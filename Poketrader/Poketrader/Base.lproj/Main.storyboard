@@ -1009,7 +1009,7 @@
                         <outlet property="saveButton" destination="Sva-mi-OLH" id="ZLR-I6-jQK"/>
                         <outlet property="searchPokemon" destination="QVj-Kx-w2n" id="wBp-Mg-jma"/>
                         <outlet property="velTextField" destination="poQ-5Q-WgA" id="p5I-JR-DJi"/>
-                        <segue destination="iO3-uR-s7m" kind="presentation" identifier="CadastrarVC.SelecionarPokemonVC" id="PaK-AH-kHF"/>
+                        <segue destination="iO3-uR-s7m" kind="showDetail" identifier="CadastrarVC.SelecionarPokemonVC" id="PaK-AH-kHF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4i0-RM-ayv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1026,11 +1026,11 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-0C-cb7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P3w-tM-Jsk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.23137254900000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P3w-tM-Jsk" firstAttribute="trailing" secondItem="y8c-0C-cb7" secondAttribute="trailing" id="DRf-Qq-m44"/>
                             <constraint firstItem="P3w-tM-Jsk" firstAttribute="bottom" secondItem="y8c-0C-cb7" secondAttribute="bottom" id="NuO-KC-agX"/>
@@ -1038,6 +1038,7 @@
                             <constraint firstItem="y8c-0C-cb7" firstAttribute="top" secondItem="P3w-tM-Jsk" secondAttribute="top" id="wyk-IJ-sLp"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zar-XU-bZh"/>
                     <connections>
                         <outlet property="tableView" destination="y8c-0C-cb7" id="64D-ZU-fnB"/>
                     </connections>
