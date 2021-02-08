@@ -32,6 +32,10 @@ class FeedViewController: BaseViewController {
         self.setup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.loadOffers()
+    }
+    
     func setup() {
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
