@@ -24,6 +24,12 @@ class MeuAnuncioController {
         self.oferta = oferta
     }
     
+    func editOffer(nv: String, hp: String, def: String, ata: String, vel: String, ataSp: String, defSp: String, obs: String) {
+        
+        OfertasWorker().updateOffer(offer: self.oferta ?? OfertaElement(), nv: nv, hp: hp, def: def, ata: ata, vel: vel, ataSp: ataSp, defSp: defSp, obs: obs)
+    }
+
+    
     func loadAnuncio(completion: @escaping (OfertaElement?, String?) -> ()) {
         if let oferta = self.oferta {
             self.oferta = oferta

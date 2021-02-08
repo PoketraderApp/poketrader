@@ -24,9 +24,9 @@ class OfertasUsuarioController {
         }
     }
     
-    func editOffer(obs: String) {
-        OfertasWorker().updateOffer(offer: self.oferta ?? OfertaElement(), obs: obs)
-    }
+//    func editOffer(obs: String) {
+//        OfertasWorker().updateOffer(offer: self.oferta ?? OfertaElement(), obs: obs)
+//    }
     
     func getOferta(at posicao: Int) -> OfertaElement? {
         return ofertas?.ofertas?[posicao]

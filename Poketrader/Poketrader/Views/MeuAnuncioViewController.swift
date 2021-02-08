@@ -10,17 +10,19 @@ import UIKit
 class MeuAnuncioViewController: BaseViewController {
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var nomePokemonLabel: UILabel!
-    @IBOutlet weak var usuarioValueLabel: UILabel!
-    @IBOutlet weak var telefoneValueLabel: UILabel!
-    @IBOutlet weak var jogoValueLabel: UILabel!
-    @IBOutlet weak var emailValueLabel: UILabel!
-    @IBOutlet weak var observacoesValueLabel: UILabel!
-    @IBOutlet weak var hpValueLabel: UILabel!
-    @IBOutlet weak var defesaValueLabel: UILabel!
-    @IBOutlet weak var ataqueValueLabel: UILabel!
-    @IBOutlet weak var velocidadeValueLabel: UILabel!
-    @IBOutlet weak var ataqueSPValueLabel: UILabel!
-    @IBOutlet weak var defesaSPValueLabel: UILabel!
+    @IBOutlet weak var obsTextView: UITextView!
+    
+    @IBOutlet weak var nvTextField: UITextField!
+    @IBOutlet weak var hpTextField: UITextField!
+    @IBOutlet weak var defTextField: UITextField!
+    @IBOutlet weak var ataTextField: UITextField!
+    @IBOutlet weak var velTextField: UITextField!
+    @IBOutlet weak var ataSpTetField: UITextField!
+    @IBOutlet weak var defSpTextField: UITextField!
+    
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     private var oferta: OfertaElement?
     var controller: MeuAnuncioController?
@@ -28,16 +30,18 @@ class MeuAnuncioViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Entrou editar")
+        self.statusView.layer.cornerRadius = 4
+        self.statusView.clipsToBounds = true
+        self.editButton.layer.cornerRadius = 4
+        self.editButton.clipsToBounds = true
+        self.deleteButton.layer.cornerRadius = 4
+        self.deleteButton.clipsToBounds = true
         self.showLoading()
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
                 self.oferta = _oferta
                 DispatchQueue.main.async {
-                    self.usuarioValueLabel.text = oferta?.nome
-                    self.emailValueLabel.text =  oferta?.email
-                    self.telefoneValueLabel.text = oferta?.telefone
-                    self.jogoValueLabel.text = oferta?.game
-                    self.observacoesValueLabel.text = oferta?.observacoes
+                    self.obsTextView.text = oferta?.observacoes
                     self.nomePokemonLabel.text = oferta?.pokemon?.name
                     let urlText = oferta?.pokemon?.sprite! ?? ""
                     let url = URL(string: urlText)
@@ -78,7 +82,7 @@ class MeuAnuncioViewController: BaseViewController {
     }
     
     @IBAction func pressedEditarButton(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "MeuAnuncioVC.EditarVC", sender: self)
+        self.controller?.editOffer(nv: self.nvTextField.text!, hp: self.hpTextField.text!, def: self.defTextField.text!, ata: self.ataTextField.text!, vel: self.velTextField.text!, ataSp: self.ataSpTetField.text!, defSp: self.defSpTextField.text!, obs: self.obsTextView.text!)
     }
     
     @IBAction func pressedExcluirButton(_ sender: UIButton) {
