@@ -377,6 +377,7 @@
                     </view>
                     <connections>
                         <outlet property="cadastrarButton" destination="rcl-0Q-Slr" id="zkI-I7-Y4R"/>
+                        <outlet property="consoleTextField" destination="Xxs-eA-c0R" id="GIX-vz-GSf"/>
                         <outlet property="emailLabel" destination="lt5-EL-sfy" id="y7w-0J-Aww"/>
                         <outlet property="emailTextField" destination="i1y-Bf-A2d" id="qIT-Ag-xiN"/>
                         <outlet property="entrarButton" destination="vBi-61-ADu" id="AhT-tO-bUO"/>
