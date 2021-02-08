@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import Firebase
 
 class AddPokemonController {
     private var pokemon: Pokemon?
     
-    func savePokemon(name: String?, url: String?, game: String?, obs: String?) {
-        OfertasWorker().saveOffer(name: name, url: url, game: game, obs: obs)
+    func savePokemon(name: String?,telefone: String?, url: String?, game: String?, obs: String?) {
+        OfertasWorker().saveOffer(name: name, telefone: telefone, url: url, game: game, obs: obs)
     }
     
     var pokemonURLImage: String {
@@ -33,5 +34,4 @@ class AddPokemonController {
     func getPokemonInfoTeste() -> Pokemon?{
         return self.pokemon
     }
-    
 }
