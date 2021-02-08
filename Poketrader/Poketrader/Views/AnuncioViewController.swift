@@ -38,7 +38,7 @@ class AnuncioViewController: BaseViewController {
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
                 DispatchQueue.main.async {
-                    self.profileImage.isHidden = true
+//                    self.profileImage.isHidden = true
                     self.usuarioValueLabel.text = _oferta.nome
                     self.emailValueLabel.text =  _oferta.email
                     self.telefoneValueLabel.text = _oferta.telefone

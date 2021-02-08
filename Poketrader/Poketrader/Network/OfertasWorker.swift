@@ -40,7 +40,7 @@ class OfertasWorker: GenericWorker {
         if let userData = Auth.auth().currentUser {
             let db = Firestore.firestore()
             var ref: DocumentReference? = nil
-            ref = db.collection("anuncio").addDocument(data: ["id": ref?.documentID ?? "No Id", "userName": userData.displayName ?? "No name", "name": name ?? "No name", "uid": Auth.auth().currentUser?.uid ?? "No Uid", "url": url ?? "No url", "game": game ?? "No game", "obs": obs ?? "No obs"]) { err in
+            ref = db.collection("anuncio").addDocument(data: ["id": ref?.documentID ?? "No Id", "email": Auth.auth().currentUser?.email ?? "No email", "userName": userData.displayName ?? "No name", "name": name ?? "No name", "uid": Auth.auth().currentUser?.uid ?? "No Uid", "url": url ?? "No url", "game": game ?? "No game", "obs": obs ?? "No obs"]) { err in
                 if let _err = err {
                     print("deu ruim \(_err)")
                 } else {
@@ -71,13 +71,13 @@ class OfertasWorker: GenericWorker {
                 if let document = query?.documents {
                     for doc in document {
                         let data = doc.data()
-                        if let userName = data["userName"] as? String, let nameText = data["name"] as? String, let urlText = data["url"] as? String, let gameText = data["game"] as? String, let obsText = data["obs"] as? String {
+                        if let userName = data["userName"] as? String, let emailText = data["email"] as? String, let nameText = data["name"] as? String, let urlText = data["url"] as? String, let gameText = data["game"] as? String, let obsText = data["obs"] as? String {
                             let officialArt = OfficialArtwork(imagePath: urlText)
                             let other = Other(dreamWorld: nil, officialArtwork: officialArt)
                             let sprites = Sprites(other: other)
                             let pokeData = PokeData(id: nil, name: nameText, sprites: sprites, stats: nil)
                             let pokemon = Pokemon(sprt: urlText, data: pokeData)
-                            let newOfer = OfertaElement(game: gameText, pokemon: pokemon, observacoes: obsText, ofertaID: nil, nome: userName, email: nil, telefone: nil)
+                            let newOfer = OfertaElement(game: gameText, pokemon: pokemon, observacoes: obsText, ofertaID: nil, nome: userName, email: emailText, telefone: nil)
                             self.ofersList.ofertas?.append(newOfer)
                         }
                     }
