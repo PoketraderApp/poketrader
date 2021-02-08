@@ -29,12 +29,16 @@ class AnuncioViewController: BaseViewController {
     @IBOutlet weak var velocidadeValueLabel: UILabel!
     @IBOutlet weak var ataqueSPValueLabel: UILabel!
     @IBOutlet weak var defesaSPValueLabel: UILabel!
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var infoView: UIView!
     
     var controller: AnuncioController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showLoading()
+        self.statusView.layer.cornerRadius = 4
+        self.infoView.layer.cornerRadius = 4
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
             if let _oferta = oferta {
                 DispatchQueue.main.async {

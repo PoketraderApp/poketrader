@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     @IBOutlet weak var gameTitleTextField: UITextField!
@@ -17,6 +18,8 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
     @IBOutlet weak var saveButton: UIButton!
     var namePokemon: String?
     @IBOutlet weak var cancelButton: UIButton!
+    
+    var phoneNumber: String?
     
     private var controller: AddPokemonController?
     
@@ -32,6 +35,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
         self.saveButton.clipsToBounds = true
         self.cancelButton.layer.cornerRadius = 4
         self.cancelButton.clipsToBounds = true
+        self.getTelephone()
         
     }
     
@@ -73,7 +77,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
             self.descriptionTextField
         ])
         if isValid {
-            controller?.savePokemon(name: namePokemon, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, obs: self.descriptionTextField.text)
+            controller?.savePokemon(name: namePokemon, telefone: self.phoneNumber, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, obs: self.descriptionTextField.text)
             let alert = UIAlertController(title: "Confirmação", message: "Pokémon adicionado com sucesso!", preferredStyle: .alert)
             let button = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(button)
@@ -84,11 +88,29 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate {
             alert.addAction(buttonOk)
             self.present(alert, animated: true, completion: nil)
         }
+        self.gameTitleTextField.text = ""
+        self.descriptionTextField.text = ""
     }
     
     @IBAction func cancelPokemon(_ sender: UIButton) {
         //self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func getTelephone() {
+        if let uid = (Auth.auth().currentUser?.uid){
+            let db = Firestore.firestore()
+            db.collection("telefones").document(uid).getDocument { (document, error) in
+                if let document = document, document.exists {
+                    if let teamInfo = document.data()?["telefone"] {
+                        let telefone = teamInfo as? String ?? ""
+                        self.phoneNumber = telefone
+                    }
+                } else {
+                    print("Document does not exist")
+                }
+            }
+        }
     }
 }
 

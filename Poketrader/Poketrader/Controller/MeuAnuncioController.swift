@@ -38,10 +38,6 @@ class MeuAnuncioController {
         return ofertas?.ofertas?[posicao].ofertaID ?? 0
     }
     
-//    func getOferta(at posicao: Int) -> OfertaElement? {
-//        return ofertas?.ofertas?[posicao]
-//    }
-    
     var numberOfRows: Int {
         return self.ofertas?.ofertas?.count ?? 0
     }
