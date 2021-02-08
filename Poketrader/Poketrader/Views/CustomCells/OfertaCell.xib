@@ -35,38 +35,37 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon (Numero)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaS-W1-p0E">
-                                <rect key="frame" x="128" y="8" width="200.5" height="25"/>
+                                <rect key="frame" x="130" y="10" width="200.5" height="25"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="19"/>
                                 <color key="textColor" red="0.79215686269999996" green="0.90980392160000001" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jogo: (nome do Jogo)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOn-8J-dak">
-                                <rect key="frame" x="128" y="41" width="168" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="130" y="45" width="171.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" red="0.51764705879999995" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuário: (nome do Jogador)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unW-tt-kKj">
-                                <rect key="frame" x="128" y="70" width="213.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.51764705879999995" green="0.66274509800000003" blue="0.67450980390000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="130" y="77.5" width="258.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.097635753450000001" green="0.19912800189999999" blue="0.25749424100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.23137254900000001" green="0.41176470590000003" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mOn-8J-dak" firstAttribute="leading" secondItem="5ho-b5-Ti1" secondAttribute="trailing" constant="8" id="0HW-pz-Skv"/>
-                            <constraint firstItem="unW-tt-kKj" firstAttribute="top" secondItem="mOn-8J-dak" secondAttribute="bottom" constant="8" id="2hj-WD-HQq"/>
-                            <constraint firstItem="unW-tt-kKj" firstAttribute="top" secondItem="mOn-8J-dak" secondAttribute="bottom" constant="8" id="4Se-xl-RDt"/>
+                            <constraint firstItem="KaS-W1-p0E" firstAttribute="leading" secondItem="K4s-fA-szH" secondAttribute="trailing" constant="10" id="1Xh-4P-5MN"/>
+                            <constraint firstItem="unW-tt-kKj" firstAttribute="top" secondItem="mOn-8J-dak" secondAttribute="bottom" constant="10" id="5cH-v2-xU6"/>
+                            <constraint firstItem="mOn-8J-dak" firstAttribute="leading" secondItem="K4s-fA-szH" secondAttribute="trailing" constant="10" id="6CR-hM-n7i"/>
+                            <constraint firstItem="mOn-8J-dak" firstAttribute="top" secondItem="KaS-W1-p0E" secondAttribute="bottom" constant="10" id="8h5-MJ-fii"/>
                             <constraint firstAttribute="bottom" secondItem="5ho-b5-Ti1" secondAttribute="bottom" id="Gxd-db-yHI"/>
-                            <constraint firstItem="KaS-W1-p0E" firstAttribute="leading" secondItem="5ho-b5-Ti1" secondAttribute="trailing" constant="8" id="InZ-lw-7u6"/>
-                            <constraint firstItem="unW-tt-kKj" firstAttribute="leading" secondItem="5ho-b5-Ti1" secondAttribute="trailing" constant="8" id="MLP-fK-LAz"/>
+                            <constraint firstItem="KaS-W1-p0E" firstAttribute="top" secondItem="Ntr-MF-4Kb" secondAttribute="top" constant="10" id="Vju-gK-m0b"/>
                             <constraint firstItem="K4s-fA-szH" firstAttribute="leading" secondItem="Ntr-MF-4Kb" secondAttribute="leading" id="aTx-Oy-3m4"/>
                             <constraint firstAttribute="bottom" secondItem="K4s-fA-szH" secondAttribute="bottom" id="cRm-bd-a8t"/>
+                            <constraint firstItem="unW-tt-kKj" firstAttribute="leading" secondItem="K4s-fA-szH" secondAttribute="trailing" constant="10" id="oFU-1d-wDI"/>
                             <constraint firstItem="K4s-fA-szH" firstAttribute="top" secondItem="Ntr-MF-4Kb" secondAttribute="top" id="pdx-9u-iUT"/>
                             <constraint firstItem="5ho-b5-Ti1" firstAttribute="top" secondItem="Ntr-MF-4Kb" secondAttribute="top" id="s12-BY-c85"/>
-                            <constraint firstItem="mOn-8J-dak" firstAttribute="top" secondItem="KaS-W1-p0E" secondAttribute="bottom" constant="8" id="su2-ih-UZQ"/>
-                            <constraint firstAttribute="bottom" secondItem="unW-tt-kKj" secondAttribute="bottom" constant="29" id="t40-Lc-hCv"/>
                             <constraint firstItem="5ho-b5-Ti1" firstAttribute="leading" secondItem="Ntr-MF-4Kb" secondAttribute="leading" id="wJe-Ob-XGn"/>
                         </constraints>
                     </view>
