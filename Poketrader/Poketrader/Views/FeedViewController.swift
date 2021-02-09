@@ -26,9 +26,10 @@ class FeedViewController: BaseViewController {
         
         //ate aqui
         self.feedTableView.backgroundColor = UIColor(rgb: 0x193342)
-        self.feedTableView.delegate = self
-        self.feedTableView.dataSource = self
+        
 
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(rgb: 0xCAE8D5), .font: UIFont(name: "DIN Alternate Bold", size: 20)!]
         self.showLoading()
         self.setup()
     }
@@ -38,6 +39,7 @@ class FeedViewController: BaseViewController {
     }
     
     func setup() {
+        
         self.feedTableView.delegate = self
         self.feedTableView.dataSource = self
         self.feedTableView.register(UINib(nibName: "OfertaCell", bundle: nil), forCellReuseIdentifier: "OfertaCell")

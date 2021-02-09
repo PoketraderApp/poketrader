@@ -100,3 +100,4 @@ class MeuAnuncioViewController: BaseViewController {
         self.controller!.removeOffer(id: self.oferta!.id!)
     }
 }
+
