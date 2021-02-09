@@ -50,6 +50,9 @@ class PerfilViewController: BaseViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(rgb: 0xCAE8D5), .font: UIFont(name: "DIN Alternate Bold", size: 20)!]
+        
         self.bloquearTextField()
         let size = self.iconUser.frame.size.height / 2
         self.iconUser.layer.cornerRadius = size

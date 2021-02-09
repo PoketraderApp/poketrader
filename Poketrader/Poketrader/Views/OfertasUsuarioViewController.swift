@@ -24,6 +24,8 @@ class OfertasUsuarioViewController: BaseViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.layoutIfNeeded()
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(rgb: 0xCAE8D5), .font: UIFont(name: "DIN Alternate Bold", size: 20)!]
 
         //ate aqui
         self.tableViewOfertas.backgroundColor = UIColor(rgb: 0x193342)
