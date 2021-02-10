@@ -10,22 +10,19 @@ import Firebase
 import SCLAlertView
 
 class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, UITextViewDelegate {
-    @IBOutlet weak var gameTitleTextField: UITextField!
+    @IBOutlet weak var nvTextField: UITextField!
     
-    @IBOutlet weak var nvtextField: UITextField!
     @IBOutlet weak var hpTextField: UITextField!
-    @IBOutlet weak var atatextField: UITextField!
     @IBOutlet weak var defTextField: UITextField!
+    @IBOutlet weak var ataTextField: UITextField!
     @IBOutlet weak var velTextField: UITextField!
-    @IBOutlet weak var defSptextField: UITextField!
     @IBOutlet weak var ataSpTextField: UITextField!
-//    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var defSpTextField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
-    
+    @IBOutlet weak var gameTitleTextField: UITextField!
     @IBOutlet weak var pokemonImage: UIImageView!
-    @IBOutlet weak var helpMessageView: UIView!
     @IBOutlet weak var searchPokemon: UISearchBar!
-    
+    @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var saveButton: UIButton!
     var namePokemon: String?
     @IBOutlet weak var cancelButton: UIButton!
@@ -47,13 +44,26 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
         self.saveButton.clipsToBounds = true
         self.cancelButton.layer.cornerRadius = 4
         self.cancelButton.clipsToBounds = true
-        self.nvtextField.keyboardType = .numberPad
+        self.nvTextField.keyboardType = .numberPad
         self.hpTextField.keyboardType = .numberPad
         self.defTextField.keyboardType = .numberPad
-        self.atatextField.keyboardType = .numberPad
+        self.ataTextField.keyboardType = .numberPad
         self.velTextField.keyboardType = .numberPad
         self.ataSpTextField.keyboardType = .numberPad
-        self.defSptextField.keyboardType = .numberPad
+        self.defSpTextField.keyboardType = .numberPad
+        
+        self.nvTextField.delegate = self
+        self.hpTextField.delegate = self
+        self.defTextField.delegate = self
+        self.ataTextField.delegate = self
+        self.velTextField.delegate = self
+        self.ataSpTextField.delegate = self
+        self.defSpTextField.delegate = self
+        
+        self.descriptionTextView.layer.cornerRadius = 4
+        
+        self.statusView.layer.cornerRadius = 4
+        
         self.getTelephone()
     }
     
@@ -67,7 +77,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
             if(result){
                 let url = URL(string: self.controller?.pokemonURLImage ?? "")
                 if let _url = url {
-                    self.helpMessageView.isHidden = true
+//                    self.helpMessageView.isHidden = true
                     self.pokemonImage.load(url: _url)
                     self.namePokemon = nomePokemon
                 }
@@ -94,7 +104,7 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
             self.gameTitleTextField
         ])
         if isValid {
-            controller?.savePokemon(name: namePokemon, telefone: self.phoneNumber, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, nv: self.nvtextField.text, hp: self.hpTextField.text, def: self.defTextField.text, ata: self.ataSpTextField.text, vel: self.velTextField.text, defSp: self.defSptextField.text, ataSp: self.ataSpTextField.text, obs: self.descriptionTextView.text)
+            controller?.savePokemon(name: namePokemon, telefone: self.phoneNumber, url: self.controller?.pokemonURLImage, game: self.gameTitleTextField.text, nv: self.nvTextField.text, hp: self.hpTextField.text, def: self.defTextField.text, ata: self.ataSpTextField.text, vel: self.velTextField.text, defSp: self.defSpTextField.text, ataSp: self.ataSpTextField.text, obs: self.descriptionTextView.text)
             let appearance = SCLAlertView.SCLAppearance(
                 showCloseButton: false
             )
@@ -111,13 +121,13 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
         }
         self.gameTitleTextField.text = ""
         self.descriptionTextView.text = ""
-        self.nvtextField.text = ""
+        self.nvTextField.text = ""
         self.hpTextField.text = ""
         self.defTextField.text = ""
-        self.atatextField.text = ""
+        self.ataTextField.text = ""
         self.velTextField.text = ""
         self.ataSpTextField.text = ""
-        self.defSptextField.text = ""
+        self.defSpTextField.text = ""
     }
     
     @IBAction func cancelPokemon(_ sender: UIButton) {
@@ -143,6 +153,27 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
 }
 
 extension AddPokemonViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        
+        
+        var maxLength: Int = 10
+        var newString: NSString = ""
+        
+        if textField != self.gameTitleTextField {
+        maxLength = 3
+        let currentString: NSString = textField.text! as NSString
+        newString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+            return newString.length <= maxLength
+        } else {
+            return newString.length <= maxLength
+        }
+            
+        
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case self.gameTitleTextField:

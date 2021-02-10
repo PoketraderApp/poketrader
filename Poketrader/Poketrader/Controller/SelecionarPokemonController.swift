@@ -41,7 +41,7 @@ class SelecionarPokemonController{
                     self.pokemonList?.next = pokemonList?.next
                 }
                 else{
-                    completion(false, "deu ruim ao pegar os próximos 20 pokemons")
+                    completion(false, "deu ruim ao pegar os próximos 151 pokemons")
                 }
             }
         }
