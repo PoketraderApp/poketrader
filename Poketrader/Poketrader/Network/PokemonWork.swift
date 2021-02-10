@@ -12,16 +12,13 @@ import FirebaseFirestore
 
 class PokemonWork: GenericWorker {
     let urlString: String = "https://pokeapi.co/api/v2/pokemon/"
-    let limit: String = "?limit="
     
     func getPokemon(nome: String, completion: @escaping completion<Pokemon?>) {
         let url: URL? = URL(string: urlString + nome)
         if let url = url {
             var request = URLRequest(url: url)
             request.httpMethod = Method.get.rawValue
-            
             AF.request(request).responseJSON { (response) in
-
                 if response.response?.statusCode == 200 {
                     do {
                         let pokemonData = try JSONDecoder().decode(PokeData.self, from: response.data ?? Data())
@@ -69,7 +66,6 @@ class PokemonWork: GenericWorker {
     func getTwentyPokemons(urlNext:String? = nil, completion: @escaping completion<PokemonList?>) {
         let session: URLSession = URLSession.shared
         var url: URL? = URL(string: urlString)
-        
         if let _urlNext = urlNext {
             url = URL(string: _urlNext)
         }
@@ -83,10 +79,8 @@ class PokemonWork: GenericWorker {
                 catch{
                     completion(nil, nil)
                 }
-            
             }
             task.resume()
         }
     }
-    
 }
