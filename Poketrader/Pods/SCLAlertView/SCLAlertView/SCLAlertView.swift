@@ -36,7 +36,7 @@ public enum SCLAlertViewStyle {
     public var defaultColorInt: UInt {
         switch self {
         case .success:
-            return 0x22B573
+            return 0x396979
         case .error:
             return 0xC1272D
         case .notice:

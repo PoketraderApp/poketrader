@@ -29,7 +29,7 @@ class FeedViewController: BaseViewController {
         
 
         
-        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(rgb: 0xCAE8D5), .font: UIFont(name: "DIN Alternate Bold", size: 20)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(rgb: 0xCAE8D5), .font: UIFont(name: "DIN Alternate Bold", size: 20) ?? UIFont.systemFont(ofSize:20)]
         self.showLoading()
         self.setup()
     }
