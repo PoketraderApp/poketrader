@@ -11,7 +11,7 @@ protocol SelecionarPokemonVCDelegate {
     func sendDataToCadastroVC(nomePokemon: String)
 }
 
-class SelecionarPokemonVC: UIViewController {
+class SelecionarPokemonVC: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     private var controller: SelecionarPokemonController?
@@ -54,19 +54,22 @@ class SelecionarPokemonVC: UIViewController {
     }
     
     func loadMoreData() {
+        
         if self.controller?.numberOfRows ?? 0 < self.controller?.numberOfPokemonsInDatabase ?? 0 {
         if !self.isLoading {
           self.isLoading = true
           DispatchQueue.global().async {
             // Fake background loading task for 2 seconds
-            sleep(2)
+//            sleep(2)
             self.controller?.getTwentyPokemons(url: self.controller?.nextURL()){ (result, error) in
                 
             }
             DispatchQueue.main.async {
               self.tableView.reloadData()
               self.isLoading = false
+//                self.hiddenLoading()
             }
+            
           }
         }
       } else {

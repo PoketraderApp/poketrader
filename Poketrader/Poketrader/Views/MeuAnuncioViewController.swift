@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MeuAnuncioViewController: BaseViewController {
+class MeuAnuncioViewController: BaseViewController, UITextFieldDelegate{
     @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var nomePokemonLabel: UILabel!
     @IBOutlet weak var obsTextView: UITextView!
@@ -42,6 +42,15 @@ class MeuAnuncioViewController: BaseViewController {
         self.velTextField.keyboardType = .numberPad
         self.ataSpTetField.keyboardType = .numberPad
         self.defSpTextField.keyboardType = .numberPad
+        
+        self.nvTextField.delegate = self
+        self.hpTextField.delegate = self
+        self.defTextField.delegate = self
+        self.ataTextField.delegate = self
+        self.velTextField.delegate = self
+        self.ataSpTetField.delegate = self
+        self.defSpTextField.delegate = self
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.showLoading()
         self.controller?.loadAnuncio(completion: { (oferta, erro) in
@@ -68,6 +77,16 @@ class MeuAnuncioViewController: BaseViewController {
                 print("\(String(describing: erro))")
             }
         })
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        let maxLength = 3
+        var newString: NSString = ""
+        let currentString: NSString = textField.text! as NSString
+        newString =
+            currentString.replacingCharacters(in: range, with: string) as NSString
+        return newString.length <= maxLength
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
