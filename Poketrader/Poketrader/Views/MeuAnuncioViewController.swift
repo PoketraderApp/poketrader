@@ -8,22 +8,25 @@
 import UIKit
 
 class MeuAnuncioViewController: BaseViewController, UITextFieldDelegate{
-    @IBOutlet weak var pokemonImage: UIImageView!
     @IBOutlet weak var nomePokemonLabel: UILabel!
-    @IBOutlet weak var obsTextView: UITextView!
-    
+    @IBOutlet weak var pokemonImage: UIImageView!
+    @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var nvTextField: UITextField!
     @IBOutlet weak var hpTextField: UITextField!
     @IBOutlet weak var defTextField: UITextField!
     @IBOutlet weak var ataTextField: UITextField!
     @IBOutlet weak var velTextField: UITextField!
-    @IBOutlet weak var ataSpTetField: UITextField!
+    @IBOutlet weak var ataSpTextField: UITextField!
     @IBOutlet weak var defSpTextField: UITextField!
+
+    @IBOutlet weak var obsTextView: UILabel!
+    //    @IBOutlet weak var obsTextView: UITextField!
     
-    @IBOutlet weak var statusView: UIView!
+//    @IBOutlet weak var obsTextView: UITextView!
+   
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
-    
+       
     private var oferta: OfertaElement?
     var controller: MeuAnuncioController?
 
@@ -40,7 +43,7 @@ class MeuAnuncioViewController: BaseViewController, UITextFieldDelegate{
         self.defTextField.keyboardType = .numberPad
         self.ataTextField.keyboardType = .numberPad
         self.velTextField.keyboardType = .numberPad
-        self.ataSpTetField.keyboardType = .numberPad
+        self.ataSpTextField.keyboardType = .numberPad
         self.defSpTextField.keyboardType = .numberPad
         
         self.nvTextField.delegate = self
@@ -48,7 +51,7 @@ class MeuAnuncioViewController: BaseViewController, UITextFieldDelegate{
         self.defTextField.delegate = self
         self.ataTextField.delegate = self
         self.velTextField.delegate = self
-        self.ataSpTetField.delegate = self
+        self.ataSpTextField.delegate = self
         self.defSpTextField.delegate = self
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -62,7 +65,7 @@ class MeuAnuncioViewController: BaseViewController, UITextFieldDelegate{
                     self.defTextField.text = _oferta.def
                     self.ataTextField.text = _oferta.ata
                     self.velTextField.text = _oferta.vel
-                    self.ataSpTetField.text = _oferta.ataSp
+                    self.ataSpTextField.text = _oferta.ataSp
                     self.defSpTextField.text = _oferta.defSp
                     self.obsTextView.text = oferta?.observacoes
                     self.nomePokemonLabel.text = oferta?.pokemon?.name
@@ -112,7 +115,7 @@ class MeuAnuncioViewController: BaseViewController, UITextFieldDelegate{
     }
     
     @IBAction func pressedEditarButton(_ sender: UIButton) {
-        self.controller?.editOffer(nv: self.nvTextField.text!, hp: self.hpTextField.text!, def: self.defTextField.text!, ata: self.ataTextField.text!, vel: self.velTextField.text!, ataSp: self.ataSpTetField.text!, defSp: self.defSpTextField.text!, obs: self.obsTextView.text!)
+        self.controller?.editOffer(nv: self.nvTextField.text!, hp: self.hpTextField.text!, def: self.defTextField.text!, ata: self.ataTextField.text!, vel: self.velTextField.text!, ataSp: self.ataSpTextField.text!, defSp: self.defSpTextField.text!, obs: self.obsTextView.text!)
     }
     
     @IBAction func pressedExcluirButton(_ sender: UIButton) {

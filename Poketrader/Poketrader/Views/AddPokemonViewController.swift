@@ -21,7 +21,6 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var gameTitleTextField: UITextField!
     @IBOutlet weak var pokemonImage: UIImageView!
-    @IBOutlet weak var searchPokemon: UISearchBar!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var saveButton: UIButton!
     var namePokemon: String?
@@ -131,7 +130,6 @@ class AddPokemonViewController: UIViewController, SelecionarPokemonVCDelegate, U
     }
     
     @IBAction func cancelPokemon(_ sender: UIButton) {
-        //self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -156,8 +154,6 @@ extension AddPokemonViewController: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
-        
-        
         var maxLength: Int = 10
         var newString: NSString = ""
         
